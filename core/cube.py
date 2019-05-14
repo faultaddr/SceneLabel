@@ -4,14 +4,13 @@ from OpenGL.GLU import *
 import numpy as np
 from OpenGL.raw.GLUT import *
 
-from core.util import get_up_down_face_coords
+from core.util import *
 
 
 class Cube(object):
     LEN = 0.5
     N_VERTEX = 24
-    bbox_array = np.loadtxt('test.obb')
-    v = get_up_down_face_coords(bbox_array)
+    v = get_room_data()
     VERTICES = np.array([
         (1, -1, -1),
         (1, 1, -1),
@@ -44,7 +43,6 @@ class Cube(object):
 
     def draw(self, update=None):
         if update is not None:
-            print(update)
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
             glPushMatrix()
 
@@ -52,7 +50,6 @@ class Cube(object):
 
             for i, array in enumerate(self.v):
                 if i == update:
-                    print('更改颜色')
                     glColor3f(0, 1, 0)
                 else:
                     glColor3f(1, 0, 0)

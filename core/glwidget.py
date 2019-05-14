@@ -46,7 +46,6 @@ class GLWidget(QOpenGLWidget):
         self.paintGL()
 
     def paintGL(self):
-        print('paintGL')
         gl.glClear(gl.GL_COLOR_BUFFER_BIT | gl.GL_DEPTH_BUFFER_BIT)
 
         gl.glMatrixMode(gl.GL_MODELVIEW)

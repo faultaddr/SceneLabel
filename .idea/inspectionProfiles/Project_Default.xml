@@ -8,5 +8,17 @@
         </list>
       </option>
     </inspection_tool>
+    <inspection_tool class="PyStubPackagesCompatibilityInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredStubPackages">
+        <list>
+          <option value="PyQt5-stubs" />
+          <option value="PyQt5-stubs" />
+          <option value="PyQt5-stubs" />
+          <option value="PyQt5-stubs" />
+          <option value="PyQt5-stubs" />
+          <option value="PyQt5-stubs" />
+        </list>
+      </option>
+    </inspection_tool>
   </profile>
 </component>
