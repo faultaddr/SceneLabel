@@ -1,4 +1,6 @@
 import platform
+
+from OpenGL.GLUT import *
 from PyQt5.QtWidgets import QOpenGLWidget
 from PyQt5.QtCore import QSize, Qt
 from PyQt5.QtGui import QVector3D, QMatrix4x4
@@ -17,7 +19,7 @@ class GLWidget(QOpenGLWidget):
         self.cam = Camera(45.0, 0.1, 1000.0)
         self.cam.lookAt(QVector3D(0, 0, 5), QVector3D(0, 0, 0), QVector3D(0, 1, 0))
         self.rotCenter = QVector3D(0, 0, 0)
-
+        self.data = None
         self.cube = Cube()
 
     def minimumSizeHint(self):
@@ -38,7 +40,13 @@ class GLWidget(QOpenGLWidget):
         gl.glLoadMatrixf(self.cam.perspective(width, height).data())
         gl.glMatrixMode(gl.GL_MODELVIEW)
 
+    def repaint_with_data(self, data):
+        self.data = data
+        print(self.data,'self data')
+        self.paintGL()
+
     def paintGL(self):
+        print('paintGL')
         gl.glClear(gl.GL_COLOR_BUFFER_BIT | gl.GL_DEPTH_BUFFER_BIT)
 
         gl.glMatrixMode(gl.GL_MODELVIEW)
@@ -49,12 +57,12 @@ class GLWidget(QOpenGLWidget):
         gl.glEnableClientState(gl.GL_COLOR_ARRAY)
 
         # draw all key frames
-        self.cube.draw()
+        self.cube.draw(self.data)
 
         # disable drawing vertices and color array
         gl.glDisableClientState(gl.GL_VERTEX_ARRAY)
         gl.glDisableClientState(gl.GL_COLOR_ARRAY)
-
+        self.update()
     def mousePressEvent(self, event):
         self.lastPos = event.pos()
         self.rotCenter = self.getRotCenter(event.x(), event.y())
@@ -68,9 +76,9 @@ class GLWidget(QOpenGLWidget):
         if magnitude < 50 ** 2:
             # left right moving
             if event.buttons() & Qt.LeftButton:
-                newPoint = self.pixelUnproject(x, y, self.lastZ)    # get 3d point that mouse clicks at
-                diff = newPoint - self.rotCenter                    # calculate distance between rotation center and current point
-                t = QVector3D(diff.x(), -diff.y(), 0)               # x -> left&right, y -> up&down
+                newPoint = self.pixelUnproject(x, y, self.lastZ)  # get 3d point that mouse clicks at
+                diff = newPoint - self.rotCenter  # calculate distance between rotation center and current point
+                t = QVector3D(diff.x(), -diff.y(), 0)  # x -> left&right, y -> up&down
                 self.cam.move(t)
                 self.rotCenter = newPoint
             # rotation
@@ -123,6 +131,5 @@ class GLWidget(QOpenGLWidget):
         return QVector3D(*center)
 
     def fixAppleBug(self, winx, winy):
-        if 'Darwin' in platform.system():
-            return (winx * 2, winy * 2)
+
         return (winx, winy)

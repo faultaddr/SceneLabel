@@ -1,5 +1,11 @@
-from PyQt5.QtWidgets import QHBoxLayout, QWidget
+import numpy as np
+from OpenGL.raw.GL.VERSION.GL_1_0 import glClear
+from OpenGL.raw.GL.VERSION.GL_1_1 import GL_COLOR_BUFFER_BIT
+from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout, QPushButton, QComboBox
+from PyQt5.QtCore import Qt
 
+from core import cube
+from core.util import get_up_down_face_coords
 from .glwidget import GLWidget
 
 
@@ -11,7 +17,26 @@ class Window(QWidget):
     def initUI(self):
         self.glWidget = GLWidget(self)
 
-        mainLayout = QHBoxLayout()
-        mainLayout.addWidget(self.glWidget)
-        self.setLayout(mainLayout)
+        main_layout = QHBoxLayout()
+        main_layout.addWidget(self.glWidget)
+        child_layout = QHBoxLayout()
+        child_layout.addWidget(QPushButton(str(1)), 0, Qt.AlignLeft | Qt.AlignTop)
+        # get label list
+        label_list = ['sofa', 'table', 'bed']
+        self.label_box = QComboBox(self)
+        self.label_box.addItems(label_list)
+        child_layout.addWidget(self.label_box, 0, Qt.AlignLeft | Qt.AlignTop)
+        main_layout.addLayout(child_layout, 0.1)
+        self.label_box.currentIndexChanged.connect(lambda: self.on_click(self.label_box))
+        self.setLayout(main_layout)
         self.setWindowTitle("Simple GL")
+
+
+    def on_click(self, box):
+        if box == self.label_box:
+            print(box.currentIndex())
+            # 画出当前的 box
+            self.draw_labeled_box(box.currentIndex())
+
+    def draw_labeled_box(self, index):
+        self.glWidget.repaint_with_data(index)
