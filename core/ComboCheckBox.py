@@ -10,8 +10,8 @@ class ComboCheckBox(QComboBox):
 
     def fn_init_data(self, list_items, text="请选择"):
 
-        self.setGeometry(QtCore.QRect(930, 50, 281, 31))
-        self.setStyleSheet("font: 16pt \"Agency FB\";")
+        #self.setGeometry(QtCore.QRect(930, 50, 281, 31))
+        # self.setStyleSheet("font: 16pt \"Agency FB\";")
 
         self.items = list_items
         self.row_num = len(self.items)
@@ -23,14 +23,21 @@ class ComboCheckBox(QComboBox):
 
         for i in range(0, self.row_num):
             self.addQCheckBox(i)
-            self.qCheckBox[i].setChecked(True)
+            self.qCheckBox[i].setChecked(False)
 
-        self.list_selected_item = list_items[1:]
+        self.list_selected_item = []
 
         self.setModel(self.qListWidget.model())
         self.setView(self.qListWidget)
         self.setLineEdit(self.qLineEdit)
         self.qLineEdit.setText(text)
+
+    def get_checked_box(self):
+        checked_index = []
+        for i, box in enumerate(self.qCheckBox):
+            if box.isChecked():
+                checked_index.append(i)
+        return checked_index
 
     def fn_init_table(self):
         self.setGeometry(QtCore.QRect(930, 50, 281, 31))

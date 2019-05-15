@@ -99,5 +99,5 @@ def main(path, for_save=True):
 
 
 if __name__ == '__main__':
-    original_path = '/data/proj/scans/scans/'
+    original_path = '/data/scans/scans/'
     main(original_path, True)

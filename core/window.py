@@ -1,5 +1,9 @@
+import os
+
+from PyQt5.QtGui import QWindow
 from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout, QPushButton, QComboBox, QFileDialog, QStyleFactory, \
-    QTextEdit, QCheckBox, QItemDelegate, QListWidget, QAbstractItemView, QListWidgetItem, QLineEdit
+    QTextEdit, QCheckBox, QItemDelegate, QListWidget, QAbstractItemView, QListWidgetItem, QLineEdit, QVBoxLayout, \
+    QDesktopWidget
 from PyQt5.QtCore import Qt
 from PyQt5.uic.properties import QtCore, QtGui
 
@@ -12,52 +16,145 @@ from PyQt5.QtWidgets import QComboBox, QLineEdit, QListWidget, QCheckBox, QListW
 class Window(QWidget):
     def __init__(self):
         super(Window, self).__init__()
+        self.save_relation = QPushButton('保存当前关系')
+        self.clear_write_btn = QPushButton('删除所有关系')
+        self.revert_last_state = QPushButton('撤销当前写入')
+        self.choose_write_directory = QFileDialog()
+        self.gl_widget = gl_widget(self)
+        self.write_btn = QPushButton('写入当前关系')
+        self.relation_text = QComboBox()
+        self.display_btn = QPushButton('显示组合obb')
+        self.choose_file = QPushButton('选取文件夹   ')
+        self.label_box = ComboCheckBox()
+        self.file_dialog = QFileDialog()
+        self.file_dialog_write = QFileDialog()
         self.data = []
         self.init_ui()
+        self.obbs_path = ''
+        self.save_path = ''
+        self.relation_stack = []
 
     def init_ui(self):
-        self.gl_widget = gl_widget(self)
 
         main_layout = QHBoxLayout()
         main_layout.addWidget(self.gl_widget)
-        child_layout = QHBoxLayout()
-        self.choose_file = QPushButton('选取文件夹   ')
-        child_layout.addWidget(self.choose_file, 0, Qt.AlignLeft | Qt.AlignTop)
-        # get label list
-        label_list = []
-
-        self.label_box = ComboCheckBox()
+        child_layout_h_1 = QHBoxLayout()
+        child_layout_h_2 = QHBoxLayout()
+        child_layout_h_1.addWidget(self.choose_file, 0, Qt.AlignLeft | Qt.AlignTop)
+        # label choose
         self.label_box.show()
         self.label_box.fn_init_data(self.data)
+        self.label_box.setMinimumContentsLength(15)
         self.label_box.setStyle(QStyleFactory.create('Windows'))
         self.label_box.currentIndexChanged.connect(lambda: self.on_click(self.label_box))
-        self.label_box.setMinimumContentsLength(20)
 
+        # choose file dialog
         self.choose_file.toggle()
-        # 点击信号与槽函数进行连接，这一步实现：在控制台输出被点击的按钮
         self.choose_file.clicked.connect(lambda: self.on_click(self.choose_file))
-        child_layout.addWidget(self.label_box, 0, Qt.AlignLeft | Qt.AlignTop)
-        self.file_dialog = QFileDialog()
+        child_layout_h_1.addWidget(self.label_box, 0, Qt.AlignLeft | Qt.AlignTop)
 
-        main_layout.addLayout(child_layout, 0)
+        # display combined relations
+        self.display_btn.toggle()
+        self.display_btn.clicked.connect(lambda: self.on_click(self.display_btn))
+        child_layout_h_1.addWidget(self.display_btn, 0, Qt.AlignLeft | Qt.AlignTop)
+        # 关系选择
+        self.relation_text.addItems(['0: 邻接', '1:支撑', '2:环绕', '3:并列'])
+        self.relation_text.currentIndexChanged.connect(lambda: self.on_click(self.relation_text))
+        child_layout_v_1 = QVBoxLayout()
+        # 保存关系
+        self.save_relation.toggle()
+        self.save_relation.clicked.connect(lambda: self.on_click(self.save_relation))
+        # 写入到txt
+        self.write_btn.toggle()
+        self.write_btn.clicked.connect(lambda: self.on_click(self.write_btn))
+        # 删除当前所有关系
+        self.clear_write_btn.toggle()
+        self.clear_write_btn.clicked.connect(lambda: self.on_click(self.clear_write_btn))
+        # 撤销前一个写入的关系
+        self.revert_last_state.toggle()
+        self.revert_last_state.clicked.connect(lambda: self.on_click(self.revert_last_state))
+
+        child_layout_h_2.addWidget(self.relation_text, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_2.addWidget(self.save_relation, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_2.addWidget(self.write_btn, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_2.addWidget(self.revert_last_state, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_2.addWidget(self.clear_write_btn, 0, Qt.AlignLeft | Qt.AlignTop)
+
+        child_layout_v_1.addLayout(child_layout_h_1, 2)
+        child_layout_v_1.addLayout(child_layout_h_2, 2)
+        main_layout.addLayout(child_layout_v_1, 2)
         self.setLayout(main_layout)
         self.setWindowTitle("Label Tools")
+        qr = self.frameGeometry()
+        cp = QDesktopWidget().availableGeometry().center()
+        qr.moveCenter(cp)
+        self.move(qr.topLeft())
 
+    def draw_multi_obb(self):
+        checked_box = self.label_box.get_checked_box()
+        self.draw_labeled_box(checked_box)
+
+    # onclick event handler
     def on_click(self, widget):
         if widget == self.label_box:
             print(widget.currentIndex())
             # 画出当前的 box
-            self.draw_labeled_box(widget.currentIndex())
+            self.draw_labeled_box([widget.currentIndex()])
         if widget == self.choose_file:
-            directory = self.file_dialog.getExistingDirectory(self, '选取 文件夹', '')
+            directory = self.file_dialog.getExistingDirectory(self, '选取文件夹', '')
             print(directory)
+            self.obbs_path = directory
             self.change_obbs(directory)
+        if widget == self.display_btn:
+            self.draw_multi_obb()
+        if widget == self.relation_text:
+            index = widget.currentIndex()
+            checked_index = self.label_box.get_checked_box()
+            if checked_index:
+                print(checked_index)
+                # print(','.join(checked_index))
+                print(str(checked_index), str(index))
+        if widget == self.write_btn:
+            self.write_txt()
+        if widget == self.clear_write_btn:
+            self.clear_txt()
+        if widget == self.save_relation:
+            self.write_single_relation()
+
+    # 删除
+    def clear_txt(self):
+        self.relation_stack = []
+        if self.save_path != '':
+            if os.path.isfile(self.save_path):
+                os.remove(self.save_path)
+
+    # 撤销
+    def back_stack(self):
+        self.relation_stack.pop()
+
+    # 保存单个
+    def write_single_relation(self):
+        # 先压栈
+        pair = self.label_box.get_checked_box()
+        self.relation_stack.append((pair, self.relation_text.currentIndex()))
+
+    # 保存
+    def write_txt(self):
+        path = self.obbs_path
+        file_name = path.split('/')[-1] + '_result.txt'
+        print(path)
+        print(file_name)
+        directory = self.file_dialog_write.getExistingDirectory(self, '选取存储位置', '')
+        print(directory)
+        self.save_path = os.path.join(directory, file_name)
+        with open(self.save_path, 'a+')as fp:
+            for i, (index, relation) in enumerate(self.relation_stack):
+                fp.write(','.join(index) + ':' + str(relation) + "\n")
 
     def draw_labeled_box(self, index):
         self.gl_widget.repaint_with_data(index)
 
     def change_obbs(self, path):
-
         self.gl_widget.change_data(path)
         self.data = self.gl_widget.get_label_data()
         print(self.data)

@@ -46,7 +46,6 @@ def get_up_down_face_coords(obbs):
 
 
 def get_room_data(path):
-
     if path == '':
         return [], []
     file_list = os.listdir(path)
@@ -57,7 +56,7 @@ def get_room_data(path):
             bbox_array = np.loadtxt(os.path.join(path, file))
             bbox = get_up_down_face_coords(bbox_array)
 
-        if file.split('.')[-1] == 'txt':
+        if file.split('.')[-1] == 'txt' and file.split('.')[0].split('_')[-1] != 'result':
 
             with open(os.path.join(path, file), 'r') as fp:
                 line_list = fp.readlines()

@@ -17,7 +17,7 @@ class GLWidget(QOpenGLWidget):
         super(GLWidget, self).__init__(parent)
         self.lastZ = 0.8
         self.cam = Camera(45.0, 0.1, 1000.0)
-        self.cam.lookAt(QVector3D(0, 0, 5), QVector3D(0, 0, 0), QVector3D(0, 1, 0))
+        self.cam.lookAt(QVector3D(0, 0, 20), QVector3D(0, 0, 0), QVector3D(0, 10, 0))
         self.rotCenter = QVector3D(0, 0, 0)
         self.data = None
         self.cube = Cube()

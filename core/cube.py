@@ -57,7 +57,7 @@ class Cube(object):
             glBegin(GL_LINES)
 
             for i, array in enumerate(self.v):
-                if i == update:
+                if i in update:
                     glColor3f(0, 1, 0)
                 else:
                     glColor3f(1, 0, 0)
