@@ -23,20 +23,19 @@ def opt_ply(path):
     v_list = np.array([list(x) for x in ply_file.elements[0]])
     coords = np.ascontiguousarray(v_list[:, :3] - v_list[:, :3].mean(0))
     colors = np.ascontiguousarray(v_list[:, 3:6]) / 127.5 - 1
-    print(coords, '\n', colors)
-    print(len(coords), len(colors))
+
     w = np.array(ply_file.elements[0]['label'])
     # ply_file.elements[0]['label']=label_instance_list
     # PlyData.write(ply_file)
     # sys.exit(0)
-    print(w)
+
     dict_label = {}
     for _i, i in enumerate(w):
         if i == 0:
             pass
         else:
             dict_label[i] = True
-    print(dict_label)
+
     dict_w = {}
     for i, _w in enumerate(label_instance_list):
         if _w in dict_w.keys():
@@ -52,8 +51,12 @@ def opt_ply(path):
 
 
 def save_obb_label(path, label_list):
-    np.savetxt(path, label_list)
-    pass
+    with open(path, 'w')as fp:
+        for i, label in enumerate(label_list):
+            if i == len(label) - 1:
+                fp.write(str(i) + ':' + str(label))
+            else:
+                fp.write(str(i) + ':' + str(label) + '\n')
 
 
 def opt_obb(path, for_save=False):
@@ -75,7 +78,8 @@ def opt_obb(path, for_save=False):
         value_list.append(value)
         label_list.append(label)
     if for_save:
-        save_obb(path[0].split('.')[0] + '_value.obb', value_list)
+        save_obb(str(path[0].split('.')[0]) + '_value.obb', value_list)
+
         save_obb_label(path[0].split('.')[0] + '_label.txt', label_list)
     return label_list
 
@@ -83,13 +87,17 @@ def opt_obb(path, for_save=False):
 def main(path, for_save=True):
     scan_dir_list = os.listdir(path)
     for i, scan_dir_list in enumerate(scan_dir_list):
+        print('-----', i)
         path = os.path.join(original_path, scan_dir_list)
-        mesh_file = os.path.join(path, scan_dir_list + '_vh_clean_2.ply')
-        agg_file = os.path.join(path, scan_dir_list + '.aggregation.json')
+        mesh_file = os.path.join(path, scan_dir_list + '_vh_clean_2.labels.ply')
+        agg_file = os.path.join(path, scan_dir_list + '_vh_clean.aggregation.json')
         seg_file = os.path.join(path, scan_dir_list + '_vh_clean_2.0.010000.segs.json')
-        opt_obb([mesh_file, seg_file, agg_file], for_save)
+        try:
+            opt_obb([mesh_file, seg_file, agg_file], for_save)
+        except Exception:
+            print(Exception)
 
 
 if __name__ == '__main__':
-    original_path = '/data/scans/scans/'
+    original_path = '/data/proj/scans/scans/'
     main(original_path, True)

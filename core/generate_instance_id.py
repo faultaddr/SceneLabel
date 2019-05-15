@@ -11,6 +11,7 @@ except:
 
 
 def read_aggregation(filename):
+    print(filename)
     assert os.path.isfile(filename)
     object_id_to_segs = {}
     label_to_segs = {}
@@ -56,15 +57,7 @@ num_verts: 多少个verts
 def get_combined_ids(agg_path, seg_path):
     object_id_to_segs, label_to_segs = read_aggregation(agg_path)
     seg_to_verts, num_verts = read_segmentation(seg_path)
-    print(object_id_to_segs)
-    print("----------------------------")
-    print(label_to_segs)
 
-    print("----------------------------")
-    print(seg_to_verts)
-
-    print("----------------------------")
-    print(num_verts)
     label_ids = np.zeros(shape=(num_verts), dtype=np.uint32)
 
     import core.util as util
@@ -72,7 +65,7 @@ def get_combined_ids(agg_path, seg_path):
 
     import multiprocessing as mp
 
-    label_map = util.read_label_mapping('./scans/scannetv2-labels.combined.tsv', label_from='raw_category',
+    label_map = util.read_label_mapping('../data/scannetv2-labels.combined.tsv', label_from='raw_category',
                                         label_to='nyu40id')
 
     for label, segs in label_to_segs.items():
@@ -85,9 +78,6 @@ def get_combined_ids(agg_path, seg_path):
         for seg in segs:
             verts = seg_to_verts[seg]
             instance_ids[verts] = object_id
-    print(label_ids * 1000)
-    print('----------------------------')
-    print(instance_ids)
     return label_ids * 1000 + instance_ids
 # 其实就是把 instance 和label 结合起来
 # util_3d.export_ids("./test.txt", label_ids * 1000 + instance_ids)

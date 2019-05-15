@@ -45,10 +45,26 @@ def get_up_down_face_coords(obbs):
     return v
 
 
-def get_room_data():
-    bbox_array = np.loadtxt('test.obb')
-    v = get_up_down_face_coords(bbox_array)
-    return v
+def get_room_data(path):
+
+    if path == '':
+        return [], []
+    file_list = os.listdir(path)
+    bbox = []
+    label = []
+    for i, file in enumerate(file_list):
+        if file.split('.')[-1] == 'obb':
+            bbox_array = np.loadtxt(os.path.join(path, file))
+            bbox = get_up_down_face_coords(bbox_array)
+
+        if file.split('.')[-1] == 'txt':
+
+            with open(os.path.join(path, file), 'r') as fp:
+                line_list = fp.readlines()
+                for line in line_list:
+                    label.append(line)
+    return bbox, label
+
 
 # print an error message and quit
 def print_error(message, user_fault=False):

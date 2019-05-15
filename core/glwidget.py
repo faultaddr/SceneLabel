@@ -23,10 +23,10 @@ class GLWidget(QOpenGLWidget):
         self.cube = Cube()
 
     def minimumSizeHint(self):
-        return QSize(50, 50)
+        return QSize(400, 400)
 
     def sizeHint(self):
-        return QSize(400, 400)
+        return QSize(900, 900)
 
     def initializeGL(self):
         gl.glClearColor(0.3, 0.3, 0.3, 1.0)
@@ -42,8 +42,17 @@ class GLWidget(QOpenGLWidget):
 
     def repaint_with_data(self, data):
         self.data = data
-        print(self.data,'self data')
+        print(self.data, 'self data')
         self.paintGL()
+
+    def change_data(self, path):
+        print('---*change data*---')
+        self.cube.path = path
+        self.cube.init_data()
+        self.paintGL()
+
+    def get_label_data(self):
+        return self.cube.label
 
     def paintGL(self):
         gl.glClear(gl.GL_COLOR_BUFFER_BIT | gl.GL_DEPTH_BUFFER_BIT)
@@ -62,6 +71,7 @@ class GLWidget(QOpenGLWidget):
         gl.glDisableClientState(gl.GL_VERTEX_ARRAY)
         gl.glDisableClientState(gl.GL_COLOR_ARRAY)
         self.update()
+
     def mousePressEvent(self, event):
         self.lastPos = event.pos()
         self.rotCenter = self.getRotCenter(event.x(), event.y())

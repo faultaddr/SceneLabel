@@ -10,7 +10,10 @@ from core.util import *
 class Cube(object):
     LEN = 0.5
     N_VERTEX = 24
-    v = get_room_data()
+    path = ''
+    v = []
+    label = []
+    label_index = []
     VERTICES = np.array([
         (1, -1, -1),
         (1, 1, -1),
@@ -41,7 +44,12 @@ class Cube(object):
     def __init__(self, size=1, pose=None):
         pass
 
+    def init_data(self):
+
+        self.v, self.label = get_room_data(self.path)
+
     def draw(self, update=None):
+        self.init_data()
         if update is not None:
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
             glPushMatrix()
