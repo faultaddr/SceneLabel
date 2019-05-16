@@ -65,6 +65,17 @@ def get_room_data(path):
     return bbox, label
 
 
+def get_ply_data(path):
+    if path == '':
+        return []
+    file_list = os.listdir(path)
+    all_box_point_array = []
+    for i, file in enumerate(file_list):
+        if file.split('.')[-1] == 'npy':
+            all_box_point_array = np.load(os.path.join(path, file))
+    return all_box_point_array
+
+
 # print an error message and quit
 def print_error(message, user_fault=False):
     sys.stderr.write('ERROR: ' + str(message) + '\n')

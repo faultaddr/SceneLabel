@@ -16,6 +16,7 @@ from PyQt5.QtWidgets import QComboBox, QLineEdit, QListWidget, QCheckBox, QListW
 class Window(QWidget):
     def __init__(self):
         super(Window, self).__init__()
+        self.display_point = QPushButton('显示点云')
         self.display_relations_list = QListWidget()
         self.save_relation = QPushButton('保存当前关系')
         self.clear_write_btn = QPushButton('删除所有关系')
@@ -79,13 +80,16 @@ class Window(QWidget):
         # 显示所有关系
         self.display_relations_list.clicked.connect(lambda: self.on_click(self.display_relations_list))
         self.display_relations_list.currentItemChanged.connect(lambda: self.display_all_relations())
+        # 显示点云
+        self.display_point.toggle()
+        self.display_point.clicked.connect(lambda: self.on_click(self.display_point))
 
         child_layout_h_1.addWidget(self.choose_file, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_1.addWidget(self.label_box, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_1.addWidget(self.display_btn, 0, Qt.AlignLeft | Qt.AlignTop)
 
         child_layout_h_2.addWidget(self.display_relations_list, 0, Qt.AlignLeft | Qt.AlignTop)
-
+        child_layout_h_2.addWidget(self.display_point, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_3.addWidget(self.relation_text, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_3.addWidget(self.save_relation, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_3.addWidget(self.write_btn, 0, Qt.AlignLeft | Qt.AlignTop)
@@ -139,9 +143,11 @@ class Window(QWidget):
             self.back_stack()
         if widget == self.save_relation:
             self.write_single_relation()
+        # 没生效
         if widget == self.display_relations_list:
-            print('dianji')
             self.draw_multi_obb(self.relation_stack[self.display_relations_list.currentIndex()])
+        if widget == self.display_point:
+            self.display_all_point()
 
     # 删除
     def clear_txt(self):
@@ -180,9 +186,11 @@ class Window(QWidget):
             for i, (index, relation) in enumerate(self.relation_stack):
                 fp.write(','.join(str(x) for x in index) + ':' + str(relation) + "\n")
 
+    # 画出bbox
     def draw_labeled_box(self, index):
         self.gl_widget.repaint_with_data(index)
 
+    # 更换 bbox
     def change_obbs(self, path):
         self.gl_widget.change_data(path)
         self.data = self.gl_widget.get_label_data()
@@ -195,3 +203,6 @@ class Window(QWidget):
         self.display_relations_list.clear()
         for relation in self.relation_stack:
             self.display_relations_list.addItem(str(relation))
+
+    def display_all_point(self):
+        self.gl_widget.display_point()

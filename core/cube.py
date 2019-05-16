@@ -42,13 +42,15 @@ class Cube(object):
     ], dtype=np.uint8)
 
     def __init__(self, size=1, pose=None):
+        self.point_array = []
         pass
 
     def init_data(self):
 
         self.v, self.label = get_room_data(self.path)
+        self.point_array = get_ply_data(self.path)
 
-    def draw(self, update=None):
+    def draw(self, update=None, is_point=False):
         self.init_data()
         if update is not None:
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
@@ -57,6 +59,7 @@ class Cube(object):
             glBegin(GL_LINES)
 
             for i, array in enumerate(self.v):
+
                 if i in update:
                     glColor3f(0, 1, 0)
                 else:
@@ -65,6 +68,15 @@ class Cube(object):
                     for vertex in edge:
                         glVertex3f(array[vertex][0], array[vertex][1], array[vertex][2])
             glEnd()
+            if is_point:
+                glBegin(GL_POINTS)
+                for i, array in enumerate(self.point_array):
+                    coords = array[:3]
+                    colors = array[3:]
+                    print(coords, colors)
+                    glColor3f(colors[0][0], colors[0][1], colors[0][2])
+                    glVertex3f(coords[0][0], coords[0][1], coords[0][2])
+                glEnd()
             glPopMatrix()
         else:
             glPushMatrix()

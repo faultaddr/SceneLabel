@@ -21,6 +21,7 @@ class GLWidget(QOpenGLWidget):
         self.rotCenter = QVector3D(0, 0, 0)
         self.data = None
         self.cube = Cube()
+        self.is_point = False
 
     def minimumSizeHint(self):
         return QSize(400, 400)
@@ -51,6 +52,10 @@ class GLWidget(QOpenGLWidget):
         self.cube.init_data()
         self.paintGL()
 
+    def display_point(self):
+        self.is_point = not self.is_point
+        self.paintGL()
+
     def get_label_data(self):
         return self.cube.label
 
@@ -65,7 +70,7 @@ class GLWidget(QOpenGLWidget):
         gl.glEnableClientState(gl.GL_COLOR_ARRAY)
 
         # draw all key frames
-        self.cube.draw(self.data)
+        self.cube.draw(self.data, self.is_point)
 
         # disable drawing vertices and color array
         gl.glDisableClientState(gl.GL_VERTEX_ARRAY)
