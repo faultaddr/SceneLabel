@@ -61,9 +61,6 @@ def get_combined_ids(agg_path, seg_path):
     label_ids = np.zeros(shape=(num_verts), dtype=np.uint32)
 
     import core.util as util
-    import core.util_3d as util_3d
-
-    import multiprocessing as mp
 
     label_map = util.read_label_mapping('../data/scannetv2-labels.combined.tsv', label_from='raw_category',
                                         label_to='nyu40id')

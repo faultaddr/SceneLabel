@@ -3,6 +3,7 @@ import numpy as np
 import os
 from core import generate_instance_id
 from core.new_parser import FitObb, save_obb
+import sys
 
 id_mapping_realation = {0: 'none', 1: 'wall', 2: 'floor', 3: 'cabinet', 4: 'bed', 5: 'chair', 6: 'sofa', 7: 'table',
                         8: 'door', 9: 'window', 10: 'bookshelf', 11: 'picture', 12: 'counter', 13: 'blinds', 14: 'desk',
@@ -37,32 +38,41 @@ def opt_ply(path):
             dict_label[i] = True
 
     dict_w = {}
+    colors_w = {}
     for i, _w in enumerate(label_instance_list):
         if _w in dict_w.keys():
             dict_w[_w].append(coords[i].tolist())
+            colors_w[_w].append(colors[i].tolist())
         else:
             dict_w[_w] = []
+            colors_w[_w] = []
             dict_w[_w].append(coords[i].tolist())
+            colors_w[_w].append(colors[i].tolist())
     result = []
     for (key, value) in dict_w.items():
         # print(key,'\n',value)
         result.append((key, FitObb(np.array(value))))
-    return result
+    return result, dict_w, colors_w
 
 
 def save_obb_label(path, label_list):
     with open(path, 'w')as fp:
         for i, label in enumerate(label_list):
-            if i == len(label) - 1:
+            if i == len(label_list) - 1:
                 fp.write(str(i) + ':' + str(label))
             else:
                 fp.write(str(i) + ':' + str(label) + '\n')
 
 
+def save_ply_part(path, coords_colors_list):
+    np.save(path, coords_colors_list)
+
+
 def opt_obb(path, for_save=False):
-    point_group_result = opt_ply(path)
+    point_group_result, coords_dict, colors_dict = opt_ply(path)
     value_list = []
     label_list = []
+    coords_color_list = []
     valid_label_list = ['floor', 'cabinet', 'bed', 'chair', 'sofa', 'table', 'door', 'window', 'bookshelf', 'picture',
                         'counter', 'desk', 'curtain', 'refrigerator', 'shower curtain', 'toilet', 'sink', 'bathtub',
                         'otherfurniture']
@@ -77,10 +87,13 @@ def opt_obb(path, for_save=False):
             continue
         value_list.append(value)
         label_list.append(label)
+
+        coords_dict[key].extend(colors_dict[key])
+        coords_color_list.append(np.array(coords_dict[key]))
     if for_save:
         save_obb(str(path[0].split('.')[0]) + '_value.obb', value_list)
-
         save_obb_label(path[0].split('.')[0] + '_label.txt', label_list)
+        save_ply_part(path[0].split('.')[0] + '_part', np.array(coords_color_list))
     return label_list
 
 

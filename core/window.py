@@ -16,6 +16,7 @@ from PyQt5.QtWidgets import QComboBox, QLineEdit, QListWidget, QCheckBox, QListW
 class Window(QWidget):
     def __init__(self):
         super(Window, self).__init__()
+        self.display_relations_list = QListWidget()
         self.save_relation = QPushButton('保存当前关系')
         self.clear_write_btn = QPushButton('删除所有关系')
         self.revert_last_state = QPushButton('撤销当前写入')
@@ -33,6 +34,7 @@ class Window(QWidget):
         self.obbs_path = ''
         self.save_path = ''
         self.relation_stack = []
+        self.display_all_relations()
 
     def init_ui(self):
 
@@ -40,7 +42,9 @@ class Window(QWidget):
         main_layout.addWidget(self.gl_widget)
         child_layout_h_1 = QHBoxLayout()
         child_layout_h_2 = QHBoxLayout()
-        child_layout_h_1.addWidget(self.choose_file, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_3 = QHBoxLayout()
+        child_layout_v_1 = QVBoxLayout()
+
         # label choose
         self.label_box.show()
         self.label_box.fn_init_data(self.data)
@@ -51,16 +55,15 @@ class Window(QWidget):
         # choose file dialog
         self.choose_file.toggle()
         self.choose_file.clicked.connect(lambda: self.on_click(self.choose_file))
-        child_layout_h_1.addWidget(self.label_box, 0, Qt.AlignLeft | Qt.AlignTop)
 
         # display combined relations
         self.display_btn.toggle()
         self.display_btn.clicked.connect(lambda: self.on_click(self.display_btn))
-        child_layout_h_1.addWidget(self.display_btn, 0, Qt.AlignLeft | Qt.AlignTop)
+
         # 关系选择
         self.relation_text.addItems(['0: 邻接', '1:支撑', '2:环绕', '3:并列'])
         self.relation_text.currentIndexChanged.connect(lambda: self.on_click(self.relation_text))
-        child_layout_v_1 = QVBoxLayout()
+
         # 保存关系
         self.save_relation.toggle()
         self.save_relation.clicked.connect(lambda: self.on_click(self.save_relation))
@@ -73,15 +76,25 @@ class Window(QWidget):
         # 撤销前一个写入的关系
         self.revert_last_state.toggle()
         self.revert_last_state.clicked.connect(lambda: self.on_click(self.revert_last_state))
+        # 显示所有关系
+        self.display_relations_list.clicked.connect(lambda: self.on_click(self.display_relations_list))
+        self.display_relations_list.currentItemChanged.connect(lambda: self.display_all_relations())
 
-        child_layout_h_2.addWidget(self.relation_text, 0, Qt.AlignLeft | Qt.AlignTop)
-        child_layout_h_2.addWidget(self.save_relation, 0, Qt.AlignLeft | Qt.AlignTop)
-        child_layout_h_2.addWidget(self.write_btn, 0, Qt.AlignLeft | Qt.AlignTop)
-        child_layout_h_2.addWidget(self.revert_last_state, 0, Qt.AlignLeft | Qt.AlignTop)
-        child_layout_h_2.addWidget(self.clear_write_btn, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_1.addWidget(self.choose_file, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_1.addWidget(self.label_box, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_1.addWidget(self.display_btn, 0, Qt.AlignLeft | Qt.AlignTop)
 
-        child_layout_v_1.addLayout(child_layout_h_1, 2)
-        child_layout_v_1.addLayout(child_layout_h_2, 2)
+        child_layout_h_2.addWidget(self.display_relations_list, 0, Qt.AlignLeft | Qt.AlignTop)
+
+        child_layout_h_3.addWidget(self.relation_text, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_3.addWidget(self.save_relation, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_3.addWidget(self.write_btn, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_3.addWidget(self.revert_last_state, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_3.addWidget(self.clear_write_btn, 0, Qt.AlignLeft | Qt.AlignTop)
+
+        child_layout_v_1.addLayout(child_layout_h_1, 1)
+        child_layout_v_1.addLayout(child_layout_h_2, 1)
+        child_layout_v_1.addLayout(child_layout_h_3, 1)
         main_layout.addLayout(child_layout_v_1, 2)
         self.setLayout(main_layout)
         self.setWindowTitle("Label Tools")
@@ -90,9 +103,13 @@ class Window(QWidget):
         qr.moveCenter(cp)
         self.move(qr.topLeft())
 
-    def draw_multi_obb(self):
-        checked_box = self.label_box.get_checked_box()
-        self.draw_labeled_box(checked_box)
+    def draw_multi_obb(self, index=None):
+        if index:
+            print('---draw_multi_obb', index)
+            self.draw_labeled_box(index[0])
+        else:
+            checked_box = self.label_box.get_checked_box()
+            self.draw_labeled_box(checked_box)
 
     # onclick event handler
     def on_click(self, widget):
@@ -118,8 +135,13 @@ class Window(QWidget):
             self.write_txt()
         if widget == self.clear_write_btn:
             self.clear_txt()
+        if widget == self.revert_last_state:
+            self.back_stack()
         if widget == self.save_relation:
             self.write_single_relation()
+        if widget == self.display_relations_list:
+            print('dianji')
+            self.draw_multi_obb(self.relation_stack[self.display_relations_list.currentIndex()])
 
     # 删除
     def clear_txt(self):
@@ -130,13 +152,20 @@ class Window(QWidget):
 
     # 撤销
     def back_stack(self):
+        print('back_stack', self.relation_stack)
         self.relation_stack.pop()
+        self.display_all_relations()
 
     # 保存单个
     def write_single_relation(self):
         # 先压栈
         pair = self.label_box.get_checked_box()
-        self.relation_stack.append((pair, self.relation_text.currentIndex()))
+        if len(pair) >= 1:
+            index = self.relation_text.currentIndex()
+
+            if (pair, index) not in self.relation_stack:
+                self.relation_stack.append((pair, index))
+                self.display_all_relations()
 
     # 保存
     def write_txt(self):
@@ -149,7 +178,7 @@ class Window(QWidget):
         self.save_path = os.path.join(directory, file_name)
         with open(self.save_path, 'a+')as fp:
             for i, (index, relation) in enumerate(self.relation_stack):
-                fp.write(','.join(index) + ':' + str(relation) + "\n")
+                fp.write(','.join(str(x) for x in index) + ':' + str(relation) + "\n")
 
     def draw_labeled_box(self, index):
         self.gl_widget.repaint_with_data(index)
@@ -160,3 +189,9 @@ class Window(QWidget):
         print(self.data)
         self.label_box.clear()
         self.label_box.fn_init_data(self.data)
+
+    # 显示所有已保存的关系
+    def display_all_relations(self):
+        self.display_relations_list.clear()
+        for relation in self.relation_stack:
+            self.display_relations_list.addItem(str(relation))
