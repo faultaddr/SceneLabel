@@ -71,12 +71,13 @@ class Cube(object):
             if is_point:
                 glBegin(GL_POINTS)
                 for i, array in enumerate(self.point_array):
-                    coords = array[:3]
-                    colors = array[3:]
-                    print(coords, colors)
-                    glColor3f(colors[0][0], colors[0][1], colors[0][2])
-                    glVertex3f(coords[0][0], coords[0][1], coords[0][2])
+                    lens = int(len(array) / 2)
+                    print(lens)
+                    for j in range(lens):
+                        glColor3f(array[lens + j][0], array[lens + j][1], array[lens + j][2])
+                        glVertex3f(array[j][0], array[j][1], array[j][2])
                 glEnd()
+                glFlush()
             glPopMatrix()
         else:
             glPushMatrix()

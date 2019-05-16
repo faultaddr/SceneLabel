@@ -14,7 +14,7 @@ id_mapping_realation = {0: 'none', 1: 'wall', 2: 'floor', 3: 'cabinet', 4: 'bed'
                         39: 'otherfurniture', 40: 'otherprop'}
 
 '''
-path: 文件名数组 ply seg agg 
+path: 文件名数组 ply seg agg
 '''
 
 
@@ -112,5 +112,5 @@ def main(path, for_save=True):
 
 
 if __name__ == '__main__':
-    original_path = '/data/scans/scans/'
+    original_path = '/data/proj/scans/scans/'
     main(original_path, True)

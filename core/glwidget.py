@@ -44,17 +44,17 @@ class GLWidget(QOpenGLWidget):
     def repaint_with_data(self, data):
         self.data = data
         print(self.data, 'self data')
-        self.paintGL()
+        self.update()
 
     def change_data(self, path):
         print('---*change data*---')
         self.cube.path = path
         self.cube.init_data()
-        self.paintGL()
+        self.update()
 
     def display_point(self):
         self.is_point = not self.is_point
-        self.paintGL()
+        self.update()
 
     def get_label_data(self):
         return self.cube.label
@@ -75,7 +75,6 @@ class GLWidget(QOpenGLWidget):
         # disable drawing vertices and color array
         gl.glDisableClientState(gl.GL_VERTEX_ARRAY)
         gl.glDisableClientState(gl.GL_COLOR_ARRAY)
-        self.update()
 
     def mousePressEvent(self, event):
         self.lastPos = event.pos()

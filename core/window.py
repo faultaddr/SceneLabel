@@ -99,7 +99,7 @@ class Window(QWidget):
         child_layout_v_1.addLayout(child_layout_h_1, 1)
         child_layout_v_1.addLayout(child_layout_h_2, 1)
         child_layout_v_1.addLayout(child_layout_h_3, 1)
-        main_layout.addLayout(child_layout_v_1, 2)
+        main_layout.addLayout(child_layout_v_1, 0)
         self.setLayout(main_layout)
         self.setWindowTitle("Label Tools")
         qr = self.frameGeometry()
