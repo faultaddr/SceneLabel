@@ -31,6 +31,8 @@ class Window(QWidget):
         self.file_dialog = QFileDialog()
         self.file_dialog_write = QFileDialog()
         self.data = []
+        self.fake_data = []
+        self.use_fake = False
         self.init_ui()
         self.obbs_path = ''
         self.save_path = ''
@@ -90,6 +92,7 @@ class Window(QWidget):
 
         child_layout_h_2.addWidget(self.display_relations_list, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_2.addWidget(self.display_point, 0, Qt.AlignLeft | Qt.AlignTop)
+
         child_layout_h_3.addWidget(self.relation_text, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_3.addWidget(self.save_relation, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_3.addWidget(self.write_btn, 0, Qt.AlignLeft | Qt.AlignTop)
@@ -113,13 +116,20 @@ class Window(QWidget):
             self.draw_labeled_box(index[0])
         else:
             checked_box = self.label_box.get_checked_box()
-            self.draw_labeled_box(checked_box)
+            print(checked_box)
+            multi = []
+            for j, checked_index in enumerate(checked_box):
+                if self.use_fake:
+                    for i, d in enumerate(self.fake_data[checked_box[j]].split(',')):
+                        multi.append(int(d.split(':')[0]))
+                else:
+                    for i, d in enumerate(self.data[checked_box[j]].split(',')):
+                        multi.append(int(d.split(':')[0]))
+            self.draw_labeled_box(multi)
 
     # onclick event handler
     def on_click(self, widget):
         if widget == self.label_box:
-            print(widget.currentIndex())
-            # 画出当前的 box
             self.draw_labeled_box([widget.currentIndex()])
         if widget == self.choose_file:
             directory = self.file_dialog.getExistingDirectory(self, '选取文件夹', '')
@@ -155,25 +165,58 @@ class Window(QWidget):
         if self.save_path != '':
             if os.path.isfile(self.save_path):
                 os.remove(self.save_path)
+        self.use_fake = False
 
     # 撤销
     def back_stack(self):
         print('back_stack', self.relation_stack)
         self.relation_stack.pop()
+        if not self.relation_stack:
+            self.use_fake = False
         self.display_all_relations()
 
     # 保存单个
     def write_single_relation(self):
         # 先压栈
         pair = self.label_box.get_checked_box()
+        pair_temp = ''
+
+        if self.use_fake:
+            for i, p in enumerate(pair):
+                for single in self.fake_data[p].split(','):
+                    print(single)
+                    pair_temp = pair_temp + '-' + single.split(':')[0]
+            pair = pair_temp
+        else:
+            pair = '-'.join([str(x) for x in pair])
         if len(pair) >= 1:
             index = self.relation_text.currentIndex()
-
             if (pair, index) not in self.relation_stack:
                 self.relation_stack.append((pair, index))
                 self.display_all_relations()
+        fake_data = []
+        record = []
+        # 现有的都是-a-b-c 组织起来的
+        for (pair, index) in self.relation_stack:
+            temp_list = []
+            print(pair.split('-'))
+            for p in pair.split('-'):
+                if p != '':
+                    record.append(int(p))
+                    temp_list.append(self.data[int(p)])
+            fake_data.append(','.join([str(x) for x in temp_list]))
+        for i, d in enumerate(self.data):
+            if i in record:
+                pass
+            else:
+                fake_data.append(d)
+        print(fake_data)
+        self.fake_data = fake_data
+        self.label_box.fn_init_data(self.fake_data)
+        self.use_fake = True
 
-    # 保存
+        # 保存
+
     def write_txt(self):
         path = self.obbs_path
         file_name = path.split('/')[-1] + '_result.txt'

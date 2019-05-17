@@ -61,7 +61,7 @@ def get_room_data(path):
             with open(os.path.join(path, file), 'r') as fp:
                 line_list = fp.readlines()
                 for line in line_list:
-                    label.append(line)
+                    label.append(line.strip())
     return bbox, label
 
 
@@ -72,7 +72,7 @@ def get_ply_data(path):
     all_box_point_array = []
     for i, file in enumerate(file_list):
         if file.split('.')[-1] == 'npy':
-            all_box_point_array = np.load(os.path.join(path, file))
+            all_box_point_array = np.load(os.path.join(path, file), allow_pickle=True)
     return all_box_point_array
 
 
