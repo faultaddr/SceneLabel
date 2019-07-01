@@ -169,7 +169,7 @@ class Window(QWidget):
 
     # 撤销
     def back_stack(self):
-        print('back_stack', self.relation_stack)
+        print('back_stack', self.relation_stack) 
         self.relation_stack.pop()
         if not self.relation_stack:
             self.use_fake = False
@@ -215,7 +215,7 @@ class Window(QWidget):
         self.label_box.fn_init_data(self.fake_data)
         self.use_fake = True
 
-        # 保存
+    # 保存
 
     def write_txt(self):
         path = self.obbs_path
