@@ -1,5 +1,6 @@
 import os, sys
 import csv
+import json
 
 try:
     import numpy as np
@@ -187,3 +188,28 @@ def create_color_palette():
         (82, 84, 163),  # otherfurn
         (100, 85, 144)
     ]
+
+
+import inspect
+
+
+def get__function_name():
+    """获取正在运行函数(或方法)名称"""
+    return inspect.stack()[1][3]
+
+
+def get_json_data(path):
+    """
+    :rtype: a dict that contains all info of an area
+    """
+    with open(path)as fp:
+        model_array = json.load(fp)
+        first_hier = []
+        for i, model in enumerate(model_array):
+            if model['parent'] == 0:
+                group = [int(x) for x in model['children']]
+                for g in group:
+                    first_hier.append(model_array[int(g)])
+        return first_hier
+
+def get_obj_data(path):
