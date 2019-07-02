@@ -1,6 +1,8 @@
 import os, sys
 import csv
 import json
+import open3d as o3d
+import logging
 
 try:
     import numpy as np
@@ -202,14 +204,40 @@ def get_json_data(path):
     """
     :rtype: a dict that contains all info of an area
     """
-    with open(path)as fp:
-        model_array = json.load(fp)
-        first_hier = []
-        for i, model in enumerate(model_array):
-            if model['parent'] == 0:
-                group = [int(x) for x in model['children']]
-                for g in group:
-                    first_hier.append(model_array[int(g)])
-        return first_hier
+    if os.path.exists(path):
+        with open(path)as fp:
+            model_array = json.load(fp)
+            first_hier = []
+            for i, model in enumerate(model_array):
+                if model['parent'] == '0':
+                    group = [int(x) for x in model['children']]
+                    for g in group:
+                        first_hier.append(model_array[int(g)])
+            return first_hier
+    else:
+        return []
+
 
 def get_obj_data(path):
+    """
+    :rtype: vertices:np_array,triangles:np_array,normals:np_array
+    """
+    mesh = o3d.io.read_triangle_mesh(path)
+    return np.asarray(mesh.vertices), np.asarray(mesh.triangles), np.asarray(mesh.vertex_normals)
+
+
+def get_logger():
+    # logger settings
+    logger = logging.getLogger(__name__)
+    logger.setLevel(level=logging.INFO)
+    handler = logging.FileHandler("log.txt")
+    handler.setLevel(logging.INFO)
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+
+    console = logging.StreamHandler()
+    console.setLevel(logging.INFO)
+
+    logger.addHandler(handler)
+    logger.addHandler(console)
+    return logger
