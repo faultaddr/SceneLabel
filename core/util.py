@@ -16,6 +16,8 @@ except:
     print("pip install imageio")
     sys.exit(-1)
 
+logger = None
+
 
 def get_up_down_face_coords(obbs):
     v = [[] for i in range(len(obbs))]
@@ -196,7 +198,9 @@ import inspect
 
 
 def get__function_name():
-    """获取正在运行函数(或方法)名称"""
+    """
+    :rtype: name of running method
+    """
     return inspect.stack()[1][3]
 
 
@@ -211,6 +215,7 @@ def get_json_data(path):
             for i, model in enumerate(model_array):
                 if model['parent'] == '0':
                     group = [int(x) for x in model['children']]
+                    print(group)
                     for g in group:
                         first_hier.append(model_array[int(g)])
             return first_hier
@@ -218,26 +223,38 @@ def get_json_data(path):
         return []
 
 
+def get_label_info(path):
+    label_list = []
+    hier_data = get_json_data(path)
+    if hier_data:
+        for group in hier_data:
+            label_list.append(' '.join([str(i) for i in group['label'][1:]]))
+    return label_list
+
+
 def get_obj_data(path):
     """
     :rtype: vertices:np_array,triangles:np_array,normals:np_array
     """
     mesh = o3d.io.read_triangle_mesh(path)
-    return np.asarray(mesh.vertices), np.asarray(mesh.triangles), np.asarray(mesh.vertex_normals)
+    return np.asarray(mesh.vertices).tolist(), np.asarray(mesh.triangles).tolist(), np.asarray(
+        mesh.vertex_normals).tolist()
 
 
 def get_logger():
-    # logger settings
-    logger = logging.getLogger(__name__)
-    logger.setLevel(level=logging.INFO)
-    handler = logging.FileHandler("log.txt")
-    handler.setLevel(logging.INFO)
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    handler.setFormatter(formatter)
+    global logger
+    if logger is None:
+        # logger settings
+        logger = logging.getLogger(__name__)
+        logger.setLevel(level=logging.INFO)
+        handler = logging.FileHandler("log.txt")
+        handler.setLevel(logging.INFO)
+        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        handler.setFormatter(formatter)
 
-    console = logging.StreamHandler()
-    console.setLevel(logging.INFO)
+        console = logging.StreamHandler()
+        console.setLevel(logging.INFO)
 
-    logger.addHandler(handler)
-    logger.addHandler(console)
+        logger.addHandler(handler)
+        logger.addHandler(console)
     return logger

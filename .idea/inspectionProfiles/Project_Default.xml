@@ -24,6 +24,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="PyQt5.QtWidgets.clicked.*" />
+          <option value="PyQt5.QtWidgets.currentIndexChanged.connect" />
         </list>
       </option>
     </inspection_tool>

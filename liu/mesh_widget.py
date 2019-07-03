@@ -1,20 +1,13 @@
 # coding=utf-8
-from OpenGL.GL import *
-from OpenGL.GLU import *
-import numpy as np
-from OpenGL.raw.GLUT import *
 
-from core.util import *
-
-from OpenGL.GLUT import *
-from PyQt5.QtWidgets import QOpenGLWidget
-from PyQt5.QtCore import QSize, Qt
-from PyQt5.QtGui import QVector3D, QMatrix4x4
 import OpenGL.GL as gl
 import OpenGL.GLU as glu
-from core.camera import Camera
-from string import digits
+from PyQt5.QtCore import QSize, Qt
+from PyQt5.QtGui import QVector3D, QMatrix4x4
+from PyQt5.QtWidgets import QOpenGLWidget
 
+from core.camera import Camera
+from core.util import *
 from liu.Mesh import Mesh
 
 ROOT_PATH = '/data/Liu/obj_data/pc'
@@ -24,10 +17,10 @@ logger = get_logger()
 class GLWidget(QOpenGLWidget):
     def __init__(self, parent=None):
         super(GLWidget, self).__init__(parent)
-        self.lastZ = 72
-        self.cam = Camera(10, 10, 200)
-        self.cam.lookAt(QVector3D(0, 0, 0), QVector3D(50, 50, 50), QVector3D(0, -10, 0))
-        self.rotCenter = QVector3D(50, 50, 50)
+        self.lastZ = 10
+        self.cam = Camera(45.0, 0.1, 500)
+        self.cam.lookAt(QVector3D(0, 0, 10), QVector3D(0, 0, 0), QVector3D(0, 10, 0))
+        self.rotCenter = QVector3D(0, 0, 0)
         self.data = None
         self.mesh = Mesh(path='')
         self.is_point = False
@@ -53,12 +46,16 @@ class GLWidget(QOpenGLWidget):
     def change_data(self, path):
         logger.info(get__function_name() + '-->')
         self.mesh.path = path
+        self.mesh.init_data()
         self.update()
 
     def repaint_with_data(self, data):
-        self.data = data
-        print(self.data, 'self data')
-        self.update()
+        logger.info(get__function_name() + '-->' + str(data))
+        logger.info(get__function_name() + '-->' + str(self.mesh.hier_data))
+        if self.mesh.hier_data:
+            self.mesh.hier_display_index = data
+            self.mesh.change_data()
+            self.update()
 
     def paintGL(self):
         logger.info(get__function_name() + '-->')
@@ -73,7 +70,7 @@ class GLWidget(QOpenGLWidget):
         gl.glEnableClientState(gl.GL_NORMAL_ARRAY)
 
         # draw all key frames
-        self.mesh.draw_mesh()
+        self.mesh.draw()
 
         # disable drawing vertices and color array
         gl.glDisableClientState(gl.GL_VERTEX_ARRAY)

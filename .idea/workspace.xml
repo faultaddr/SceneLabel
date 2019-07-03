@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6782a91-b4d6-45d3-a3f8-1f9c8a4fa48c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/liu/Mesh.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/simpleGL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/simpleGL.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/Mesh.py" beforeDir="false" afterPath="$PROJECT_DIR$/liu/Mesh.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/liu/mesh_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/liu/mesh_widget.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/liu/window_liu.py" beforeDir="false" afterPath="$PROJECT_DIR$/liu/window_liu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,66 +18,112 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/liu/mesh_widget.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-              <folding>
-                <element signature="e#15#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/liu/opt_gt.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="99" selection-start-line="99" selection-end-line="99" />
-              <folding>
-                <element signature="e#15#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/liu/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/liu/window_liu.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/liu/Mesh.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="76" column="15" lean-forward="true" selection-start-line="72" selection-end-line="73" selection-end-column="27" />
-              <folding>
-                <element signature="e#15#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/liu/window_liu.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret line="26" selection-start-line="26" selection-end-line="26" />
+                  <folding>
+                    <element signature="e#0#27#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/liu/mesh_widget.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="515">
+                  <caret line="116" selection-start-line="116" selection-end-line="116" />
+                  <folding>
+                    <element signature="e#16#38#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/liu/Mesh.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="792">
+                  <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
+                  <folding>
+                    <element signature="e#15#40#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/core/util.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="116">
+                  <caret line="226" column="19" lean-forward="true" selection-start-line="226" selection-start-column="19" selection-end-line="226" selection-end-column="19" />
+                  <folding>
+                    <element signature="e#0#14#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/core/ComboCheckBox.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="312">
+                  <caret line="76" column="24" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/core/window.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="6056">
+                  <caret line="233" column="47" selection-start-line="233" selection-start-column="47" selection-end-line="233" selection-end-column="47" />
+                  <folding>
+                    <element signature="e#0#9#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/liu/window_liu.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="766">
+                  <caret line="102" column="75" selection-start-line="102" selection-start-column="75" selection-end-line="102" selection-end-column="75" />
+                  <folding>
+                    <element signature="e#0#27#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -88,7 +134,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>print</find>
       <find>glWidget</find>
       <find>draw_multi_obb</find>
       <find>child_layout</find>
@@ -103,6 +148,11 @@
       <find>__ver</find>
       <find>self.</find>
       <find>main_layout</find>
+      <find>glut</find>
+      <find>onclick</find>
+      <find>print</find>
+      <find>label</find>
+      <find>display_relations_list</find>
     </findStrings>
     <replaceStrings>
       <replace>gl_widget</replace>
@@ -121,27 +171,29 @@
       <list>
         <option value="$PROJECT_DIR$/core/new_parser.py" />
         <option value="$PROJECT_DIR$/core/util_3d.py" />
-        <option value="$PROJECT_DIR$/core/ComboCheckBox.py" />
         <option value="$PROJECT_DIR$/core/generate_instance_id.py" />
         <option value="$PROJECT_DIR$/core/glwidget.py" />
         <option value="$PROJECT_DIR$/core/cube.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/core/window.py" />
         <option value="$PROJECT_DIR$/core/generate_obb_label.py" />
         <option value="$PROJECT_DIR$/liu/opt_gt.py" />
         <option value="$PROJECT_DIR$/liu/__init__.py" />
+        <option value="$PROJECT_DIR$/run.py" />
+        <option value="$PROJECT_DIR$/liu/liu_json/bedroom000005.json" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/core/ComboCheckBox.py" />
+        <option value="$PROJECT_DIR$/liu/Mesh.py" />
+        <option value="$PROJECT_DIR$/liu/mesh_widget.py" />
         <option value="$PROJECT_DIR$/core/util.py" />
         <option value="$PROJECT_DIR$/liu/window_liu.py" />
-        <option value="$PROJECT_DIR$/run.py" />
-        <option value="$PROJECT_DIR$/liu/mesh_widget.py" />
-        <option value="$PROJECT_DIR$/liu/Mesh.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2180" />
-    <option name="width" value="1912" />
-    <option name="height" value="1400" />
+    <option name="x" value="2225" />
+    <option name="y" value="19" />
+    <option name="width" value="1892" />
+    <option name="height" value="1398" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -154,11 +206,6 @@
             <path>
               <item name="SceneLabel" type="b2602c69:ProjectViewProjectNode" />
               <item name="SceneLabel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SceneLabel" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SceneLabel" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SceneLabel" type="b2602c69:ProjectViewProjectNode" />
@@ -187,7 +234,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/liu" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -208,6 +255,28 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.run">
+    <configuration name="Mesh" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="simpleGL" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/liu" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/liu/Mesh.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="generate_obb_label" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="simpleGL" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -296,42 +365,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="window" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="simpleGL" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/core" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/core/window.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.generate_obb_label" />
       <item itemvalue="Python.run" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python.window" />
       <item itemvalue="Python.opt_gt" />
+      <item itemvalue="Python.Mesh" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.run" />
-        <item itemvalue="Python.opt_gt" />
+        <item itemvalue="Python.Mesh" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.opt_gt" />
         <item itemvalue="Python.generate_obb_label" />
-        <item itemvalue="Python.window" />
       </list>
     </recent_temporary>
   </component>
@@ -365,20 +412,23 @@
       <workItem from="1562014291787" duration="3861000" />
       <workItem from="1562025524486" duration="9748000" />
       <workItem from="1562066634791" duration="14357000" />
-      <workItem from="1562059119304" duration="11418000" />
+      <workItem from="1562059119304" duration="11631000" />
+      <workItem from="1562074061155" duration="18688000" />
+      <workItem from="1562178011715" duration="11161000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133554000" />
+    <option name="totallyTimeSpent" value="163616000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="2560" height="1404" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08108108" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1200318" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Statistic" order="0" weight="0.11638955" />
+      <window_info anchor="bottom" id="Statistic" order="0" weight="0.023752969" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39904988" />
@@ -390,39 +440,40 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50039744" side_tool="true" weight="0.41330168" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.3262745" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.3256917" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.22486144" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32944787" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Database" order="4" weight="0.3298887" />
       <window_info anchor="right" id="R Graphics" order="5" />
       <window_info anchor="right" id="R Packages" order="6" />
       <window_info anchor="right" x="0" y="0" width="590" height="1204" id="Documentation" order="7" side_tool="true" weight="0.3298887" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25536993" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1200318" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32698414" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39952904" />
+      <window_info anchor="bottom" id="Statistic" order="0" weight="0.11638955" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39904988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32857144" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49960256" visible="true" weight="0.21852732" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50039744" side_tool="true" weight="0.41330168" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.3256917" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.22486144" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32944787" />
+      <window_info anchor="right" id="Database" order="4" weight="0.3298887" />
       <window_info anchor="right" id="R Graphics" order="5" />
       <window_info anchor="right" id="R Packages" order="6" />
       <window_info anchor="right" x="0" y="0" width="590" height="1204" id="Documentation" order="7" side_tool="true" weight="0.3298887" />
@@ -434,18 +485,12 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SceneLabel$generate_obb_label.coverage" NAME="generate_obb_label Coverage Results" MODIFIED="1558028177729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/SceneLabel$opt_gt.coverage" NAME="opt_gt Coverage Results" MODIFIED="1562018292162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/liu" />
-    <SUITE FILE_PATH="coverage/SceneLabel$run.coverage" NAME="run Coverage Results" MODIFIED="1562073141354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SceneLabel$run.coverage" NAME="run Coverage Results" MODIFIED="1562159936648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SceneLabel$Mesh.coverage" NAME="Mesh Coverage Results" MODIFIED="1562133144247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/liu" />
     <SUITE FILE_PATH="coverage/SceneLabel$window.coverage" NAME="window Coverage Results" MODIFIED="1557903588561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
-    <SUITE FILE_PATH="coverage/SceneLabel$test.coverage" NAME="test Coverage Results" MODIFIED="1560720300850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SceneLabel$test.coverage" NAME="test Coverage Results" MODIFIED="1562132419245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.conda/envs/py36/lib/python3.6/site-packages/OpenGL/raw/GLUT/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="368" selection-start-line="368" selection-end-line="368" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/lib/python3.7/ntpath.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -480,13 +525,6 @@
     <entry file="file://$PROJECT_DIR$/b.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" selection-start-line="3" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/util_3d.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -498,13 +536,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/liu/liu_json/0.txt" />
-    <entry file="file://$PROJECT_DIR$/core/ComboCheckBox.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/generate_obb_label.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -546,23 +577,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/liu/liu_json/bedroom000005.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$USER_HOME$/.conda/envs/py36/lib/python3.6/site-packages/OpenGL/GL/VERSION/GL_1_0.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
           <caret line="318" column="18" lean-forward="true" selection-start-line="318" selection-start-column="18" selection-end-line="318" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="228" column="17" selection-start-line="228" selection-start-column="17" selection-end-line="228" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -572,16 +590,6 @@
           <caret line="65" column="38" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
           <folding>
             <element signature="e#15#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/window.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -596,6 +604,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.conda/envs/py36/lib/python3.6/site-packages/OpenGL/raw/GLUT/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="881" selection-start-line="881" selection-end-line="881" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.conda/envs/py36/lib/python3.6/site-packages/OpenGL/wrapper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="791" selection-start-line="791" selection-end-line="791" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.conda/envs/py36/lib/python3.6/site-packages/OpenGL/GL/pointers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="153" selection-start-line="153" selection-end-line="153" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/liu/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
@@ -603,39 +639,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liu/window_liu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liu/mesh_widget.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-          <folding>
-            <element signature="e#15#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/liu/opt_gt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
+        <state relative-caret-position="714">
           <caret line="99" selection-start-line="99" selection-end-line="99" />
           <folding>
             <element signature="e#15#26#0" expanded="true" />
@@ -643,12 +649,117 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/liu/log.txt" />
+    <entry file="file://$PROJECT_DIR$/log.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36738">
+          <caret line="1413" lean-forward="true" selection-start-line="1413" selection-end-line="1413" />
+        </state>
+      </provider>
+      <provider editor-type-id="LargeFileEditor">
+        <state relative-caret-position="572">
+          <caret line="12" column="1135" selection-start-line="12" selection-start-column="1135" selection-end-line="12" selection-end-column="1135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liu/liu_json/bedroom000007.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="43" column="32" lean-forward="true" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+          <folding>
+            <element signature="e#17#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liu/liu_json/bedroom000005.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="37" selection-end-column="31902" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liu/liu_json/bedroom000087.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="81" selection-end-column="13770" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/50545331/PyQt5/QtGui/QStandardItem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="216" column="8" selection-start-line="216" selection-start-column="8" selection-end-line="216" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/ComboCheckBox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="76" column="24" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.conda/envs/py36/lib/python3.6/site-packages/PyQt5/uic/properties.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="454" column="4" selection-start-line="454" selection-start-column="4" selection-end-line="454" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/liu/Mesh.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="76" column="15" lean-forward="true" selection-start-line="72" selection-end-line="73" selection-end-column="27" />
+        <state relative-caret-position="792">
+          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
           <folding>
-            <element signature="e#15#38#0" expanded="true" />
+            <element signature="e#15#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liu/mesh_widget.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+          <folding>
+            <element signature="e#16#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/window.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6056">
+          <caret line="233" column="47" selection-start-line="233" selection-start-column="47" selection-end-line="233" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="226" column="19" lean-forward="true" selection-start-line="226" selection-start-column="19" selection-end-line="226" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liu/window_liu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="766">
+          <caret line="102" column="75" selection-start-line="102" selection-start-column="75" selection-end-line="102" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
