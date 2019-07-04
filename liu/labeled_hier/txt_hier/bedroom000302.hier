@@ -1,0 +1,126 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 20
+leaf_group 0 2 3 4 5 6 8 9 14 15 16 17 20 22 24 28 30 32 38 45
+label 0 bedroom
+newModel 1
+parent 15
+is_meaningful yes
+children 
+leaf_group 6
+label 7 bed frame
+newModel 2
+parent 18
+is_meaningful yes
+children 
+leaf_group 2 45
+label 10 table lamp
+newModel 3
+parent 13
+is_meaningful yes
+children 
+leaf_group 8
+label 13 painting
+newModel 4
+parent 19
+is_meaningful yes
+children 
+leaf_group 9
+label 5 rug
+newModel 5
+parent 17
+is_meaningful yes
+children 
+leaf_group 0
+label 31 book
+newModel 6
+parent 15
+is_meaningful yes
+children 
+leaf_group 14
+label 6 mattress
+newModel 7
+parent 14
+is_meaningful yes
+children 
+leaf_group 15
+label 8 pillow
+newModel 8
+parent 14
+is_meaningful yes
+children 
+leaf_group 16
+label 8 pillow
+newModel 9
+parent 18
+is_meaningful yes
+children 
+leaf_group 17
+label 31 book
+newModel 10
+parent 18
+is_meaningful yes
+children 
+leaf_group 5 20 22 24
+label 119 nightstand
+newModel 11
+parent 17
+is_meaningful yes
+children 
+leaf_group 4 28 30 32
+label 119 nightstand
+newModel 12
+parent 17
+is_meaningful yes
+children 
+leaf_group 3 38
+label 10 table lamp
+newModel 13
+parent 20
+is_meaningful yes
+children 3
+leaf_group 8
+label 69 paintings
+newModel 14
+parent 16
+is_meaningful yes
+children 7 8
+leaf_group 15 16
+label 71 pillows
+newModel 15
+parent 16
+is_meaningful yes
+children 1 6
+leaf_group 6 14
+label 37 bed
+newModel 16
+parent 19
+is_meaningful yes
+children 14 15
+leaf_group 6 14 15 16
+label 34 bed and supported
+newModel 17
+parent 19
+is_meaningful yes
+children 5 11 12
+leaf_group 0 3 4 28 30 32 38
+label 118 nightstand group
+newModel 18
+parent 19
+is_meaningful yes
+children 9 10 2
+leaf_group 2 5 17 20 22 24 45
+label 118 nightstand group
+newModel 19
+parent 20
+is_meaningful yes
+children 4 16 17 18
+leaf_group 0 2 3 4 5 6 9 14 15 16 17 20 22 24 28 30 32 38 45
+label 79 sleep area
+newModel 20
+parent 0
+is_meaningful yes
+children 13 19
+leaf_group 0 2 3 4 5 6 8 9 14 15 16 17 20 22 24 28 30 32 38 45
+label 76 inside

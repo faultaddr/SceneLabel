@@ -1,0 +1,162 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 25
+leaf_group 12 15 20 24 25 26 27 28 29 30 32 34 39 41 62 64 66 68 101 107 145 151 152 154 159 165 169 183 200 201 203 211 212 214 216 218 219 221 353 361 369 377 385 393 401 409 417 497 505 513 521 526 529 537 545 549 553 561 570 574 576 578 580 581 582 601 606 608 609 610 612 613 614 616 617 618 620 622 625 633 634 636 638 640 641 644 645 646 648 649 650 652 657 665 673 674 676 677 678 680 681 697 709 741 769 773 777 785 793 805 809 817 825 833 841 849 857 865 866 868 870 873 876 949 953 961 969 977 982 984 985 986 993 997 1001 1009 1017 1025 1029 1057 1061 1065 1073 1081 1089 1093 1097 1105 1113 1121 1129 1137 1153 1189 1205 1221 1225 1233 1241 1249 1253 1257 1281
+label 0 bedroom
+newModel 1
+parent 3
+is_meaningful yes
+children 
+leaf_group 15 34
+label 39 door
+newModel 2
+parent 18
+is_meaningful yes
+children 
+leaf_group 30 32
+label 10 table lamp
+newModel 3
+parent 25
+is_meaningful yes
+children 1
+leaf_group 15 34
+label 2 door set
+newModel 4
+parent 24
+is_meaningful yes
+children 
+leaf_group 68 107 145
+label 12 plant
+newModel 5
+parent 25
+is_meaningful yes
+children 
+leaf_group 101 165 169 183 200 221 353 361 369 377 385 393 401 409 417 497 505 513 521 526 529 537 545 549 553 561 570 574 576 578 580 581 582 601 606 608 609 610 612 613 614 616 617 618 620 622 625 633 634 636 638 640 641 644 645 646 648 649 650 652 657 665 673 674 676 677 678 680 681 697 709 741 769 773 777 785 793 805 809 817 825 833 841 849 857 865 866 868 870 873 876 949 953 961 969 977 982 984 985 986 993 997 1001 1009 1017 1025 1029 1057 1061 1065 1073 1081 1089 1093 1097 1105 1113 1121 1129 1137 1153 1189 1205 1221 1225 1233 1241 1249 1253 1257 1281
+label 12 plant
+newModel 6
+parent 25
+is_meaningful yes
+children 15
+leaf_group 26 25 27 28 29 39 41
+label 19 floor lamp
+newModel 7
+parent 24
+is_meaningful yes
+children 
+leaf_group 62 64 66
+label 131 console table
+newModel 8
+parent 22
+is_meaningful yes
+children 14
+leaf_group 219
+label 108 chair group
+newModel 9
+parent 21
+is_meaningful yes
+children 
+leaf_group 20
+label 58 printer
+newModel 10
+parent 21
+is_meaningful yes
+children 
+leaf_group 12
+label 9 telephone
+newModel 11
+parent 25
+is_meaningful yes
+children 18 19
+leaf_group 30 32 212 214 216 218
+label 79 sleep area
+newModel 12
+parent 19
+is_meaningful yes
+children 
+leaf_group 212
+label 37 bed
+newModel 13
+parent 18
+is_meaningful yes
+children 
+leaf_group 214 216 218
+label 119 nightstand
+newModel 14
+parent 8
+is_meaningful yes
+children 
+leaf_group 219
+label 18 chair
+newModel 15
+parent 6
+is_meaningful yes
+children 
+leaf_group 25 27 28 29 39 41
+label 19 floor lamp
+newModel 16
+parent 20
+is_meaningful yes
+children 
+leaf_group 154 159
+label 40 keyboard
+newModel 17
+parent 20
+is_meaningful yes
+children 
+leaf_group 151 152
+label 41 monitor
+newModel 18
+parent 11
+is_meaningful yes
+children 2 13
+leaf_group 30 32 214 216 218
+label 118 nightstand group
+newModel 19
+parent 11
+is_meaningful yes
+children 12
+leaf_group 212
+label 34 bed and supported
+newModel 20
+parent 21
+is_meaningful yes
+children 16 17
+leaf_group 151 152 154 159
+label 51 desktop
+newModel 21
+parent 22
+is_meaningful yes
+children 9 10 20 26
+leaf_group 12 20 24 151 152 154 159 201 203 211
+label 104 desk group
+newModel 22
+parent 25
+is_meaningful yes
+children 8 21
+leaf_group 12 20 24 151 152 154 159 201 203 211 219
+label 92 desk area
+newModel 23
+parent 25
+is_meaningful yes
+children 24
+leaf_group 62 64 66 68 107 145
+label 129 console area
+newModel 24
+parent 23
+is_meaningful yes
+children 4 7
+leaf_group 62 64 66 68 107 145
+label 130 console group
+newModel 25
+parent 0
+is_meaningful yes
+children 3 6 11 22 23 5
+leaf_group 12 15 20 24 25 26 27 28 29 30 32 34 39 41 62 64 66 68 101 107 145 151 152 154 159 165 169 183 200 201 203 211 212 214 216 218 219 221 353 361 369 377 385 393 401 409 417 497 505 513 521 526 529 537 545 549 553 561 570 574 576 578 580 581 582 601 606 608 609 610 612 613 614 616 617 618 620 622 625 633 634 636 638 640 641 644 645 646 648 649 650 652 657 665 673 674 676 677 678 680 681 697 709 741 769 773 777 785 793 805 809 817 825 833 841 849 857 865 866 868 870 873 876 949 953 961 969 977 982 984 985 986 993 997 1001 1009 1017 1025 1029 1057 1061 1065 1073 1081 1089 1093 1097 1105 1113 1121 1129 1137 1153 1189 1205 1221 1225 1233 1241 1249 1253 1257 1281
+label 76 inside
+newModel 26
+parent 21
+is_meaningful yes
+children 
+leaf_group 24 201 203 211
+label 44 desk

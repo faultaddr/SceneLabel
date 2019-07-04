@@ -1,0 +1,144 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 21
+leaf_group 0 3 4 6 8 9 10 11 16 17 18 19 25 26 27 29
+label 0 bedroom
+newModel 1
+parent 18
+is_meaningful yes
+children 
+leaf_group 16 17 18
+label 17 ottoman
+newModel 2
+parent 23
+is_meaningful yes
+children 7
+leaf_group 9 10
+label 72 cabinet group
+newModel 3
+parent 6
+is_meaningful yes
+children 
+leaf_group 6
+label 119 nightstand
+newModel 4
+parent 18
+is_meaningful yes
+children 
+leaf_group 3
+label 20 folded blanket
+newModel 5
+parent 23
+is_meaningful yes
+children 
+leaf_group 8
+label 14 mirror
+newModel 6
+parent 19
+is_meaningful yes
+children 3
+leaf_group 6
+label 118 nightstand group
+newModel 7
+parent 2
+is_meaningful yes
+children 
+leaf_group 9 10
+label 3 cabinet
+newModel 8
+parent 19
+is_meaningful yes
+children 
+leaf_group 11
+label 5 rug
+newModel 9
+parent 20
+is_meaningful yes
+children 
+leaf_group 0
+label 39 door
+newModel 10
+parent 17
+is_meaningful yes
+children 
+leaf_group 25
+label 28 blanket
+newModel 11
+parent 16
+is_meaningful yes
+children 
+leaf_group 26
+label 8 pillow
+newModel 12
+parent 16
+is_meaningful yes
+children 
+leaf_group 27
+label 8 pillow
+newModel 13
+parent 15
+is_meaningful yes
+children 
+leaf_group 29
+label 6 mattress
+newModel 14
+parent 15
+is_meaningful yes
+children 
+leaf_group 4 19
+label 7 bed frame
+newModel 15
+parent 17
+is_meaningful yes
+children 13 14
+leaf_group 4 19 29
+label 37 bed
+newModel 16
+parent 17
+is_meaningful yes
+children 11 12
+leaf_group 26 27
+label 71 pillows
+newModel 17
+parent 19
+is_meaningful yes
+children 10 15 16
+leaf_group 4 19 25 26 27 29
+label 34 bed and supported
+newModel 18
+parent 19
+is_meaningful yes
+children 1 4
+leaf_group 3 16 17 18
+label 82 ottoman group
+newModel 19
+parent 21
+is_meaningful yes
+children 6 8 17 18
+leaf_group 3 4 6 11 16 17 18 19 25 26 27 29
+label 79 sleep area
+newModel 20
+parent 21
+is_meaningful yes
+children 9
+leaf_group 0
+label 2 door set
+newModel 21
+parent 0
+is_meaningful yes
+children 19 20 22
+leaf_group 0 3 4 6 8 9 10 11 16 17 18 19 25 26 27 29
+label 76 inside
+newModel 22
+parent 21
+is_meaningful yes
+children 23
+leaf_group 8 9 10
+label 121 vanity area
+newModel 23
+parent 22
+is_meaningful yes
+children 5 2
+leaf_group 8 9 10
+label 66 mirror and cabinet

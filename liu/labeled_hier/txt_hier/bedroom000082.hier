@@ -1,0 +1,186 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 17
+leaf_group 0 2 4 5 7 8 9 10 11 12 13 15 16 17 18 20 21 26 28 29 30 31 33 34 36 39 40 41 42 43 49 50 57 78
+label 0 bedroom
+newModel 1
+parent 21
+is_meaningful yes
+children 
+leaf_group 2
+label 18 chair
+newModel 2
+parent 18
+is_meaningful yes
+children 
+leaf_group 18
+label 119 nightstand
+newModel 3
+parent 19
+is_meaningful yes
+children 
+leaf_group 17
+label 119 nightstand
+newModel 4
+parent 26
+is_meaningful yes
+children 
+leaf_group 9
+label 34 bed and supported
+newModel 5
+parent 29
+is_meaningful yes
+children 
+leaf_group 20
+label 4 ceiling lamp
+newModel 6
+parent 20
+is_meaningful yes
+children 
+leaf_group 21
+label 12 plant
+newModel 7
+parent 24
+is_meaningful yes
+children 
+leaf_group 49
+label 12 plant
+newModel 8
+parent 16
+is_meaningful yes
+children 
+leaf_group 26
+label 32 window set
+newModel 9
+parent 28
+is_meaningful yes
+children 
+leaf_group 16 29 31
+label 32 window set
+newModel 10
+parent 19
+is_meaningful yes
+children 
+leaf_group 28
+label 10 table lamp
+newModel 11
+parent 27
+is_meaningful yes
+children 
+leaf_group 15 34 36
+label 32 window set
+newModel 12
+parent 18
+is_meaningful yes
+children 
+leaf_group 33
+label 10 table lamp
+newModel 13
+parent 25
+is_meaningful yes
+children 
+leaf_group 4 5 7 8 12 13 30 39 40 41 42 50 57 78
+label 120 closet
+newModel 14
+parent 24
+is_meaningful yes
+children 
+leaf_group 0 43
+label 19 floor lamp
+newModel 15
+parent 23
+is_meaningful yes
+children 30
+leaf_group 10
+label 2 door set
+newModel 16
+parent 17
+is_meaningful yes
+children 8
+leaf_group 26
+label 122 window group
+newModel 17
+parent 0
+is_meaningful yes
+children 16 20 23 24 26 29
+leaf_group 0 2 4 5 7 8 9 10 11 12 13 15 16 17 18 20 21 26 28 29 30 31 33 34 36 39 40 41 42 43 49 50 57 78
+label 76 inside
+newModel 18
+parent 26
+is_meaningful yes
+children 2 12
+leaf_group 18 33
+label 118 nightstand group
+newModel 19
+parent 26
+is_meaningful yes
+children 3 10
+leaf_group 17 28
+label 118 nightstand group
+newModel 20
+parent 17
+is_meaningful yes
+children 25 6
+leaf_group 4 5 7 8 12 13 30 39 40 41 42 50 57 78 21
+label 117 storage area
+newModel 21
+parent 24
+is_meaningful yes
+children 1
+leaf_group 2
+label 108 chair group
+newModel 22
+parent 23
+is_meaningful yes
+children 
+leaf_group 11
+label 39 door
+newModel 23
+parent 17
+is_meaningful yes
+children 22 15
+leaf_group 11 10
+label 2 door set
+newModel 24
+parent 17
+is_meaningful yes
+children 14 21 7 28
+leaf_group 0 2 43 49 16 29 31
+label 77 rest area
+newModel 25
+parent 20
+is_meaningful yes
+children 13
+leaf_group 4 5 7 8 12 13 30 39 40 41 42 50 57 78
+label 125 closet group
+newModel 26
+parent 17
+is_meaningful yes
+children 4 18 19 27
+leaf_group 9 17 18 28 33 15 34 36
+label 79 sleep area
+newModel 27
+parent 26
+is_meaningful yes
+children 11
+leaf_group 15 34 36
+label 122 window group
+newModel 28
+parent 24
+is_meaningful yes
+children 9
+leaf_group 16 29 31
+label 122 window group
+newModel 29
+parent 17
+is_meaningful yes
+children 5
+leaf_group 20
+label 70 ceiling lamps
+newModel 30
+parent 15
+is_meaningful yes
+children 
+leaf_group 10
+label 39 door

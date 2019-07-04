@@ -1,0 +1,90 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 14
+leaf_group 3 4 9 11 14 18 19 20 21 22 23 27 30 36 39 51 52 54 60 63 64 68 69 72 75 81 83 86 94 96 97 99 102 103 104 105 106 107 109 111 112 113 115 117 118 120 122 123 124 125 126 127 140 141 142 143 144
+label 0 bedroom
+newModel 1
+parent 10
+is_meaningful yes
+children 
+leaf_group 3 4 9 11 64
+label 119 nightstand
+newModel 2
+parent 13
+is_meaningful yes
+children 
+leaf_group 18 19 20 21 22 23 52 140 141 142 143
+label 120 closet
+newModel 3
+parent 6
+is_meaningful yes
+children 
+leaf_group 27 30 36 39 51 54 60 63 68 69 72 75 81 83 86 111 112 117 118 122 123 127 144
+label 37 bed
+newModel 4
+parent 11
+is_meaningful yes
+children 
+leaf_group 14 94 96 97 99 103 104 105 106 107 109 113 115 120 124 125 126
+label 44 desk
+newModel 5
+parent 8
+is_meaningful yes
+children 
+leaf_group 102
+label 8 pillow
+newModel 6
+parent 7
+is_meaningful yes
+children 3 8
+leaf_group 27 30 36 39 51 54 60 63 68 69 72 75 81 83 86 102 111 112 117 118 122 123 127 144
+label 34 bed and supported
+newModel 7
+parent 14
+is_meaningful yes
+children 6 10
+leaf_group 3 4 9 11 27 30 36 39 51 54 60 63 64 68 69 72 75 81 83 86 102 111 112 117 118 122 123 127 144
+label 79 sleep area
+newModel 8
+parent 6
+is_meaningful yes
+children 5
+leaf_group 102
+label 71 pillows
+newModel 9
+parent 14
+is_meaningful yes
+children 11
+leaf_group 14 94 96 97 99 103 104 105 106 107 109 113 115 120 124 125 126
+label 92 desk area
+newModel 10
+parent 7
+is_meaningful yes
+children 1
+leaf_group 3 4 9 11 64
+label 118 nightstand group
+newModel 11
+parent 9
+is_meaningful yes
+children 4
+leaf_group 14 94 96 97 99 103 104 105 106 107 109 113 115 120 124 125 126
+label 104 desk group
+newModel 12
+parent 14
+is_meaningful yes
+children 13
+leaf_group 18 19 20 21 22 23 52 140 141 142 143
+label 117 storage area
+newModel 13
+parent 12
+is_meaningful yes
+children 2
+leaf_group 18 19 20 21 22 23 52 140 141 142 143
+label 125 closet group
+newModel 14
+parent 0
+is_meaningful yes
+children 7 9 12
+leaf_group 3 4 9 11 14 18 19 20 21 22 23 27 30 36 39 51 52 54 60 63 64 68 69 72 75 81 83 86 94 96 97 99 102 103 104 105 106 107 109 111 112 113 115 117 118 120 122 123 124 125 126 127 140 141 142 143 144
+label 76 inside

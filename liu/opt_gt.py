@@ -93,9 +93,25 @@ def read_hier(path, i):
             json.dump(gt_list, json_data, default=obj_2_json)
 
 
+def json_2_txt(path):
+    with open(path)as f:
+        gt_list = json.load(f)
+    with open(path.split('.')[0].replace('_copy', '') + '.hier', 'w')as fp:
+        for g in gt_list:
+            fp.write('newModel' + ' ' + str(g['newModel']) + '\n')
+            fp.write('parent' + ' ' + g['parent'] + '\n')
+            fp.write('is_meaningful' + ' ' + g['is_meaningful'] + '\n')
+            fp.write('children' + ' ' + ' '.join(g['children']) + '\n')
+            fp.write('leaf_group' + ' ' + ' '.join(g['leaf_group']) + '\n')
+            fp.write('label' + ' ' + ' '.join(g['label']) + '\n')
+
+
 def opt_all_data(path):
     for i, hier in enumerate(os.listdir(path)):
-        read_hier(os.path.join(path, hier), hier.split('.')[0])
+        #read_hier(os.path.join(path, hier), hier.split('.')[0])
+        json_2_txt(os.path.join(path, hier))
 
 
-opt_all_data('/data/Liu/scenegraphs/cleaned/bedroom/gtSceneGraphs/')
+# opt_all_data('/data/Liu/scenegraphs/cleaned/bedroom/gtSceneGraphs/')
+#json_2_txt('/data/SceneLabel/liu/liu_json/bedroom001896_copy.json')
+opt_all_data('/data/SceneLabel/liu/labeled_hier/')

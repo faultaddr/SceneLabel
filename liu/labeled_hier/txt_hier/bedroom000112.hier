@@ -1,0 +1,132 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 18
+leaf_group 0 3 5 7 8 9 10 11 12 13 14 16 17 18 19 22 23 24 28
+label 0 bedroom
+newModel 1
+parent 15
+is_meaningful yes
+children 
+leaf_group 0
+label 37 bed
+newModel 2
+parent 16
+is_meaningful yes
+children 
+leaf_group 3
+label 17 ottoman
+newModel 3
+parent 14
+is_meaningful yes
+children 
+leaf_group 8
+label 8 pillow
+newModel 4
+parent 14
+is_meaningful yes
+children 
+leaf_group 10
+label 8 pillow
+newModel 5
+parent 16
+is_meaningful yes
+children 
+leaf_group 11
+label 10 table lamp
+newModel 6
+parent 13
+is_meaningful yes
+children 
+leaf_group 12
+label 2 door set
+newModel 7
+parent 14
+is_meaningful yes
+children 
+leaf_group 14
+label 8 pillow
+newModel 8
+parent 19
+is_meaningful yes
+children 
+leaf_group 5 16
+label 120 closet
+newModel 9
+parent 14
+is_meaningful yes
+children 
+leaf_group 18
+label 8 pillow
+newModel 10
+parent 20
+is_meaningful yes
+children 
+leaf_group 19
+label 120 closet
+newModel 11
+parent 12
+is_meaningful yes
+children 
+leaf_group 7 9 13 17 22 23 24 28
+label 18 chair
+newModel 12
+parent 21
+is_meaningful yes
+children 11
+leaf_group 7 9 13 17 22 23 24 28
+label 108 chair group
+newModel 13
+parent 18
+is_meaningful yes
+children 6 19 20
+leaf_group 5 12 16 19
+label 117 storage area
+newModel 14
+parent 15
+is_meaningful yes
+children 3 4 7 9
+leaf_group 8 10 14 18
+label 71 pillows
+newModel 15
+parent 17
+is_meaningful yes
+children 1 14
+leaf_group 0 8 10 14 18
+label 34 bed and supported
+newModel 16
+parent 17
+is_meaningful yes
+children 2 5
+leaf_group 3 11
+label 82 ottoman group
+newModel 17
+parent 18
+is_meaningful yes
+children 15 16
+leaf_group 0 3 8 10 11 14 18
+label 79 sleep area
+newModel 18
+parent 0
+is_meaningful yes
+children 13 17 21
+leaf_group 0 3 5 7 8 9 10 11 12 13 14 16 17 18 19 22 23 24 28
+label 76 inside
+newModel 19
+parent 13
+is_meaningful yes
+children 8
+leaf_group 5 16
+label 125 closet group
+newModel 20
+parent 13
+is_meaningful yes
+children 10
+leaf_group 19
+label 125 closet group
+newModel 21
+parent 18
+is_meaningful yes
+children 12
+leaf_group 7 9 13 17 22 23 24 28
+label 77 rest area

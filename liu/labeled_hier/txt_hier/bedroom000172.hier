@@ -1,0 +1,138 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 22
+leaf_group 0 9 10 11 15 18 19 22 25 26 29 32 33 34 35 38 40 43 45 47 57 62 67
+label 0 bedroom
+newModel 1
+parent 14
+is_meaningful yes
+children 
+leaf_group 0
+label 28 blanket
+newModel 2
+parent 12
+is_meaningful yes
+children 
+leaf_group 40
+label 8 pillow
+newModel 3
+parent 19
+is_meaningful yes
+children 
+leaf_group 67
+label 3 cabinet
+newModel 4
+parent 12
+is_meaningful yes
+children 
+leaf_group 43
+label 8 pillow
+newModel 5
+parent 12
+is_meaningful yes
+children 
+leaf_group 38
+label 8 pillow
+newModel 6
+parent 13
+is_meaningful yes
+children 
+leaf_group 9 10 11 15 18 19 22 25 26 29 32 33 34
+label 7 bed frame
+newModel 7
+parent 12
+is_meaningful yes
+children 
+leaf_group 45
+label 8 pillow
+newModel 8
+parent 15
+is_meaningful yes
+children 
+leaf_group 47
+label 14 mirror
+newModel 9
+parent 17
+is_meaningful yes
+children 
+leaf_group 62
+label 119 nightstand
+newModel 10
+parent 21
+is_meaningful yes
+children 
+leaf_group 57
+label 3 cabinet
+newModel 11
+parent 13
+is_meaningful yes
+children 
+leaf_group 35
+label 6 mattress
+newModel 12
+parent 14
+is_meaningful yes
+children 2 4 5 7
+leaf_group 38 40 43 45
+label 71 pillows
+newModel 13
+parent 14
+is_meaningful yes
+children 6 11
+leaf_group 9 10 11 15 18 19 22 25 26 29 32 33 34 35
+label 37 bed
+newModel 14
+parent 16
+is_meaningful yes
+children 1 12 13
+leaf_group 0 9 10 11 15 18 19 22 25 26 29 32 33 34 35 38 40 43 45
+label 34 bed and supported
+newModel 15
+parent 20
+is_meaningful yes
+children 8 19
+leaf_group 47 67
+label 66 mirror and cabinet
+newModel 16
+parent 22
+is_meaningful yes
+children 14 17
+leaf_group 0 9 10 11 15 18 19 22 25 26 29 32 33 34 35 38 40 43 45 62
+label 79 sleep area
+newModel 17
+parent 16
+is_meaningful yes
+children 9
+leaf_group 62
+label 118 nightstand group
+newModel 18
+parent 22
+is_meaningful yes
+children 21
+leaf_group 57
+label 117 storage area
+newModel 19
+parent 15
+is_meaningful yes
+children 3
+leaf_group 67
+label 72 cabinet group
+newModel 20
+parent 22
+is_meaningful yes
+children 15
+leaf_group 47 67
+label 121 vanity area
+newModel 21
+parent 18
+is_meaningful yes
+children 10
+leaf_group 57
+label 72 cabinet group
+newModel 22
+parent 0
+is_meaningful yes
+children 16 18 20
+leaf_group 0 9 10 11 15 18 19 22 25 26 29 32 33 34 35 38 40 43 45 47 57 62 67
+label 76 inside

@@ -1,0 +1,114 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 3
+leaf_group 8 9 13 14 18 19 23 24 28 29 33 34 40 41 43 44 45 48 49 52 53 54 55 58 59 60 61 65 67 70 74 78 80 81 85 87 90 94 98 100 101 105 109 114 119 120 123 124 127 128 131 132 135 136 139 140 143 144 147 148 151 152 155 156 159 160 163 164 167 168 171 172 175 176 179 180 183 184 187 188 268 348 428 444 503 508 509 511 513 515 520 522 524 529 531 533 538 540 542 547 549 551 556 558 560 574 588 591 611 627 668
+label 0 bedroom
+newModel 1
+parent 2
+is_meaningful yes
+children 9 15
+leaf_group 85 87 90 94 98 100 101 574 591
+label 118 nightstand group
+newModel 2
+parent 3
+is_meaningful yes
+children 1 4 18
+leaf_group 8 9 13 14 18 19 23 24 28 29 33 34 40 41 43 44 45 48 49 52 53 54 55 58 59 60 61 65 67 70 74 78 80 81 85 87 90 94 98 100 101 105 109 574 591 611 627
+label 79 sleep area
+newModel 3
+parent 0
+is_meaningful yes
+children 2 6 14
+leaf_group 8 9 13 14 18 19 23 24 28 29 33 34 40 41 43 44 45 48 49 52 53 54 55 58 59 60 61 65 67 70 74 78 80 81 85 87 90 94 98 100 101 105 109 114 119 120 123 124 127 128 131 132 135 136 139 140 143 144 147 148 151 152 155 156 159 160 163 164 167 168 171 172 175 176 179 180 183 184 187 188 268 348 428 444 503 508 509 511 513 515 520 522 524 529 531 533 538 540 542 547 549 551 556 558 560 574 588 591 611 627 668
+label 76 inside
+newModel 4
+parent 2
+is_meaningful yes
+children 8 16
+leaf_group 65 67 70 74 78 80 81 611 627
+label 118 nightstand group
+newModel 5
+parent 18
+is_meaningful yes
+children 7 17
+leaf_group 8 9 13 14 18 19 23 24 28 29 33 34 40 41 43 44 45 48 49 52 53 54 55 58 59 60 61
+label 37 bed
+newModel 6
+parent 3
+is_meaningful yes
+children 12
+leaf_group 114 119 120 123 124 127 128 131 132 135 136 139 140 143 144 147 148 151 152 155 156 159 160 163 164 167 168 171 172 175 176 179 180 183 184 187 188 268 348 428 444 508 588 668
+label 70 ceiling lamps
+newModel 7
+parent 5
+is_meaningful yes
+children 
+leaf_group 45
+label 6 mattress
+newModel 8
+parent 4
+is_meaningful yes
+children 
+leaf_group 65 67 70 74 78 80 81
+label 119 nightstand
+newModel 9
+parent 1
+is_meaningful yes
+children 
+leaf_group 85 87 90 94 98 100 101
+label 119 nightstand
+newModel 10
+parent 13
+is_meaningful yes
+children 
+leaf_group 105
+label 8 pillow
+newModel 11
+parent 13
+is_meaningful yes
+children 
+leaf_group 109
+label 8 pillow
+newModel 12
+parent 6
+is_meaningful yes
+children 
+leaf_group 114 119 120 123 124 127 128 131 132 135 136 139 140 143 144 147 148 151 152 155 156 159 160 163 164 167 168 171 172 175 176 179 180 183 184 187 188 268 348 428 444 508 588 668
+label 4 ceiling lamp
+newModel 13
+parent 18
+is_meaningful yes
+children 10 11
+leaf_group 105 109
+label 71 pillows
+newModel 14
+parent 3
+is_meaningful yes
+children 
+leaf_group 503 509 511 513 515 520 522 524 529 531 533 538 540 542 547 549 551 556 558 560
+label 52 fireplace
+newModel 15
+parent 1
+is_meaningful yes
+children 
+leaf_group 574 591
+label 10 table lamp
+newModel 16
+parent 4
+is_meaningful yes
+children 
+leaf_group 611 627
+label 10 table lamp
+newModel 17
+parent 5
+is_meaningful yes
+children 
+leaf_group 8 9 13 14 18 19 23 24 28 29 33 34 40 41 43 44 48 49 52 53 54 55 58 59 60 61
+label 7 bed frame
+newModel 18
+parent 2
+is_meaningful yes
+children 5 13
+leaf_group 8 9 13 14 18 19 23 24 28 29 33 34 40 41 43 44 45 48 49 52 53 54 55 58 59 60 61 105 109
+label 34 bed and supported

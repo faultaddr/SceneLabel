@@ -1,0 +1,126 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 19
+leaf_group 0 5 6 9 10 12 13 14 20 21 25 27 39 78 79 80 81 82 83 85 119 151
+label 0 bedroom
+newModel 1
+parent 17
+is_meaningful yes
+children 
+leaf_group 5 6 9 10
+label 119 nightstand
+newModel 2
+parent 17
+is_meaningful yes
+children 
+leaf_group 13
+label 10 table lamp
+newModel 3
+parent 18
+is_meaningful yes
+children 
+leaf_group 20
+label 17 ottoman
+newModel 4
+parent 14
+is_meaningful yes
+children 
+leaf_group 80
+label 8 pillow
+newModel 5
+parent 14
+is_meaningful yes
+children 
+leaf_group 81
+label 8 pillow
+newModel 6
+parent 13
+is_meaningful yes
+children 
+leaf_group 82
+label 6 mattress
+newModel 7
+parent 16
+is_meaningful yes
+children 
+leaf_group 0 25
+label 33 photo frame
+newModel 8
+parent 16
+is_meaningful yes
+children 
+leaf_group 21 85
+label 24 book array
+newModel 9
+parent 19
+is_meaningful yes
+children 18
+leaf_group 20
+label 77 rest area
+newModel 10
+parent 16
+is_meaningful yes
+children 
+leaf_group 12 14
+label 119 nightstand
+newModel 11
+parent 13
+is_meaningful yes
+children 
+leaf_group 78 79 83
+label 7 bed frame
+newModel 12
+parent 19
+is_meaningful yes
+children 15 16 17
+leaf_group 0 5 6 9 10 12 13 14 21 25 27 39 78 79 80 81 82 83 85 119 151
+label 79 sleep area
+newModel 13
+parent 15
+is_meaningful yes
+children 6 11
+leaf_group 78 79 82 83
+label 37 bed
+newModel 14
+parent 15
+is_meaningful yes
+children 4 5
+leaf_group 80 81
+label 71 pillows
+newModel 15
+parent 12
+is_meaningful yes
+children 13 14
+leaf_group 78 79 80 81 82 83
+label 34 bed and supported
+newModel 16
+parent 12
+is_meaningful yes
+children 7 8 10
+leaf_group 0 12 14 21 25 85
+label 118 nightstand group
+newModel 17
+parent 12
+is_meaningful yes
+children 1 2 20
+leaf_group 5 6 9 10 13 27 39 119 151
+label 118 nightstand group
+newModel 18
+parent 9
+is_meaningful yes
+children 3
+leaf_group 20
+label 82 ottoman group
+newModel 19
+parent 0
+is_meaningful yes
+children 9 12
+leaf_group 0 5 6 9 10 12 13 14 20 21 25 27 39 78 79 80 81 82 83 85 119 151
+label 76 inside
+newModel 20
+parent 17
+is_meaningful yes
+children 
+leaf_group 27 39 119 151
+label 12 plant

@@ -1,0 +1,126 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 12
+leaf_group 0 6 7 8 9 10 11 12 14 15 16 17 18 20 23 24 26 28 29 30 31 52
+label 0 bedroom
+newModel 1
+parent 14
+is_meaningful yes
+children 
+leaf_group 12
+label 32 window set
+newModel 2
+parent 16
+is_meaningful yes
+children 
+leaf_group 6
+label 8 pillow
+newModel 3
+parent 16
+is_meaningful yes
+children 
+leaf_group 7
+label 8 pillow
+newModel 4
+parent 17
+is_meaningful yes
+children 
+leaf_group 8
+label 28 blanket
+newModel 5
+parent 15
+is_meaningful yes
+children 
+leaf_group 9
+label 6 mattress
+newModel 6
+parent 15
+is_meaningful yes
+children 
+leaf_group 14 15 16 17 18 20
+label 7 bed frame
+newModel 7
+parent 19
+is_meaningful yes
+children 
+leaf_group 24
+label 119 nightstand
+newModel 8
+parent 18
+is_meaningful yes
+children 
+leaf_group 26
+label 119 nightstand
+newModel 9
+parent 20
+is_meaningful yes
+children 
+leaf_group 28
+label 5 rug
+newModel 10
+parent 19
+is_meaningful yes
+children 
+leaf_group 0 30
+label 10 table lamp
+newModel 11
+parent 18
+is_meaningful yes
+children 
+leaf_group 10 52
+label 10 table lamp
+newModel 12
+parent 0
+is_meaningful yes
+children 14 20
+leaf_group 0 6 7 8 9 10 11 12 14 15 16 17 18 20 23 24 26 28 29 30 31 52
+label 76 inside
+newModel 13
+parent 14
+is_meaningful yes
+children 
+leaf_group 11 23 29 31
+label 35 curtain
+newModel 14
+parent 12
+is_meaningful yes
+children 1 13
+leaf_group 11 12 23 29 31
+label 122 window group
+newModel 15
+parent 17
+is_meaningful yes
+children 5 6
+leaf_group 9 14 15 16 17 18 20
+label 37 bed
+newModel 16
+parent 17
+is_meaningful yes
+children 2 3
+leaf_group 6 7
+label 71 pillows
+newModel 17
+parent 20
+is_meaningful yes
+children 4 15 16
+leaf_group 6 7 8 9 14 15 16 17 18 20
+label 34 bed and supported
+newModel 18
+parent 20
+is_meaningful yes
+children 8 11
+leaf_group 10 26 52
+label 118 nightstand group
+newModel 19
+parent 20
+is_meaningful yes
+children 7 10
+leaf_group 0 24 30
+label 118 nightstand group
+newModel 20
+parent 12
+is_meaningful yes
+children 9 17 18 19
+leaf_group 0 6 7 8 9 10 14 15 16 17 18 20 24 26 28 30 52
+label 79 sleep area

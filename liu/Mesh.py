@@ -52,12 +52,11 @@ class Mesh(object):
         self.change_data()
 
     def change_data(self):
-
         all_data = []
         for i, data in enumerate(self.hier_data):
             if i in self.hier_display_index:
                 leaf_group = data['leaf_group']
-                room_name = self.path.split('/')[-1].split('.')[0]
+                room_name = self.path.split('/')[-1].split('.')[0].split('_')[0]
                 category_name = room_name.translate(str.maketrans('', '', digits))
                 single_group = []
                 for leaf in leaf_group:

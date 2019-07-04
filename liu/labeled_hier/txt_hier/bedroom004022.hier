@@ -1,0 +1,132 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 17
+leaf_group 0 2 4 6 7 8 9 10 11 12 13 19 20 21 22 28 29
+label 0 bedroom
+newModel 1
+parent 21
+is_meaningful yes
+children 
+leaf_group 2
+label 3 cabinet
+newModel 2
+parent 12
+is_meaningful yes
+children 
+leaf_group 29
+label 6 mattress
+newModel 3
+parent 19
+is_meaningful yes
+children 
+leaf_group 4
+label 119 nightstand
+newModel 4
+parent 18
+is_meaningful yes
+children 
+leaf_group 12
+label 119 nightstand
+newModel 5
+parent 6
+is_meaningful yes
+children 
+leaf_group 13
+label 14 mirror
+newModel 6
+parent 16
+is_meaningful yes
+children 5 21
+leaf_group 2 13
+label 66 mirror and cabinet
+newModel 7
+parent 14
+is_meaningful yes
+children 
+leaf_group 19
+label 28 blanket
+newModel 8
+parent 13
+is_meaningful yes
+children 
+leaf_group 21
+label 8 pillow
+newModel 9
+parent 13
+is_meaningful yes
+children 
+leaf_group 22
+label 8 pillow
+newModel 10
+parent 20
+is_meaningful yes
+children 
+leaf_group 28
+label 39 door
+newModel 11
+parent 12
+is_meaningful yes
+children 
+leaf_group 0 6 7 8 9 10 11 20
+label 7 bed frame
+newModel 12
+parent 14
+is_meaningful yes
+children 2 11
+leaf_group 0 6 7 8 9 10 11 20 29
+label 37 bed
+newModel 13
+parent 14
+is_meaningful yes
+children 8 9
+leaf_group 21 22
+label 71 pillows
+newModel 14
+parent 15
+is_meaningful yes
+children 7 12 13
+leaf_group 0 6 7 8 9 10 11 19 20 21 22 29
+label 34 bed and supported
+newModel 15
+parent 17
+is_meaningful yes
+children 14 18 19
+leaf_group 0 4 6 7 8 9 10 11 12 19 20 21 22 29
+label 79 sleep area
+newModel 16
+parent 17
+is_meaningful yes
+children 6
+leaf_group 2 13
+label 121 vanity area
+newModel 17
+parent 0
+is_meaningful yes
+children 15 16 20
+leaf_group 0 2 4 6 7 8 9 10 11 12 13 19 20 21 22 28 29
+label 76 inside
+newModel 18
+parent 15
+is_meaningful yes
+children 4
+leaf_group 12
+label 118 nightstand group
+newModel 19
+parent 15
+is_meaningful yes
+children 3
+leaf_group 4
+label 118 nightstand group
+newModel 20
+parent 17
+is_meaningful yes
+children 10
+leaf_group 28
+label 2 door set
+newModel 21
+parent 6
+is_meaningful yes
+children 1
+leaf_group 2
+label 72 cabinet group

@@ -1,0 +1,240 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 37
+leaf_group 0 2 3 7 8 9 10 13 16 32 52 54 56 57 59 60 61 62 63 64 65 66 74 93 94 95 97 99 100 104 105 106 107 108 109 110 113 114 115 116 117 118 119 120 122 123 124 127 128 129 130 131 132 133 135 136 137 138 139 141 142 143 144 145 146 147 148 149 150 151
+label 0 bedroom
+newModel 1
+parent 37
+is_meaningful yes
+children 17
+leaf_group 110
+label 2 door set
+newModel 2
+parent 35
+is_meaningful yes
+children 
+leaf_group 8 9 10
+label 32 window set
+newModel 3
+parent 35
+is_meaningful yes
+children 
+leaf_group 7 52
+label 35 curtain
+newModel 4
+parent 28
+is_meaningful yes
+children 
+leaf_group 54
+label 28 blanket
+newModel 5
+parent 26
+is_meaningful yes
+children 
+leaf_group 56 57
+label 8 pillow
+newModel 6
+parent 26
+is_meaningful yes
+children 
+leaf_group 59 60
+label 8 pillow
+newModel 7
+parent 27
+is_meaningful yes
+children 
+leaf_group 61
+label 8 pillow
+newModel 8
+parent 27
+is_meaningful yes
+children 
+leaf_group 62
+label 8 pillow
+newModel 9
+parent 36
+is_meaningful yes
+children 11
+leaf_group 0
+label 125 closet group
+newModel 10
+parent 37
+is_meaningful yes
+children 28
+leaf_group 54 56 57 59 60 61 62 63 64 65 66 74 93 94 95 97 99 100
+label 79 sleep area
+newModel 11
+parent 9
+is_meaningful yes
+children 
+leaf_group 0
+label 120 closet
+newModel 12
+parent 32
+is_meaningful yes
+children 
+leaf_group 3 104 105 106
+label 18 chair
+newModel 13
+parent 34
+is_meaningful yes
+children 
+leaf_group 2 113 114 115
+label 18 chair
+newModel 14
+parent 31
+is_meaningful yes
+children 
+leaf_group 107
+label 8 pillow
+newModel 15
+parent 31
+is_meaningful yes
+children 
+leaf_group 108
+label 8 pillow
+newModel 16
+parent 31
+is_meaningful yes
+children 
+leaf_group 109
+label 8 pillow
+newModel 17
+parent 1
+is_meaningful yes
+children 
+leaf_group 110
+label 39 door
+newModel 18
+parent 28
+is_meaningful yes
+children 
+leaf_group 63 64 65 66 74 93 94 95 97 99 100
+label 37 bed
+newModel 19
+parent 33
+is_meaningful yes
+children 
+leaf_group 116
+label 8 pillow
+newModel 20
+parent 33
+is_meaningful yes
+children 
+leaf_group 117
+label 8 pillow
+newModel 21
+parent 33
+is_meaningful yes
+children 
+leaf_group 118
+label 8 pillow
+newModel 22
+parent 39
+is_meaningful yes
+children 
+leaf_group 13 16 32 122 123 127 129 130 131 133 135 136 137 139 141 143 144 145 147 149 150 151
+label 99 table
+newModel 23
+parent 29
+is_meaningful yes
+children 
+leaf_group 119 120 124 128 132 142 146
+label 12 plant
+newModel 24
+parent 29
+is_meaningful yes
+children 
+leaf_group 138
+label 131 console table
+newModel 25
+parent 30
+is_meaningful yes
+children 
+leaf_group 148
+label 13 painting
+newModel 26
+parent 28
+is_meaningful yes
+children 5 6
+leaf_group 56 57 59 60
+label 71 pillows
+newModel 27
+parent 28
+is_meaningful yes
+children 7 8
+leaf_group 61 62
+label 71 pillows
+newModel 28
+parent 10
+is_meaningful yes
+children 4 18 26 27
+leaf_group 54 56 57 59 60 61 62 63 64 65 66 74 93 94 95 97 99 100
+label 34 bed and supported
+newModel 29
+parent 30
+is_meaningful yes
+children 23 24
+leaf_group 119 120 124 128 132 138 142 146
+label 130 console group
+newModel 30
+parent 37
+is_meaningful yes
+children 25 29
+leaf_group 119 120 124 128 132 138 142 146 148
+label 129 console area
+newModel 31
+parent 32
+is_meaningful yes
+children 14 15 16
+leaf_group 107 108 109
+label 71 pillows
+newModel 32
+parent 38
+is_meaningful yes
+children 12 31
+leaf_group 3 104 105 106 107 108 109
+label 108 chair group
+newModel 33
+parent 34
+is_meaningful yes
+children 19 20 21
+leaf_group 116 117 118
+label 71 pillows
+newModel 34
+parent 38
+is_meaningful yes
+children 13 33
+leaf_group 2 113 114 115 116 117 118
+label 108 chair group
+newModel 35
+parent 38
+is_meaningful yes
+children 2 3
+leaf_group 7 8 9 10 52
+label 122 window group
+newModel 36
+parent 37
+is_meaningful yes
+children 9
+leaf_group 0
+label 117 storage area
+newModel 37
+parent 0
+is_meaningful yes
+children 10 30 36 38 1
+leaf_group 0 2 3 7 8 9 10 13 16 32 52 54 56 57 59 60 61 62 63 64 65 66 74 93 94 95 97 99 100 104 105 106 107 108 109 110 113 114 115 116 117 118 119 120 122 123 124 127 128 129 130 131 132 133 135 136 137 138 139 141 142 143 144 145 146 147 148 149 150 151
+label 76 inside
+newModel 38
+parent 37
+is_meaningful yes
+children 32 34 39 35
+leaf_group 2 3 13 16 32 104 105 106 107 108 109 113 114 115 116 117 118 122 123 127 129 130 131 133 135 136 137 139 141 143 144 145 147 149 150 151 7 8 9 10 52
+label 77 rest area
+newModel 39
+parent 38
+is_meaningful yes
+children 22
+leaf_group 13 16 32 122 123 127 129 130 131 133 135 136 137 139 141 143 144 145 147 149 150 151
+label 93 table group

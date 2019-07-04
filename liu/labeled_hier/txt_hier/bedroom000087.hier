@@ -1,0 +1,108 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 13
+leaf_group 3 4 5 6 8 9 11 13 14 16 19 20 22 24 26 28 31
+label 0 bedroom
+newModel 1
+parent 11
+is_meaningful yes
+children 10
+leaf_group 8 9 14 16 22 24 26 28
+label 34 bed and supported
+newModel 2
+parent 10
+is_meaningful yes
+children 
+leaf_group 9
+label 6 mattress
+newModel 3
+parent 12
+is_meaningful yes
+children 
+leaf_group 6 11
+label 120 closet
+newModel 4
+parent 15
+is_meaningful yes
+children 
+leaf_group 5 13
+label 131 console table
+newModel 5
+parent 16
+is_meaningful yes
+children 
+leaf_group 4 19
+label 19 floor lamp
+newModel 6
+parent 11
+is_meaningful yes
+children 
+leaf_group 20
+label 5 rug
+newModel 7
+parent 17
+is_meaningful yes
+children 
+leaf_group 3
+label 17 ottoman
+newModel 8
+parent 14
+is_meaningful yes
+children 
+leaf_group 31
+label 13 painting
+newModel 9
+parent 10
+is_meaningful yes
+children 
+leaf_group 8 14 16 22 24 26 28
+label 7 bed frame
+newModel 10
+parent 1
+is_meaningful yes
+children 2 9
+leaf_group 8 9 14 16 22 24 26 28
+label 37 bed
+newModel 11
+parent 13
+is_meaningful yes
+children 6 17 1
+leaf_group 3 8 9 14 16 20 22 24 26 28
+label 79 sleep area
+newModel 12
+parent 16
+is_meaningful yes
+children 3
+leaf_group 6 11
+label 125 closet group
+newModel 13
+parent 0
+is_meaningful yes
+children 11 14 16
+leaf_group 3 4 5 6 8 9 11 13 14 16 19 20 22 24 26 28 31
+label 76 inside
+newModel 14
+parent 13
+is_meaningful yes
+children 8 15
+leaf_group 5 13 31
+label 129 console area
+newModel 15
+parent 14
+is_meaningful yes
+children 4
+leaf_group 5 13
+label 130 console group
+newModel 16
+parent 13
+is_meaningful yes
+children 12 5
+leaf_group 6 11 4 19
+label 117 storage area
+newModel 17
+parent 11
+is_meaningful yes
+children 7
+leaf_group 3
+label 82 ottoman group

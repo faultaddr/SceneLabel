@@ -1,0 +1,150 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 21
+leaf_group 0 2 3 4 5 7 8 9 10 11 12 13 14 16 17 18 26 28 30 38 40 42 46 49 50 51 52 53 55 57 58 59 60 61 62 63 65 68 69
+label 0 bedroom
+newModel 1
+parent 19
+is_meaningful yes
+children 12 14
+leaf_group 3 49 51 53 55 57 59 61 63 65 68
+label 128 heater group
+newModel 2
+parent 20
+is_meaningful yes
+children 
+leaf_group 7
+label 13 painting
+newModel 3
+parent 22
+is_meaningful yes
+children 
+leaf_group 69
+label 131 console table
+newModel 4
+parent 19
+is_meaningful yes
+children 
+leaf_group 16
+label 13 painting
+newModel 5
+parent 16
+is_meaningful yes
+children 
+leaf_group 17
+label 8 pillow
+newModel 6
+parent 24
+is_meaningful yes
+children 
+leaf_group 0 2
+label 26 wall lamp
+newModel 7
+parent 22
+is_meaningful yes
+children 
+leaf_group 8 9 10 12 14 18
+label 24 book array
+newModel 8
+parent 16
+is_meaningful yes
+children 
+leaf_group 28
+label 8 pillow
+newModel 9
+parent 17
+is_meaningful yes
+children 
+leaf_group 30
+label 28 blanket
+newModel 10
+parent 23
+is_meaningful yes
+children 
+leaf_group 13 38 42 52 60
+label 119 nightstand
+newModel 11
+parent 18
+is_meaningful yes
+children 
+leaf_group 46
+label 5 rug
+newModel 12
+parent 1
+is_meaningful yes
+children 
+leaf_group 3 49 51 53 55 57 59 61 63 65
+label 65 heater
+newModel 13
+parent 18
+is_meaningful yes
+children 
+leaf_group 11 26 40 50 58 62
+label 24 book array
+newModel 14
+parent 1
+is_meaningful yes
+children 
+leaf_group 68
+label 13 painting
+newModel 15
+parent 17
+is_meaningful yes
+children 
+leaf_group 4 5
+label 37 bed
+newModel 16
+parent 17
+is_meaningful yes
+children 5 8
+leaf_group 17 28
+label 71 pillows
+newModel 17
+parent 18
+is_meaningful yes
+children 9 15 16
+leaf_group 4 5 17 28 30
+label 34 bed and supported
+newModel 18
+parent 21
+is_meaningful yes
+children 13 17 23 24 11
+leaf_group 0 2 4 5 11 13 17 26 28 30 38 40 42 50 52 58 60 62 46
+label 79 sleep area
+newModel 19
+parent 21
+is_meaningful yes
+children 4 22 20 1
+leaf_group 8 9 10 12 14 16 18 69 7 3 49 51 53 55 57 59 61 63 65 68
+label 129 console area
+newModel 20
+parent 19
+is_meaningful yes
+children 2
+leaf_group 7
+label 69 paintings
+newModel 21
+parent 0
+is_meaningful yes
+children 18 19
+leaf_group 0 2 3 4 5 7 8 9 10 11 12 13 14 16 17 18 26 28 30 38 40 42 46 49 50 51 52 53 55 57 58 59 60 61 62 63 65 68 69
+label 76 inside
+newModel 22
+parent 19
+is_meaningful yes
+children 3 7
+leaf_group 8 9 10 12 14 18 69
+label 130 console group
+newModel 23
+parent 18
+is_meaningful yes
+children 10
+leaf_group 13 38 42 52 60
+label 118 nightstand group
+newModel 24
+parent 18
+is_meaningful yes
+children 6
+leaf_group 0 2
+label 73 wall lamps

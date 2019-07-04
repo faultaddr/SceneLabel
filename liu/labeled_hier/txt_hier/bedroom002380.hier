@@ -1,0 +1,138 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 18
+leaf_group 0 2 10 11 12 13 14 15 18 20 22 24 25 26 27 28
+label 0 bedroom
+newModel 1
+parent 17
+is_meaningful yes
+children 11
+leaf_group 26
+label 108 chair group
+newModel 2
+parent 15
+is_meaningful yes
+children 
+leaf_group 0
+label 43 computer machine
+newModel 3
+parent 9
+is_meaningful yes
+children 
+leaf_group 25
+label 6 mattress
+newModel 4
+parent 9
+is_meaningful yes
+children 
+leaf_group 27
+label 7 bed frame
+newModel 5
+parent 17
+is_meaningful yes
+children 13
+leaf_group 13 14 15
+label 122 window group
+newModel 6
+parent 19
+is_meaningful yes
+children 
+leaf_group 18 20 22
+label 39 door
+newModel 7
+parent 16
+is_meaningful yes
+children 
+leaf_group 10 12
+label 44 desk
+newModel 8
+parent 15
+is_meaningful yes
+children 
+leaf_group 2 11
+label 41 monitor
+newModel 9
+parent 14
+is_meaningful yes
+children 3 4
+leaf_group 25 27
+label 37 bed
+newModel 10
+parent 22
+is_meaningful yes
+children 
+leaf_group 24
+label 66 mirror and cabinet
+newModel 11
+parent 1
+is_meaningful yes
+children 
+leaf_group 26
+label 18 chair
+newModel 12
+parent 20
+is_meaningful yes
+children 
+leaf_group 28
+label 8 pillow
+newModel 13
+parent 5
+is_meaningful yes
+children 
+leaf_group 13 14 15
+label 32 window set
+newModel 14
+parent 21
+is_meaningful yes
+children 9 20
+leaf_group 25 27 28
+label 34 bed and supported
+newModel 15
+parent 16
+is_meaningful yes
+children 2 8
+leaf_group 0 2 11
+label 51 desktop
+newModel 16
+parent 17
+is_meaningful yes
+children 7 15
+leaf_group 0 2 10 11 12
+label 104 desk group
+newModel 17
+parent 18
+is_meaningful yes
+children 16 1 5
+leaf_group 0 2 10 11 12 26 13 14 15
+label 92 desk area
+newModel 18
+parent 0
+is_meaningful yes
+children 17 19 21 22
+leaf_group 0 2 10 11 12 13 14 15 18 20 22 24 25 26 27 28
+label 76 inside
+newModel 19
+parent 18
+is_meaningful yes
+children 6
+leaf_group 18 20 22
+label 2 door set
+newModel 20
+parent 14
+is_meaningful yes
+children 12
+leaf_group 28
+label 71 pillows
+newModel 21
+parent 18
+is_meaningful yes
+children 14
+leaf_group 25 27 28
+label 79 sleep area
+newModel 22
+parent 18
+is_meaningful yes
+children 10
+leaf_group 24
+label 121 vanity area

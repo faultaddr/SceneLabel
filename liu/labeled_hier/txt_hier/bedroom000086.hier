@@ -1,0 +1,144 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 23
+leaf_group 0 2 3 4 5 6 7 8 9 10 12 13 32 34 40 51 59 63 64 65
+label 0 bedroom
+newModel 1
+parent 19
+is_meaningful yes
+children 
+leaf_group 3
+label 7 bed frame
+newModel 2
+parent 19
+is_meaningful yes
+children 
+leaf_group 4
+label 6 mattress
+newModel 3
+parent 18
+is_meaningful yes
+children 
+leaf_group 9
+label 10 table lamp
+newModel 4
+parent 17
+is_meaningful yes
+children 
+leaf_group 10
+label 10 table lamp
+newModel 5
+parent 18
+is_meaningful yes
+children 
+leaf_group 13
+label 33 photo frame
+newModel 6
+parent 22
+is_meaningful yes
+children 
+leaf_group 12
+label 13 painting
+newModel 7
+parent 20
+is_meaningful yes
+children 19
+leaf_group 3 4
+label 34 bed and supported
+newModel 8
+parent 16
+is_meaningful yes
+children 
+leaf_group 34
+label 35 curtain
+newModel 9
+parent 21
+is_meaningful yes
+children 
+leaf_group 5 6 7 8
+label 131 console table
+newModel 10
+parent 18
+is_meaningful yes
+children 
+leaf_group 2
+label 119 nightstand
+newModel 11
+parent 20
+is_meaningful yes
+children 
+leaf_group 59
+label 5 rug
+newModel 12
+parent 16
+is_meaningful yes
+children 
+leaf_group 51
+label 35 curtain
+newModel 13
+parent 17
+is_meaningful yes
+children 
+leaf_group 0
+label 119 nightstand
+newModel 14
+parent 21
+is_meaningful yes
+children 
+leaf_group 40 63 64 65
+label 12 plant
+newModel 15
+parent 16
+is_meaningful yes
+children 
+leaf_group 32
+label 32 window set
+newModel 16
+parent 23
+is_meaningful yes
+children 8 12 15
+leaf_group 32 34 51
+label 122 window group
+newModel 17
+parent 20
+is_meaningful yes
+children 4 13
+leaf_group 0 10
+label 118 nightstand group
+newModel 18
+parent 20
+is_meaningful yes
+children 3 5 10
+leaf_group 2 9 13
+label 118 nightstand group
+newModel 19
+parent 7
+is_meaningful yes
+children 1 2
+leaf_group 3 4
+label 37 bed
+newModel 20
+parent 23
+is_meaningful yes
+children 11 17 18 7
+leaf_group 0 2 3 4 9 10 13 59
+label 79 sleep area
+newModel 21
+parent 22
+is_meaningful yes
+children 9 14
+leaf_group 5 6 7 8 40 63 64 65
+label 130 console group
+newModel 22
+parent 23
+is_meaningful yes
+children 6 21
+leaf_group 5 6 7 8 12 40 63 64 65
+label 129 console area
+newModel 23
+parent 0
+is_meaningful yes
+children 16 20 22
+leaf_group 0 2 3 4 5 6 7 8 9 10 12 13 32 34 40 51 59 63 64 65
+label 76 inside

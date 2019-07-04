@@ -1,0 +1,390 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 54
+leaf_group 0 3 4 5 7 8 9 10 12 13 14 15 17 19 21 22 23 24 25 26 28 29 30 33 36 39 42 45 47 48 49 50 52 54 55 56 58 60 61 62 63 64 66 67 68 72 73 75 77 79 80 82 83 85 86 88 91 92 93 94 95 96 97 100 101 102 104 106 107 108 110 111 112 115 116 117 120 121 122 123 125 129 130 131 132 133 137 138 139 140 141 142 143 144 145 147 148 149 150 151 152 153 155 158 160 161 162 164 166 167 168 171 172 173 174 176 177 178 179 181 183 184 185 186 187 190 191 192 193 194 215 216 217 218 219 220 221 222 223 224 225 226 227 228 234 235 236 237 238 239 240 241 244 245 246 247 248 250 252 253 254 255 257 258 259 260 263 264 265 268 270 272 273 274 275 276
+label 0 bedroom
+newModel 1
+parent 42
+is_meaningful yes
+children 
+leaf_group 29
+label 119 nightstand
+newModel 2
+parent 43
+is_meaningful yes
+children 
+leaf_group 28
+label 119 nightstand
+newModel 3
+parent 42
+is_meaningful yes
+children 
+leaf_group 17 26
+label 10 table lamp
+newModel 4
+parent 43
+is_meaningful yes
+children 
+leaf_group 19 25
+label 10 table lamp
+newModel 5
+parent 27
+is_meaningful yes
+children 
+leaf_group 24
+label 3 cabinet
+newModel 6
+parent 62
+is_meaningful yes
+children 
+leaf_group 23
+label 3 cabinet
+newModel 7
+parent 41
+is_meaningful yes
+children 
+leaf_group 30
+label 37 bed
+newModel 8
+parent 46
+is_meaningful yes
+children 19
+leaf_group 12 224 225 226 227 228
+label 124 shelves group
+newModel 9
+parent 45
+is_meaningful yes
+children 
+leaf_group 22 215 216
+label 32 window set
+newModel 10
+parent 26
+is_meaningful yes
+children 
+leaf_group 21 217 218
+label 32 window set
+newModel 11
+parent 44
+is_meaningful yes
+children 
+leaf_group 15 219 220
+label 32 window set
+newModel 12
+parent 49
+is_meaningful yes
+children 
+leaf_group 14 221 222
+label 32 window set
+newModel 13
+parent 60
+is_meaningful yes
+children 
+leaf_group 0
+label 18 chair
+newModel 14
+parent 47
+is_meaningful yes
+children 
+leaf_group 45
+label 8 pillow
+newModel 15
+parent 55
+is_meaningful yes
+children 
+leaf_group 13 223
+label 52 fireplace
+newModel 16
+parent 48
+is_meaningful yes
+children 
+leaf_group 48
+label 5 rug
+newModel 17
+parent 51
+is_meaningful yes
+children 
+leaf_group 49
+label 14 mirror
+newModel 18
+parent 59
+is_meaningful yes
+children 
+leaf_group 50
+label 14 mirror
+newModel 19
+parent 8
+is_meaningful yes
+children 
+leaf_group 12 224 225 226 227 228
+label 123 shelves
+newModel 20
+parent 38
+is_meaningful yes
+children 
+leaf_group 52
+label 8 pillow
+newModel 21
+parent 38
+is_meaningful yes
+children 
+leaf_group 54
+label 8 pillow
+newModel 22
+parent 56
+is_meaningful yes
+children 
+leaf_group 10 58
+label 19 floor lamp
+newModel 23
+parent 50
+is_meaningful yes
+children 
+leaf_group 9
+label 13 painting
+newModel 24
+parent 53
+is_meaningful yes
+children 
+leaf_group 8 234 235 236
+label 131 console table
+newModel 25
+parent 58
+is_meaningful yes
+children 
+leaf_group 33 36 39 42 47 60 64 237 238 239 240 241 244 245 246 247 248 250 253 255 258 260 263 265 268 270 273 275 276
+label 12 plant
+newModel 26
+parent 48
+is_meaningful yes
+children 10
+leaf_group 21 217 218
+label 122 window group
+newModel 27
+parent 51
+is_meaningful yes
+children 5
+leaf_group 24
+label 72 cabinet group
+newModel 28
+parent 64
+is_meaningful yes
+children 
+leaf_group 5 79
+label 39 door
+newModel 29
+parent 63
+is_meaningful yes
+children 
+leaf_group 7 82
+label 39 door
+newModel 30
+parent 58
+is_meaningful yes
+children 
+leaf_group 85
+label 48 human
+newModel 31
+parent 58
+is_meaningful yes
+children 
+leaf_group 55 62 67 73 77 80 83 100 102 106 108 111 116 121 123 143 145 158 161 164 167 172 174 177 179 259 264 272 274
+label 12 plant
+newModel 32
+parent 55
+is_meaningful yes
+children 
+leaf_group 142 144 147 148 149 150 151 152 153 155 160 162 166 168 171 173 176 178 181 183 184 185 186 187 190 191 252 254 257
+label 12 plant
+newModel 33
+parent 55
+is_meaningful yes
+children 
+leaf_group 86 88 91 92 93 94 95 96 97 101 104 107 110 112 115 117 120 122 125 129 130 131 132 133 137 138 139 140 141
+label 12 plant
+newModel 34
+parent 39
+is_meaningful yes
+children 
+leaf_group 192
+label 8 pillow
+newModel 35
+parent 39
+is_meaningful yes
+children 
+leaf_group 193
+label 8 pillow
+newModel 36
+parent 39
+is_meaningful yes
+children 
+leaf_group 194
+label 8 pillow
+newModel 37
+parent 40
+is_meaningful yes
+children 
+leaf_group 56 61 63 66 68
+label 17 ottoman
+newModel 38
+parent 40
+is_meaningful yes
+children 20 21
+leaf_group 52 54
+label 71 pillows
+newModel 39
+parent 41
+is_meaningful yes
+children 34 35 36
+leaf_group 192 193 194
+label 71 pillows
+newModel 40
+parent 48
+is_meaningful yes
+children 37 38 47
+leaf_group 45 52 54 56 61 63 66 68
+label 82 ottoman group
+newModel 41
+parent 48
+is_meaningful yes
+children 7 39
+leaf_group 30 192 193 194
+label 34 bed and supported
+newModel 42
+parent 48
+is_meaningful yes
+children 1 3
+leaf_group 17 26 29
+label 118 nightstand group
+newModel 43
+parent 48
+is_meaningful yes
+children 2 4
+leaf_group 19 25 28
+label 118 nightstand group
+newModel 44
+parent 56
+is_meaningful yes
+children 11
+leaf_group 15 219 220
+label 122 window group
+newModel 45
+parent 48
+is_meaningful yes
+children 9
+leaf_group 22 215 216
+label 122 window group
+newModel 46
+parent 56
+is_meaningful yes
+children 8
+leaf_group 12 224 225 226 227 228
+label 117 storage area
+newModel 47
+parent 40
+is_meaningful yes
+children 14
+leaf_group 45
+label 71 pillows
+newModel 48
+parent 54
+is_meaningful yes
+children 40 41 42 43 16 26 45
+leaf_group 17 19 25 26 28 29 30 45 52 54 56 61 63 66 68 192 193 194 48 21 217 218 22 215 216
+label 79 sleep area
+newModel 49
+parent 58
+is_meaningful yes
+children 12
+leaf_group 14 221 222
+label 122 window group
+newModel 50
+parent 54
+is_meaningful yes
+children 23 53
+leaf_group 8 9 234 235 236
+label 129 console area
+newModel 51
+parent 58
+is_meaningful yes
+children 17 27
+leaf_group 24 49
+label 66 mirror and cabinet
+newModel 52
+parent 54
+is_meaningful yes
+children 57 61 64
+leaf_group 3 4 72 75 5 79 7 82
+label 2 door set
+newModel 53
+parent 50
+is_meaningful yes
+children 24
+leaf_group 8 234 235 236
+label 130 console group
+newModel 54
+parent 0
+is_meaningful yes
+children 48 50 52 55 56 58
+leaf_group 0 3 4 5 7 8 9 10 12 13 14 15 17 19 21 22 23 24 25 26 28 29 30 33 36 39 42 45 47 48 49 50 52 54 55 56 58 60 61 62 63 64 66 67 68 72 73 75 77 79 80 82 83 85 86 88 91 92 93 94 95 96 97 100 101 102 104 106 107 108 110 111 112 115 116 117 120 121 122 123 125 129 130 131 132 133 137 138 139 140 141 142 143 144 145 147 148 149 150 151 152 153 155 158 160 161 162 164 166 167 168 171 172 173 174 176 177 178 179 181 183 184 185 186 187 190 191 192 193 194 215 216 217 218 219 220 221 222 223 224 225 226 227 228 234 235 236 237 238 239 240 241 244 245 246 247 248 250 252 253 254 255 257 258 259 260 263 264 265 268 270 272 273 274 275 276
+label 76 inside
+newModel 55
+parent 54
+is_meaningful yes
+children 59 32 33 15
+leaf_group 23 50 142 144 147 148 149 150 151 152 153 155 160 162 166 168 171 173 176 178 181 183 184 185 186 187 190 191 252 254 257 86 88 91 92 93 94 95 96 97 101 104 107 110 112 115 117 120 122 125 129 130 131 132 133 137 138 139 140 141 13 223
+label 121 vanity area
+newModel 56
+parent 54
+is_meaningful yes
+children 22 60 44 46
+leaf_group 0 10 58 15 219 220 12 224 225 226 227 228
+label 77 rest area
+newModel 57
+parent 52
+is_meaningful yes
+children 
+leaf_group 3 72
+label 39 door
+newModel 58
+parent 54
+is_meaningful yes
+children 51 25 31 30 49
+leaf_group 24 49 33 36 39 42 47 60 64 237 238 239 240 241 244 245 246 247 248 250 253 255 258 260 263 265 268 270 273 275 276 55 62 67 73 77 80 83 100 102 106 108 111 116 121 123 143 145 158 161 164 167 172 174 177 179 259 264 272 274 85 14 221 222
+label 121 vanity area
+newModel 59
+parent 55
+is_meaningful yes
+children 18 62
+leaf_group 23 50
+label 66 mirror and cabinet
+newModel 60
+parent 56
+is_meaningful yes
+children 13
+leaf_group 0
+label 108 chair group
+newModel 61
+parent 52
+is_meaningful yes
+children 
+leaf_group 4 75
+label 39 door
+newModel 62
+parent 59
+is_meaningful yes
+children 6
+leaf_group 23
+label 72 cabinet group
+newModel 63
+parent 64
+is_meaningful yes
+children 29
+leaf_group 7 82
+label 2 door set
+newModel 64
+parent 52
+is_meaningful yes
+children 28 63
+leaf_group 5 79 7 82
+label 2 door set

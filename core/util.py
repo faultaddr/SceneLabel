@@ -1,8 +1,10 @@
-import os, sys
 import csv
 import json
-import open3d as o3d
 import logging
+import os
+import sys
+
+import open3d as o3d
 
 try:
     import numpy as np
@@ -204,6 +206,14 @@ def get__function_name():
     return inspect.stack()[1][3]
 
 
+def get_all_json_data(path):
+    model_array = []
+    if os.path.exists(path):
+        with open(path)as fp:
+            model_array = json.load(fp)
+    return model_array
+
+
 def get_json_data(path):
     """
     :rtype: a dict that contains all info of an area
@@ -215,6 +225,7 @@ def get_json_data(path):
             for i, model in enumerate(model_array):
                 if model['parent'] == '0':
                     group = [int(x) for x in model['children']]
+                    print(path)
                     print(group)
                     for g in group:
                         first_hier.append(model_array[int(g)])
@@ -228,6 +239,7 @@ def get_label_info(path):
     hier_data = get_json_data(path)
     if hier_data:
         for group in hier_data:
+            print(' '.join([str(i) for i in group['label'][1:]]))
             label_list.append(' '.join([str(i) for i in group['label'][1:]]))
     return label_list
 

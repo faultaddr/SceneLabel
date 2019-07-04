@@ -1,0 +1,150 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 19
+leaf_group 3 12 17 21 25 29 31 33 35 37 40 43 46 49 52 54 57 1337 1339 1341 1345 1349 1353 1771 1775 1793 1797 1809
+label 0 bedroom
+newModel 1
+parent 10
+is_meaningful yes
+children 12
+leaf_group 1349
+label 125 closet group
+newModel 2
+parent 24
+is_meaningful yes
+children 
+leaf_group 21
+label 32 window set
+newModel 3
+parent 9
+is_meaningful yes
+children 
+leaf_group 25
+label 8 pillow
+newModel 4
+parent 16
+is_meaningful yes
+children 13
+leaf_group 1353
+label 108 chair group
+newModel 5
+parent 17
+is_meaningful yes
+children 
+leaf_group 40
+label 8 pillow
+newModel 6
+parent 17
+is_meaningful yes
+children 
+leaf_group 43
+label 8 pillow
+newModel 7
+parent 17
+is_meaningful yes
+children 
+leaf_group 46
+label 8 pillow
+newModel 8
+parent 17
+is_meaningful yes
+children 
+leaf_group 49
+label 8 pillow
+newModel 9
+parent 18
+is_meaningful yes
+children 3
+leaf_group 25
+label 71 pillows
+newModel 10
+parent 19
+is_meaningful yes
+children 1
+leaf_group 1349
+label 117 storage area
+newModel 11
+parent 18
+is_meaningful yes
+children 
+leaf_group 52 54 57
+label 28 blanket
+newModel 12
+parent 1
+is_meaningful yes
+children 
+leaf_group 1349
+label 120 closet
+newModel 13
+parent 4
+is_meaningful yes
+children 
+leaf_group 1353
+label 18 chair
+newModel 14
+parent 19
+is_meaningful yes
+children 22
+leaf_group 12 17 1345
+label 2 door set
+newModel 15
+parent 21
+is_meaningful yes
+children 
+leaf_group 3 1337 1339 1341 1771 1775 1793 1797 1809
+label 44 desk
+newModel 16
+parent 19
+is_meaningful yes
+children 4 21 24 24
+leaf_group 3 1337 1339 1341 1353 1771 1775 1793 1797 1809 21 21
+label 92 desk area
+newModel 17
+parent 18
+is_meaningful yes
+children 5 6 7 8
+leaf_group 40 43 46 49
+label 71 pillows
+newModel 18
+parent 23
+is_meaningful yes
+children 9 17 20 11
+leaf_group 25 29 31 33 35 37 40 43 46 49 52 54 57
+label 34 bed and supported
+newModel 19
+parent 0
+is_meaningful yes
+children 10 16 23 14
+leaf_group 3 12 17 21 25 29 31 33 35 37 40 43 46 49 52 54 57 1337 1339 1341 1345 1349 1353 1771 1775 1793 1797 1809
+label 76 inside
+newModel 20
+parent 18
+is_meaningful yes
+children 
+leaf_group 29 31 33 35 37
+label 37 bed
+newModel 21
+parent 16
+is_meaningful yes
+children 15
+leaf_group 3 1337 1339 1341 1771 1775 1793 1797 1809
+label 104 desk group
+newModel 22
+parent 14
+is_meaningful yes
+children 
+leaf_group 12 17 1345
+label 39 door
+newModel 23
+parent 19
+is_meaningful yes
+children 18
+leaf_group 25 29 31 33 35 37 40 43 46 49 52 54 57
+label 79 sleep area
+newModel 24
+parent 16
+is_meaningful yes
+children 2
+leaf_group 21
+label 122 window group

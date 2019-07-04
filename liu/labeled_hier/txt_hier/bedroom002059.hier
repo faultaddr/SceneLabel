@@ -1,0 +1,168 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 24
+leaf_group 4 9 12 13 14 15 17 19 20 24 26 28 31 32 34 36 39 40 41 42 43 44 45 46
+label 0 bedroom
+newModel 1
+parent 5
+is_meaningful yes
+children 
+leaf_group 4
+label 120 closet
+newModel 2
+parent 27
+is_meaningful yes
+children 
+leaf_group 12 15 32
+label 6 mattress
+newModel 3
+parent 6
+is_meaningful yes
+children 
+leaf_group 9
+label 3 cabinet
+newModel 4
+parent 24
+is_meaningful yes
+children 15
+leaf_group 17 19 40 42 43 44 45 46
+label 122 window group
+newModel 5
+parent 23
+is_meaningful yes
+children 1
+leaf_group 4
+label 125 closet group
+newModel 6
+parent 23
+is_meaningful yes
+children 3
+leaf_group 9
+label 72 cabinet group
+newModel 7
+parent 24
+is_meaningful yes
+children 19 22
+leaf_group 13 14 24 26 28 12 15 32 34 36
+label 79 sleep area
+newModel 8
+parent 23
+is_meaningful yes
+children 17
+leaf_group 41
+label 125 closet group
+newModel 9
+parent 18
+is_meaningful yes
+children 
+leaf_group 26
+label 8 pillow
+newModel 10
+parent 20
+is_meaningful yes
+children 
+leaf_group 28
+label 7 bed frame
+newModel 11
+parent 20
+is_meaningful yes
+children 
+leaf_group 13 14 24
+label 6 mattress
+newModel 12
+parent 26
+is_meaningful yes
+children 
+leaf_group 34
+label 8 pillow
+newModel 13
+parent 25
+is_meaningful yes
+children 
+leaf_group 20 31
+label 39 door
+newModel 14
+parent 27
+is_meaningful yes
+children 
+leaf_group 36
+label 7 bed frame
+newModel 15
+parent 4
+is_meaningful yes
+children 
+leaf_group 17 19 40 42 43 44 45 46
+label 35 curtain
+newModel 16
+parent 25
+is_meaningful yes
+children 
+leaf_group 39
+label 45 air conditioner
+newModel 17
+parent 8
+is_meaningful yes
+children 
+leaf_group 41
+label 120 closet
+newModel 18
+parent 19
+is_meaningful yes
+children 9
+leaf_group 26
+label 71 pillows
+newModel 19
+parent 7
+is_meaningful yes
+children 18 20
+leaf_group 13 14 24 26 28
+label 34 bed and supported
+newModel 20
+parent 19
+is_meaningful yes
+children 10 11
+leaf_group 13 14 24 28
+label 37 bed
+newModel 21
+parent 22
+is_meaningful yes
+children 26 27
+leaf_group 12 15 32 34 36
+label 34 bed and supported
+newModel 22
+parent 7
+is_meaningful yes
+children 21
+leaf_group 12 15 32 34 36
+label 79 sleep area
+newModel 23
+parent 24
+is_meaningful yes
+children 5 6 8
+leaf_group 4 9 41
+label 117 storage area
+newModel 24
+parent 0
+is_meaningful yes
+children 4 7 23 25
+leaf_group 4 9 12 13 14 15 17 19 20 24 26 28 31 32 34 36 39 40 41 42 43 44 45 46
+label 76 inside
+newModel 25
+parent 24
+is_meaningful yes
+children 13 16
+leaf_group 20 31 39
+label 2 door set
+newModel 26
+parent 21
+is_meaningful yes
+children 12
+leaf_group 34
+label 71 pillows
+newModel 27
+parent 21
+is_meaningful yes
+children 14 2
+leaf_group 12 15 32 36
+label 37 bed

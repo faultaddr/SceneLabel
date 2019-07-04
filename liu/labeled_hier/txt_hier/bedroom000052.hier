@@ -1,0 +1,276 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 17
+leaf_group 0 2 4 5 8 9 11 12 14 15 16 17 18 19 20 21 22 23 24 25 26 31 37 38 47 49 50 53 55 57 59 64 67 69 71 73 78 79 80 81 82 83 84 85 91 92 93 95 97 99 100 101 105
+label 0 bedroom
+newModel 1
+parent 41
+is_meaningful yes
+children 
+leaf_group 79
+label 20 folded blanket
+newModel 2
+parent 37
+is_meaningful yes
+children 
+leaf_group 37 53 55 57 59
+label 10 table lamp
+newModel 3
+parent 42
+is_meaningful yes
+children 
+leaf_group 78
+label 20 folded blanket
+newModel 4
+parent 39
+is_meaningful yes
+children 
+leaf_group 8
+label 21 shoe
+newModel 5
+parent 39
+is_meaningful yes
+children 
+leaf_group 9
+label 21 shoe
+newModel 6
+parent 42
+is_meaningful yes
+children 
+leaf_group 85
+label 20 folded blanket
+newModel 7
+parent 40
+is_meaningful yes
+children 
+leaf_group 11
+label 21 shoe
+newModel 8
+parent 40
+is_meaningful yes
+children 
+leaf_group 12
+label 21 shoe
+newModel 9
+parent 42
+is_meaningful yes
+children 
+leaf_group 14 15 16 17 18 19 20 21 22 23 24
+label 17 ottoman
+newModel 10
+parent 41
+is_meaningful yes
+children 
+leaf_group 80
+label 20 folded blanket
+newModel 11
+parent 36
+is_meaningful yes
+children 
+leaf_group 25
+label 119 nightstand
+newModel 12
+parent 26
+is_meaningful yes
+children 
+leaf_group 2
+label 19 floor lamp
+newModel 13
+parent 34
+is_meaningful yes
+children 
+leaf_group 105
+label 8 pillow
+newModel 14
+parent 44
+is_meaningful yes
+children 
+leaf_group 38
+label 131 console table
+newModel 15
+parent 42
+is_meaningful yes
+children 
+leaf_group 81
+label 20 folded blanket
+newModel 16
+parent 42
+is_meaningful yes
+children 
+leaf_group 82
+label 20 folded blanket
+newModel 17
+parent 0
+is_meaningful yes
+children 26 38 43
+leaf_group 0 2 4 5 8 9 11 12 14 15 16 17 18 19 20 21 22 23 24 25 26 31 37 38 47 49 50 53 55 57 59 64 67 69 71 73 78 79 80 81 82 83 84 85 91 92 93 95 97 99 100 101 105
+label 76 inside
+newModel 18
+parent 34
+is_meaningful yes
+children 
+leaf_group 101
+label 8 pillow
+newModel 19
+parent 37
+is_meaningful yes
+children 
+leaf_group 5
+label 119 nightstand
+newModel 20
+parent 44
+is_meaningful yes
+children 
+leaf_group 100
+label 16 vase
+newModel 21
+parent 42
+is_meaningful yes
+children 
+leaf_group 83
+label 20 folded blanket
+newModel 22
+parent 43
+is_meaningful yes
+children 
+leaf_group 47
+label 5 rug
+newModel 23
+parent 38
+is_meaningful yes
+children 
+leaf_group 0
+label 4 ceiling lamp
+newModel 24
+parent 43
+is_meaningful yes
+children 
+leaf_group 49
+label 13 painting
+newModel 25
+parent 26
+is_meaningful yes
+children 
+leaf_group 50
+label 13 painting
+newModel 26
+parent 17
+is_meaningful yes
+children 25 44 12
+leaf_group 38 50 100 2
+label 129 console area
+newModel 27
+parent 42
+is_meaningful yes
+children 
+leaf_group 4
+label 16 vase
+newModel 28
+parent 42
+is_meaningful yes
+children 
+leaf_group 84
+label 20 folded blanket
+newModel 29
+parent 43
+is_meaningful yes
+children 
+leaf_group 64
+label 5 rug
+newModel 30
+parent 36
+is_meaningful yes
+children 
+leaf_group 31 67 69 71 73
+label 10 table lamp
+newModel 31
+parent 43
+is_meaningful yes
+children 
+leaf_group 92
+label 5 rug
+newModel 32
+parent 33
+is_meaningful yes
+children 
+leaf_group 91
+label 6 mattress
+newModel 33
+parent 35
+is_meaningful yes
+children 32 45
+leaf_group 26 91 93 95 97 99
+label 37 bed
+newModel 34
+parent 35
+is_meaningful yes
+children 13 18
+leaf_group 101 105
+label 71 pillows
+newModel 35
+parent 43
+is_meaningful yes
+children 33 34
+leaf_group 26 91 93 95 97 99 101 105
+label 34 bed and supported
+newModel 36
+parent 43
+is_meaningful yes
+children 11 30
+leaf_group 25 31 67 69 71 73
+label 118 nightstand group
+newModel 37
+parent 43
+is_meaningful yes
+children 2 19
+leaf_group 5 37 53 55 57 59
+label 118 nightstand group
+newModel 38
+parent 17
+is_meaningful yes
+children 23
+leaf_group 0
+label 70 ceiling lamps
+newModel 39
+parent 42
+is_meaningful yes
+children 4 5
+leaf_group 8 9
+label 80 shoes
+newModel 40
+parent 42
+is_meaningful yes
+children 7 8
+leaf_group 11 12
+label 80 shoes
+newModel 41
+parent 42
+is_meaningful yes
+children 1 10
+leaf_group 79 80
+label 81 folded blankets
+newModel 42
+parent 43
+is_meaningful yes
+children 3 6 9 15 16 21 27 28 39 40 41
+leaf_group 4 8 9 11 12 14 15 16 17 18 19 20 21 22 23 24 78 79 80 81 82 83 84 85
+label 82 ottoman group
+newModel 43
+parent 17
+is_meaningful yes
+children 22 24 29 31 35 36 37 42
+leaf_group 4 5 8 9 11 12 14 15 16 17 18 19 20 21 22 23 24 25 26 31 37 47 49 53 55 57 59 64 67 69 71 73 78 79 80 81 82 83 84 85 91 92 93 95 97 99 101 105
+label 79 sleep area
+newModel 44
+parent 26
+is_meaningful yes
+children 14 20
+leaf_group 38 100
+label 130 console group
+newModel 45
+parent 33
+is_meaningful yes
+children 
+leaf_group 26 93 95 97 99
+label 7 bed frame

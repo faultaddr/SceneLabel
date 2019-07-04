@@ -1,0 +1,144 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 16
+leaf_group 0 2 3 4 5 6 8 9 12 14 24 28 30 32 34 36 38 39 40 45 46 47 48 51 57 59 66 67 68 69 72 73 75 78 79
+label 0 bedroom
+newModel 1
+parent 21
+is_meaningful yes
+children 
+leaf_group 9
+label 8 pillow
+newModel 2
+parent 16
+is_meaningful yes
+children 19
+leaf_group 38
+label 117 storage area
+newModel 3
+parent 17
+is_meaningful yes
+children 
+leaf_group 12
+label 9 telephone
+newModel 4
+parent 20
+is_meaningful yes
+children 
+leaf_group 24
+label 18 chair
+newModel 5
+parent 15
+is_meaningful yes
+children 
+leaf_group 28
+label 40 keyboard
+newModel 6
+parent 17
+is_meaningful yes
+children 
+leaf_group 32
+label 10 table lamp
+newModel 7
+parent 19
+is_meaningful yes
+children 
+leaf_group 38
+label 123 shelves
+newModel 8
+parent 14
+is_meaningful yes
+children 
+leaf_group 40
+label 5 rug
+newModel 9
+parent 23
+is_meaningful yes
+children 
+leaf_group 5 46 48
+label 46 couch
+newModel 10
+parent 17
+is_meaningful yes
+children 
+leaf_group 0 36 39 47 51
+label 44 desk
+newModel 11
+parent 15
+is_meaningful yes
+children 
+leaf_group 2 3 4 14 30 34 45 57 59 66 67 68 69 72 73 75 78 79
+label 41 monitor
+newModel 12
+parent 13
+is_meaningful yes
+children 
+leaf_group 6 8
+label 37 bed
+newModel 13
+parent 22
+is_meaningful yes
+children 12 21
+leaf_group 6 8 9
+label 34 bed and supported
+newModel 14
+parent 16
+is_meaningful yes
+children 8 23
+leaf_group 5 40 46 48
+label 77 rest area
+newModel 15
+parent 17
+is_meaningful yes
+children 5 11
+leaf_group 2 3 4 14 28 30 34 45 57 59 66 67 68 69 72 73 75 78 79
+label 51 desktop
+newModel 16
+parent 0
+is_meaningful yes
+children 14 18 22 2
+leaf_group 0 2 3 4 5 6 8 9 12 14 24 28 30 32 34 36 38 39 40 45 46 47 48 51 57 59 66 67 68 69 72 73 75 78 79
+label 76 inside
+newModel 17
+parent 18
+is_meaningful yes
+children 3 6 10 15
+leaf_group 0 2 3 4 12 14 28 30 32 34 36 39 45 47 51 57 59 66 67 68 69 72 73 75 78 79
+label 104 desk group
+newModel 18
+parent 16
+is_meaningful yes
+children 17 20
+leaf_group 0 2 3 4 12 14 24 28 30 32 34 36 39 45 47 51 57 59 66 67 68 69 72 73 75 78 79
+label 92 desk area
+newModel 19
+parent 2
+is_meaningful yes
+children 7
+leaf_group 38
+label 124 shelves group
+newModel 20
+parent 18
+is_meaningful yes
+children 4
+leaf_group 24
+label 108 chair group
+newModel 21
+parent 13
+is_meaningful yes
+children 1
+leaf_group 9
+label 71 pillows
+newModel 22
+parent 16
+is_meaningful yes
+children 13
+leaf_group 6 8 9
+label 79 sleep area
+newModel 23
+parent 14
+is_meaningful yes
+children 9
+leaf_group 5 46 48
+label 97 couch group

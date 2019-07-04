@@ -1,0 +1,246 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 9
+leaf_group 4 10 12 13 14 15 18 25 26 28 29 31 32 33 34 36 37 81 105 129 177 201 225 249 273 321 369 393 402 404 405 517 521 522 523 525 526 527 529 530 534 535 538 539 544 547 548 549 551 552 557 574 575 580 582 583 584 591 592 595 596 601 602 605 606 607 609 610 611 614 615 618 619 620 622 623 625 629 630 635 637 638 639 646 647 650 651 657 659 660 661 663 664 668 669 670 672 673 676 677 678 682 683 684 686 687 690 691 692 695 696 701 703 704 705 722 723 724 739 746 750 751 752 753 754 758 762 764 769 771 772 773 792 794 796 798 836
+label 0 bedroom
+newModel 1
+parent 30
+is_meaningful yes
+children 
+leaf_group 4 798
+label 119 nightstand
+newModel 2
+parent 37
+is_meaningful yes
+children 
+leaf_group 10 746 796
+label 131 console table
+newModel 3
+parent 33
+is_meaningful yes
+children 
+leaf_group 12 13 14 15
+label 44 desk
+newModel 4
+parent 31
+is_meaningful yes
+children 
+leaf_group 18 794
+label 119 nightstand
+newModel 5
+parent 35
+is_meaningful yes
+children 
+leaf_group 792
+label 3 cabinet
+newModel 6
+parent 21
+is_meaningful yes
+children 
+leaf_group 25
+label 13 painting
+newModel 7
+parent 32
+is_meaningful yes
+children 
+leaf_group 26
+label 5 rug
+newModel 8
+parent 38
+is_meaningful yes
+children 
+leaf_group 836
+label 39 door
+newModel 9
+parent 0
+is_meaningful yes
+children 32 34 38 39 40
+leaf_group 4 10 12 13 14 15 18 25 26 28 29 31 32 33 34 36 37 81 105 129 177 201 225 249 273 321 369 393 402 404 405 517 521 522 523 525 526 527 529 530 534 535 538 539 544 547 548 549 551 552 557 574 575 580 582 583 584 591 592 595 596 601 602 605 606 607 609 610 611 614 615 618 619 620 622 623 625 629 630 635 637 638 639 646 647 650 651 657 659 660 661 663 664 668 669 670 672 673 676 677 678 682 683 684 686 687 690 691 692 695 696 701 703 704 705 722 723 724 739 746 750 751 752 753 754 758 762 764 769 771 772 773 792 794 796 798 836
+label 76 inside
+newModel 10
+parent 28
+is_meaningful yes
+children 
+leaf_group 36 37
+label 6 mattress
+newModel 11
+parent 37
+is_meaningful yes
+children 
+leaf_group 81 105 129 177 201 225 249 273 321 369 393 402
+label 12 plant
+newModel 12
+parent 37
+is_meaningful yes
+children 
+leaf_group 404 405
+label 31 book
+newModel 13
+parent 34
+is_meaningful yes
+children 22
+leaf_group 750 751 752
+label 108 chair group
+newModel 14
+parent 36
+is_meaningful yes
+children 
+leaf_group 754 772 773
+label 32 window set
+newModel 15
+parent 32
+is_meaningful yes
+children 
+leaf_group 722
+label 13 painting
+newModel 16
+parent 31
+is_meaningful yes
+children 
+leaf_group 723
+label 10 table lamp
+newModel 17
+parent 30
+is_meaningful yes
+children 
+leaf_group 724
+label 10 table lamp
+newModel 18
+parent 33
+is_meaningful yes
+children 
+leaf_group 753
+label 24 book array
+newModel 19
+parent 27
+is_meaningful yes
+children 
+leaf_group 762 764
+label 8 pillow
+newModel 20
+parent 24
+is_meaningful yes
+children 
+leaf_group 739
+label 13 painting
+newModel 21
+parent 23
+is_meaningful yes
+children 6
+leaf_group 25
+label 69 paintings
+newModel 22
+parent 13
+is_meaningful yes
+children 
+leaf_group 750 751 752
+label 18 chair
+newModel 23
+parent 40
+is_meaningful yes
+children 21
+leaf_group 517 521 522 523 525 526 527 529 530 534 535 538 539 544 547 548 549 551 552 557 574 575 580 582 583 584 591 592 595 596 601 602 605 606 607 609 610 611 614 615 618 619 620 622 623 625 629 630 635 637 638 639 646 647 650 651 657 659 660 661 663 664 668 669 670 672 673 676 677 678 682 683 684 686 687 690 691 692 695 696 701 703 704 705 758 25
+label 12 plant
+newModel 24
+parent 40
+is_meaningful yes
+children 20 37
+leaf_group 10 81 105 129 177 201 225 249 273 321 369 393 402 404 405 739 746 796
+label 129 console area
+newModel 25
+parent 28
+is_meaningful yes
+children 
+leaf_group 28 29 31 32 33 34
+label 7 bed frame
+newModel 26
+parent 27
+is_meaningful yes
+children 
+leaf_group 769 771
+label 8 pillow
+newModel 27
+parent 29
+is_meaningful yes
+children 19 26
+leaf_group 762 764 769 771
+label 71 pillows
+newModel 28
+parent 29
+is_meaningful yes
+children 10 25
+leaf_group 28 29 31 32 33 34 36 37
+label 37 bed
+newModel 29
+parent 32
+is_meaningful yes
+children 27 28
+leaf_group 28 29 31 32 33 34 36 37 762 764 769 771
+label 34 bed and supported
+newModel 30
+parent 32
+is_meaningful yes
+children 1 17
+leaf_group 4 724 798
+label 118 nightstand group
+newModel 31
+parent 32
+is_meaningful yes
+children 4 16
+leaf_group 18 723 794
+label 118 nightstand group
+newModel 32
+parent 9
+is_meaningful yes
+children 7 15 29 30 31
+leaf_group 4 18 26 28 29 31 32 33 34 36 37 722 723 724 762 764 769 771 794 798
+label 79 sleep area
+newModel 33
+parent 39
+is_meaningful yes
+children 3 18
+leaf_group 12 13 14 15 753
+label 104 desk group
+newModel 34
+parent 9
+is_meaningful yes
+children 13
+leaf_group 750 751 752
+label 77 rest area
+newModel 35
+parent 40
+is_meaningful yes
+children 5
+leaf_group 792
+label 72 cabinet group
+newModel 36
+parent 39
+is_meaningful yes
+children 14
+leaf_group 754 772 773
+label 122 window group
+newModel 37
+parent 24
+is_meaningful yes
+children 2 11 12
+leaf_group 10 81 105 129 177 201 225 249 273 321 369 393 402 404 405 746 796
+label 130 console group
+newModel 38
+parent 9
+is_meaningful yes
+children 8
+leaf_group 836
+label 2 door set
+newModel 39
+parent 9
+is_meaningful yes
+children 33 36
+leaf_group 12 13 14 15 753 754 772 773
+label 92 desk area
+newModel 40
+parent 9
+is_meaningful yes
+children 35 23 24
+leaf_group 792 517 521 522 523 525 526 527 529 530 534 535 538 539 544 547 548 549 551 552 557 574 575 580 582 583 584 591 592 595 596 601 602 605 606 607 609 610 611 614 615 618 619 620 622 623 625 629 630 635 637 638 639 646 647 650 651 657 659 660 661 663 664 668 669 670 672 673 676 677 678 682 683 684 686 687 690 691 692 695 696 701 703 704 705 758 25 10 81 105 129 177 201 225 249 273 321 369 393 402 404 405 739 746 796
+label 117 storage area

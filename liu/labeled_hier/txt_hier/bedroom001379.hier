@@ -1,0 +1,84 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 11
+leaf_group 0 1 4 5 7 8 10 11 13 14 16 18 20 21 23 24 26 27 29 30 32 34 35 36 38 48 51 52 53 55 60 62 66 82
+label 0 bedroom
+newModel 1
+parent 13
+is_meaningful yes
+children 
+leaf_group 4 5 10 11 16 18 29
+label 119 nightstand
+newModel 2
+parent 9
+is_meaningful yes
+children 
+leaf_group 20 21 24 26 27 32 34
+label 119 nightstand
+newModel 3
+parent 8
+is_meaningful yes
+children 
+leaf_group 51
+label 8 pillow
+newModel 4
+parent 12
+is_meaningful yes
+children 
+leaf_group 0 1 7 8 13 14 23 30 35 36 38 52 53 60 62 66 82
+label 3 cabinet
+newModel 5
+parent 6
+is_meaningful yes
+children 
+leaf_group 48 55
+label 37 bed
+newModel 6
+parent 7
+is_meaningful yes
+children 5 8
+leaf_group 48 51 55
+label 34 bed and supported
+newModel 7
+parent 11
+is_meaningful yes
+children 6 9 13
+leaf_group 4 5 10 11 16 18 20 21 24 26 27 29 32 34 48 51 55
+label 79 sleep area
+newModel 8
+parent 6
+is_meaningful yes
+children 3
+leaf_group 51
+label 71 pillows
+newModel 9
+parent 7
+is_meaningful yes
+children 2
+leaf_group 20 21 24 26 27 32 34
+label 118 nightstand group
+newModel 10
+parent 11
+is_meaningful yes
+children 12
+leaf_group 0 1 7 8 13 14 23 30 35 36 38 52 53 60 62 66 82
+label 117 storage area
+newModel 11
+parent 0
+is_meaningful yes
+children 7 10
+leaf_group 0 1 4 5 7 8 10 11 13 14 16 18 20 21 23 24 26 27 29 30 32 34 35 36 38 48 51 52 53 55 60 62 66 82
+label 76 inside
+newModel 12
+parent 10
+is_meaningful yes
+children 4
+leaf_group 0 1 7 8 13 14 23 30 35 36 38 52 53 60 62 66 82
+label 72 cabinet group
+newModel 13
+parent 7
+is_meaningful yes
+children 1
+leaf_group 4 5 10 11 16 18 29
+label 118 nightstand group

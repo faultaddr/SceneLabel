@@ -1,0 +1,162 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 19
+leaf_group 0 3 4 8 9 11 12 18 19 21 22 23 26 27 28 29 30 31 38 39 40 42 43 44 45
+label 0 bedroom
+newModel 1
+parent 14
+is_meaningful yes
+children 
+leaf_group 0
+label 7 bed frame
+newModel 2
+parent 17
+is_meaningful yes
+children 
+leaf_group 3
+label 119 nightstand
+newModel 3
+parent 17
+is_meaningful yes
+children 
+leaf_group 4
+label 10 table lamp
+newModel 4
+parent 25
+is_meaningful yes
+children 24 26 5
+leaf_group 8 9 11 12 18 19
+label 125 closet group
+newModel 5
+parent 4
+is_meaningful yes
+children 20 21
+leaf_group 8 9
+label 81 folded blankets
+newModel 6
+parent 19
+is_meaningful yes
+children 
+leaf_group 22
+label 12 plant
+newModel 7
+parent 19
+is_meaningful yes
+children 9
+leaf_group 23 31
+label 122 window group
+newModel 8
+parent 16
+is_meaningful yes
+children 
+leaf_group 29
+label 28 blanket
+newModel 9
+parent 7
+is_meaningful yes
+children 
+leaf_group 31
+label 19 floor lamp
+newModel 10
+parent 15
+is_meaningful yes
+children 
+leaf_group 38
+label 8 pillow
+newModel 11
+parent 15
+is_meaningful yes
+children 
+leaf_group 39
+label 8 pillow
+newModel 12
+parent 15
+is_meaningful yes
+children 
+leaf_group 40
+label 8 pillow
+newModel 13
+parent 14
+is_meaningful yes
+children 
+leaf_group 21 26 27 28 30 42 43 44 45
+label 6 mattress
+newModel 14
+parent 16
+is_meaningful yes
+children 1 13
+leaf_group 0 21 26 27 28 30 42 43 44 45
+label 37 bed
+newModel 15
+parent 16
+is_meaningful yes
+children 10 11 12
+leaf_group 38 39 40
+label 71 pillows
+newModel 16
+parent 18
+is_meaningful yes
+children 8 14 15
+leaf_group 0 21 26 27 28 29 30 38 39 40 42 43 44 45
+label 34 bed and supported
+newModel 17
+parent 18
+is_meaningful yes
+children 2 3
+leaf_group 3 4
+label 118 nightstand group
+newModel 18
+parent 19
+is_meaningful yes
+children 16 17
+leaf_group 0 3 4 21 26 27 28 29 30 38 39 40 42 43 44 45
+label 79 sleep area
+newModel 19
+parent 0
+is_meaningful yes
+children 6 7 18 25
+leaf_group 0 3 4 8 9 11 12 18 19 21 22 23 26 27 28 29 30 31 38 39 40 42 43 44 45
+label 76 inside
+newModel 20
+parent 5
+is_meaningful yes
+children 
+leaf_group 8
+label 20 folded blanket
+newModel 21
+parent 5
+is_meaningful yes
+children 
+leaf_group 9
+label 20 folded blanket
+newModel 22
+parent 24
+is_meaningful yes
+children 
+leaf_group 11
+label 20 folded blanket
+newModel 23
+parent 24
+is_meaningful yes
+children 
+leaf_group 12
+label 20 folded blanket
+newModel 24
+parent 4
+is_meaningful yes
+children 22 23
+leaf_group 11 12
+label 81 folded blankets
+newModel 25
+parent 19
+is_meaningful yes
+children 4
+leaf_group 8 9 11 12 18 19
+label 117 storage area
+newModel 26
+parent 4
+is_meaningful yes
+children 
+leaf_group 18 19
+label 120 closet

@@ -1,0 +1,246 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 36
+leaf_group 0 3 4 5 8 15 16 18 19 21 22 24 26 28 30 32 34 35 36 37 38 39 40 44 45 48 49 50 52 54 63 77 78 81 82 83 84 85 91 93 94 95 96
+label 0 bedroom
+newModel 1
+parent 33
+is_meaningful yes
+children 
+leaf_group 15
+label 19 floor lamp
+newModel 2
+parent 27
+is_meaningful yes
+children 
+leaf_group 3
+label 7 bed frame
+newModel 3
+parent 27
+is_meaningful yes
+children 
+leaf_group 4
+label 6 mattress
+newModel 4
+parent 28
+is_meaningful yes
+children 
+leaf_group 5
+label 28 blanket
+newModel 5
+parent 40
+is_meaningful yes
+children 
+leaf_group 8 19
+label 18 chair
+newModel 6
+parent 34
+is_meaningful yes
+children 
+leaf_group 36 37 38
+label 24 book array
+newModel 7
+parent 33
+is_meaningful yes
+children 16
+leaf_group 50
+label 69 paintings
+newModel 8
+parent 35
+is_meaningful yes
+children 
+leaf_group 21
+label 13 painting
+newModel 9
+parent 13
+is_meaningful yes
+children 
+leaf_group 35
+label 8 pillow
+newModel 10
+parent 30
+is_meaningful yes
+children 
+leaf_group 39
+label 119 nightstand
+newModel 11
+parent 29
+is_meaningful yes
+children 
+leaf_group 40
+label 36 on-wall shelf
+newModel 12
+parent 39
+is_meaningful yes
+children 
+leaf_group 0 22 24 26 28 30 32 34
+label 18 chair
+newModel 13
+parent 28
+is_meaningful yes
+children 9
+leaf_group 35
+label 71 pillows
+newModel 14
+parent 34
+is_meaningful yes
+children 
+leaf_group 44
+label 47 laptop
+newModel 15
+parent 34
+is_meaningful yes
+children 
+leaf_group 48
+label 10 table lamp
+newModel 16
+parent 7
+is_meaningful yes
+children 
+leaf_group 50
+label 13 painting
+newModel 17
+parent 31
+is_meaningful yes
+children 
+leaf_group 16
+label 26 wall lamp
+newModel 18
+parent 34
+is_meaningful yes
+children 
+leaf_group 49 52 54 63
+label 44 desk
+newModel 19
+parent 29
+is_meaningful yes
+children 
+leaf_group 77
+label 24 book array
+newModel 20
+parent 30
+is_meaningful yes
+children 
+leaf_group 78
+label 10 table lamp
+newModel 21
+parent 33
+is_meaningful yes
+children 
+leaf_group 81 82 83 84 85 91
+label 19 floor lamp
+newModel 22
+parent 37
+is_meaningful yes
+children 23
+leaf_group 93
+label 69 paintings
+newModel 23
+parent 22
+is_meaningful yes
+children 
+leaf_group 93
+label 13 painting
+newModel 24
+parent 34
+is_meaningful yes
+children 
+leaf_group 94
+label 31 book
+newModel 25
+parent 34
+is_meaningful yes
+children 
+leaf_group 95
+label 31 book
+newModel 26
+parent 34
+is_meaningful yes
+children 
+leaf_group 96
+label 31 book
+newModel 27
+parent 28
+is_meaningful yes
+children 2 3
+leaf_group 3 4
+label 37 bed
+newModel 28
+parent 32
+is_meaningful yes
+children 4 13 27
+leaf_group 3 4 5 35
+label 34 bed and supported
+newModel 29
+parent 37
+is_meaningful yes
+children 11 19
+leaf_group 40 77
+label 94 on-wall shelf group
+newModel 30
+parent 32
+is_meaningful yes
+children 10 20
+leaf_group 39 78
+label 118 nightstand group
+newModel 31
+parent 32
+is_meaningful yes
+children 17
+leaf_group 16
+label 73 wall lamps
+newModel 32
+parent 36
+is_meaningful yes
+children 28 30 31 38
+leaf_group 3 4 5 16 18 35 39 45 78
+label 79 sleep area
+newModel 33
+parent 36
+is_meaningful yes
+children 34 39 40 1 7 21 35
+leaf_group 0 8 19 22 24 26 28 30 32 34 36 37 38 44 48 49 52 54 63 94 95 96 15 50 81 82 83 84 85 91 21
+label 92 desk area
+newModel 34
+parent 33
+is_meaningful yes
+children 6 14 15 18 24 25 26
+leaf_group 36 37 38 44 48 49 52 54 63 94 95 96
+label 104 desk group
+newModel 35
+parent 33
+is_meaningful yes
+children 8
+leaf_group 21
+label 69 paintings
+newModel 36
+parent 0
+is_meaningful yes
+children 32 33 37
+leaf_group 0 3 4 5 8 15 16 18 19 21 22 24 26 28 30 32 34 35 36 37 38 39 40 44 45 48 49 50 52 54 63 77 78 81 82 83 84 85 91 93 94 95 96
+label 76 inside
+newModel 37
+parent 36
+is_meaningful yes
+children 29 22
+leaf_group 40 77 93
+label 117 storage area
+newModel 38
+parent 32
+is_meaningful yes
+children 
+leaf_group 18 45
+label 13 painting
+newModel 39
+parent 33
+is_meaningful yes
+children 12
+leaf_group 0 22 24 26 28 30 32 34
+label 108 chair group
+newModel 40
+parent 33
+is_meaningful yes
+children 5
+leaf_group 8 19
+label 108 chair group

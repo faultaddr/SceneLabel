@@ -1,0 +1,144 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 22
+leaf_group 2 3 4 5 6 7 8 10 11 12 14 16 17 18 19 21 23 26 31 33 35 37 41 43 45 47 50 52 53 54 55 56 57 58 59
+label 0 bedroom
+newModel 1
+parent 13
+is_meaningful yes
+children 
+leaf_group 7
+label 37 bed
+newModel 2
+parent 14
+is_meaningful yes
+children 
+leaf_group 8
+label 5 rug
+newModel 3
+parent 21
+is_meaningful yes
+children 
+leaf_group 11
+label 8 pillow
+newModel 4
+parent 12
+is_meaningful yes
+children 
+leaf_group 17
+label 8 pillow
+newModel 5
+parent 12
+is_meaningful yes
+children 
+leaf_group 19
+label 8 pillow
+newModel 6
+parent 18
+is_meaningful yes
+children 
+leaf_group 6
+label 119 nightstand
+newModel 7
+parent 17
+is_meaningful yes
+children 
+leaf_group 5
+label 119 nightstand
+newModel 8
+parent 15
+is_meaningful yes
+children 
+leaf_group 10 14 18 23
+label 47 laptop
+newModel 9
+parent 23
+is_meaningful yes
+children 
+leaf_group 4
+label 3 cabinet
+newModel 10
+parent 15
+is_meaningful yes
+children 
+leaf_group 3 12 16 26 31 35 43 47 52 53 55 56 57 59
+label 44 desk
+newModel 11
+parent 19
+is_meaningful yes
+children 
+leaf_group 2 21 33 37 41 45 50 54 58
+label 18 chair
+newModel 12
+parent 13
+is_meaningful yes
+children 4 5
+leaf_group 17 19
+label 71 pillows
+newModel 13
+parent 14
+is_meaningful yes
+children 1 12 21
+leaf_group 7 11 17 19
+label 34 bed and supported
+newModel 14
+parent 22
+is_meaningful yes
+children 2 13 17 18
+leaf_group 5 6 7 8 11 17 19
+label 79 sleep area
+newModel 15
+parent 16
+is_meaningful yes
+children 8 10
+leaf_group 3 10 12 14 16 18 23 26 31 35 43 47 52 53 55 56 57 59
+label 104 desk group
+newModel 16
+parent 22
+is_meaningful yes
+children 15 19
+leaf_group 2 3 10 12 14 16 18 21 23 26 31 33 35 37 41 43 45 47 50 52 53 54 55 56 57 58 59
+label 92 desk area
+newModel 17
+parent 14
+is_meaningful yes
+children 7
+leaf_group 5
+label 118 nightstand group
+newModel 18
+parent 14
+is_meaningful yes
+children 6
+leaf_group 6
+label 118 nightstand group
+newModel 19
+parent 16
+is_meaningful yes
+children 11
+leaf_group 2 21 33 37 41 45 50 54 58
+label 108 chair group
+newModel 20
+parent 22
+is_meaningful yes
+children 23
+leaf_group 4
+label 117 storage area
+newModel 21
+parent 13
+is_meaningful yes
+children 3
+leaf_group 11
+label 71 pillows
+newModel 22
+parent 0
+is_meaningful yes
+children 14 16 20
+leaf_group 2 3 4 5 6 7 8 10 11 12 14 16 17 18 19 21 23 26 31 33 35 37 41 43 45 47 50 52 53 54 55 56 57 58 59
+label 76 inside
+newModel 23
+parent 20
+is_meaningful yes
+children 9
+leaf_group 4
+label 72 cabinet group

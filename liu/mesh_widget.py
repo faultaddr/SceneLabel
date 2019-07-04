@@ -19,7 +19,7 @@ class GLWidget(QOpenGLWidget):
         super(GLWidget, self).__init__(parent)
         self.lastZ = 10
         self.cam = Camera(45.0, 0.1, 500)
-        self.cam.lookAt(QVector3D(0, 0, 10), QVector3D(0, 0, 0), QVector3D(0, 10, 0))
+        self.cam.lookAt(QVector3D(5, 3, 5), QVector3D(0, 0, 0), QVector3D(-0.01, 0.1, 0))
         self.rotCenter = QVector3D(0, 0, 0)
         self.data = None
         self.mesh = Mesh(path='')

@@ -1,0 +1,216 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 32
+leaf_group 0 3 4 6 7 8 9 10 11 12 16 19 20 21 22 23 24 25 26 28 30 32 38 40 42 44 53 54 55 58 59 60 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 95 96 97 98 99 100 101 102 104 105 117 121 134 136 147 149 161
+label 0 bedroom
+newModel 1
+parent 30
+is_meaningful yes
+children 
+leaf_group 3 4
+label 13 painting
+newModel 2
+parent 9
+is_meaningful yes
+children 
+leaf_group 42 44
+label 18 chair
+newModel 3
+parent 31
+is_meaningful yes
+children 
+leaf_group 10
+label 5 rug
+newModel 4
+parent 29
+is_meaningful yes
+children 
+leaf_group 11
+label 16 vase
+newModel 5
+parent 29
+is_meaningful yes
+children 
+leaf_group 12
+label 15 plate
+newModel 6
+parent 35
+is_meaningful yes
+children 
+leaf_group 26
+label 8 pillow
+newModel 7
+parent 29
+is_meaningful yes
+children 
+leaf_group 32
+label 131 console table
+newModel 8
+parent 23
+is_meaningful yes
+children 
+leaf_group 100
+label 6 mattress
+newModel 9
+parent 28
+is_meaningful yes
+children 2 35
+leaf_group 26 42 44
+label 108 chair group
+newModel 10
+parent 27
+is_meaningful yes
+children 
+leaf_group 0 161
+label 10 table lamp
+newModel 11
+parent 34
+is_meaningful yes
+children 
+leaf_group 38 40
+label 17 ottoman
+newModel 12
+parent 24
+is_meaningful yes
+children 
+leaf_group 59
+label 12 plant
+newModel 13
+parent 33
+is_meaningful yes
+children 
+leaf_group 117 121
+label 4 ceiling lamp
+newModel 14
+parent 30
+is_meaningful yes
+children 
+leaf_group 134
+label 4 ceiling lamp
+newModel 15
+parent 27
+is_meaningful yes
+children 
+leaf_group 19
+label 9 telephone
+newModel 16
+parent 24
+is_meaningful yes
+children 
+leaf_group 16 136
+label 10 table lamp
+newModel 17
+parent 25
+is_meaningful yes
+children 
+leaf_group 149
+label 8 pillow
+newModel 18
+parent 25
+is_meaningful yes
+children 
+leaf_group 147
+label 8 pillow
+newModel 19
+parent 24
+is_meaningful yes
+children 
+leaf_group 22 23 24 25 97 98 102
+label 119 nightstand
+newModel 20
+parent 27
+is_meaningful yes
+children 
+leaf_group 20 21 28 30 96 99 101
+label 119 nightstand
+newModel 21
+parent 23
+is_meaningful yes
+children 
+leaf_group 53 54 55 58 60 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 95 104 105
+label 7 bed frame
+newModel 22
+parent 31
+is_meaningful yes
+children 
+leaf_group 6 7 8 9
+label 13 painting
+newModel 23
+parent 26
+is_meaningful yes
+children 8 21
+leaf_group 53 54 55 58 60 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 95 100 104 105
+label 37 bed
+newModel 24
+parent 31
+is_meaningful yes
+children 12 16 19
+leaf_group 16 22 23 24 25 59 97 98 102 136
+label 118 nightstand group
+newModel 25
+parent 26
+is_meaningful yes
+children 17 18
+leaf_group 147 149
+label 71 pillows
+newModel 26
+parent 31
+is_meaningful yes
+children 23 25
+leaf_group 53 54 55 58 60 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 95 100 104 105 147 149
+label 34 bed and supported
+newModel 27
+parent 31
+is_meaningful yes
+children 10 15 20
+leaf_group 0 19 20 21 28 30 96 99 101 161
+label 118 nightstand group
+newModel 28
+parent 32
+is_meaningful yes
+children 9 34
+leaf_group 26 38 40 42 44
+label 77 rest area
+newModel 29
+parent 30
+is_meaningful yes
+children 4 5 7
+leaf_group 11 12 32
+label 130 console group
+newModel 30
+parent 32
+is_meaningful yes
+children 1 14 29
+leaf_group 3 4 11 12 32 134
+label 129 console area
+newModel 31
+parent 32
+is_meaningful yes
+children 3 22 24 26 27
+leaf_group 0 6 7 8 9 10 16 19 20 21 22 23 24 25 28 30 53 54 55 58 59 60 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 95 96 97 98 99 100 101 102 104 105 136 147 149 161
+label 79 sleep area
+newModel 32
+parent 0
+is_meaningful yes
+children 28 30 31 33
+leaf_group 0 3 4 6 7 8 9 10 11 12 16 19 20 21 22 23 24 25 26 28 30 32 38 40 42 44 53 54 55 58 59 60 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 95 96 97 98 99 100 101 102 104 105 117 121 134 136 147 149 161
+label 76 inside
+newModel 33
+parent 32
+is_meaningful yes
+children 13
+leaf_group 117 121
+label 70 ceiling lamps
+newModel 34
+parent 28
+is_meaningful yes
+children 11
+leaf_group 38 40
+label 82 ottoman group
+newModel 35
+parent 9
+is_meaningful yes
+children 6
+leaf_group 26
+label 71 pillows

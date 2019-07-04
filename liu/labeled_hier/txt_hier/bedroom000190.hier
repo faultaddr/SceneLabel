@@ -1,0 +1,102 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 12
+leaf_group 0 5 6 7 8 9 10 11 13 15 17 19 21 22 30 52
+label 0 bedroom
+newModel 1
+parent 12
+is_meaningful yes
+children 2
+leaf_group 22
+label 122 window group
+newModel 2
+parent 1
+is_meaningful yes
+children 
+leaf_group 22
+label 32 window set
+newModel 3
+parent 12
+is_meaningful yes
+children 
+leaf_group 0 13 15 17 19 21
+label 53 ceiling fan
+newModel 4
+parent 13
+is_meaningful yes
+children 
+leaf_group 30
+label 8 pillow
+newModel 5
+parent 15
+is_meaningful yes
+children 
+leaf_group 10
+label 3 cabinet
+newModel 6
+parent 9
+is_meaningful yes
+children 
+leaf_group 9 52
+label 19 floor lamp
+newModel 7
+parent 14
+is_meaningful yes
+children 
+leaf_group 7 8
+label 18 chair
+newModel 8
+parent 10
+is_meaningful yes
+children 
+leaf_group 5 6 11
+label 37 bed
+newModel 9
+parent 12
+is_meaningful yes
+children 6 14
+leaf_group 7 8 9 52
+label 77 rest area
+newModel 10
+parent 11
+is_meaningful yes
+children 8 13
+leaf_group 5 6 11 30
+label 34 bed and supported
+newModel 11
+parent 12
+is_meaningful yes
+children 10
+leaf_group 5 6 11 30
+label 79 sleep area
+newModel 12
+parent 0
+is_meaningful yes
+children 3 9 11 16 1
+leaf_group 0 5 6 7 8 9 10 11 13 15 17 19 21 22 30 52
+label 76 inside
+newModel 13
+parent 10
+is_meaningful yes
+children 4
+leaf_group 30
+label 71 pillows
+newModel 14
+parent 9
+is_meaningful yes
+children 7
+leaf_group 7 8
+label 108 chair group
+newModel 15
+parent 16
+is_meaningful yes
+children 5
+leaf_group 10
+label 72 cabinet group
+newModel 16
+parent 12
+is_meaningful yes
+children 15
+leaf_group 10
+label 117 storage area

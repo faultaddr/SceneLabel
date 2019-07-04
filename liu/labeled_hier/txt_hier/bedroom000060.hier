@@ -1,0 +1,132 @@
+newModel 0
+parent -1
+is_meaningful yes
+children 1
+leaf_group 7 8 11 12 13 14 16 31 34 35 36 37 38 39 71 103 135 140 141 190 234 261 265 273 277 281 285 289 293 297 302 303 304 305 306 307 308 310 311 312 313 314 315 316 317 319 320 321 323 332 336 340 344 348 352
+label 0 bedroom
+newModel 1
+parent 0
+is_meaningful yes
+children 5 10 14
+leaf_group 7 8 11 12 13 14 16 31 34 35 36 37 38 39 71 103 135 140 141 190 234 261 265 273 277 281 285 289 293 297 302 303 304 305 306 307 308 310 311 312 313 314 315 316 317 319 320 321 323 332 336 340 344 348 352
+label 76 inside
+newModel 2
+parent 21
+is_meaningful yes
+children 
+leaf_group 7 8 11 12 190
+label 119 nightstand
+newModel 3
+parent 10
+is_meaningful yes
+children 
+leaf_group 273
+label 5 rug
+newModel 4
+parent 12
+is_meaningful yes
+children 
+leaf_group 16
+label 17 ottoman
+newModel 5
+parent 1
+is_meaningful yes
+children 
+leaf_group 277 281 285 289 293 297 319 320 321 323 332 336 340 344 348 352
+label 12 plant
+newModel 6
+parent 17
+is_meaningful yes
+children 
+leaf_group 34 35 39
+label 7 bed frame
+newModel 7
+parent 18
+is_meaningful yes
+children 
+leaf_group 36
+label 8 pillow
+newModel 8
+parent 18
+is_meaningful yes
+children 
+leaf_group 37
+label 8 pillow
+newModel 9
+parent 17
+is_meaningful yes
+children 
+leaf_group 38
+label 6 mattress
+newModel 10
+parent 1
+is_meaningful yes
+children 3 12 13 19 20 21
+leaf_group 7 8 11 12 13 14 16 31 34 35 36 37 38 39 71 103 135 140 141 190 261 265 273
+label 79 sleep area
+newModel 11
+parent 20
+is_meaningful yes
+children 
+leaf_group 141
+label 23 bag
+newModel 12
+parent 10
+is_meaningful yes
+children 4
+leaf_group 16
+label 82 ottoman group
+newModel 13
+parent 10
+is_meaningful yes
+children 
+leaf_group 31 261 265
+label 13 painting
+newModel 14
+parent 1
+is_meaningful yes
+children 
+leaf_group 234 302 303 304 305 306 307 308 310 311 312 313 314 315 316 317
+label 12 plant
+newModel 15
+parent 20
+is_meaningful yes
+children 
+leaf_group 13 14
+label 119 nightstand
+newModel 16
+parent 21
+is_meaningful yes
+children 
+leaf_group 71 103 135 140
+label 22 bottle
+newModel 17
+parent 19
+is_meaningful yes
+children 6 9
+leaf_group 34 35 38 39
+label 37 bed
+newModel 18
+parent 19
+is_meaningful yes
+children 7 8
+leaf_group 36 37
+label 71 pillows
+newModel 19
+parent 10
+is_meaningful yes
+children 17 18
+leaf_group 34 35 36 37 38 39
+label 34 bed and supported
+newModel 20
+parent 10
+is_meaningful yes
+children 11 15
+leaf_group 13 14 141
+label 118 nightstand group
+newModel 21
+parent 10
+is_meaningful yes
+children 2 16
+leaf_group 7 8 11 12 71 103 135 140 190
+label 118 nightstand group
