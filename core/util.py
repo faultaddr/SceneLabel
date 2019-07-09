@@ -214,6 +214,12 @@ def get_all_json_data(path):
     return model_array
 
 
+def get_s3dis_json_data(path):
+    room_array = get_all_json_data(path)
+    return room_array
+
+
+# ===========================Liu's dataset============================
 def get_json_data(path):
     """
     :rtype: a dict that contains all info of an area
@@ -253,6 +259,7 @@ def get_obj_data(path):
         mesh.vertex_normals).tolist()
 
 
+# ===========================Liu's dataset============================
 def get_logger():
     global logger
     if logger is None:

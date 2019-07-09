@@ -142,7 +142,7 @@ class Window(QWidget):
             self.draw_labeled_mesh(index)
         if widget == self.choose_file:
             directory = self.file_dialog.getOpenFileName(parent=self, caption='选取文件夹',
-                                                         directory='/data/SceneLabel/liu/liu_json')
+                                                         directory='/data/SceneLabel/core/s3dis_json')
             self.json_data_path = directory[0]
             self.change_mesh(directory[0])
         if widget == self.merge_mesh_button:

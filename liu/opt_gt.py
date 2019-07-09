@@ -108,10 +108,10 @@ def json_2_txt(path):
 
 def opt_all_data(path):
     for i, hier in enumerate(os.listdir(path)):
-        #read_hier(os.path.join(path, hier), hier.split('.')[0])
+        # read_hier(os.path.join(path, hier), hier.split('.')[0])
         json_2_txt(os.path.join(path, hier))
 
 
 # opt_all_data('/data/Liu/scenegraphs/cleaned/bedroom/gtSceneGraphs/')
-#json_2_txt('/data/SceneLabel/liu/liu_json/bedroom001896_copy.json')
+# json_2_txt('/data/SceneLabel/liu/liu_json/bedroom001896_copy.json')
 opt_all_data('/data/SceneLabel/liu/labeled_hier/')
