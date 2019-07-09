@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6782a91-b4d6-45d3-a3f8-1f9c8a4fa48c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/opt_s3dis_gt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/pc_widget.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/pointcloud.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/window_s3dis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/simpleGL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/simpleGL.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/opt_s3dis_gt.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/opt_s3dis_gt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pc_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/pc_widget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/pointcloud.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/pointcloud.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liu/opt_gt.py" beforeDir="false" afterPath="$PROJECT_DIR$/liu/opt_gt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liu/window_liu.py" beforeDir="false" afterPath="$PROJECT_DIR$/liu/window_liu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/window_s3dis.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/window_s3dis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/pointcloud.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/s3dis/pointcloud.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="761">
-              <caret line="125" column="40" selection-start-line="125" selection-start-column="40" selection-end-line="125" selection-end-column="40" />
+            <state relative-caret-position="988">
+              <caret line="133" column="69" selection-start-line="133" selection-start-column="69" selection-end-line="133" selection-end-column="69" />
               <folding>
                 <element signature="e#16#34#0" expanded="true" />
               </folding>
@@ -47,10 +48,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/opt_s3dis_gt.py">
+        <entry file="file://$PROJECT_DIR$/s3dis/opt_s3dis_gt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
+            <state relative-caret-position="286">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="e#16#27#0" expanded="true" />
               </folding>
@@ -58,31 +59,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/liu/window_liu.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/s3dis/window_s3dis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/window_s3dis.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3146">
-              <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/liu/opt_gt.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="54" />
+            <state relative-caret-position="624">
+              <caret line="229" column="60" lean-forward="true" selection-start-line="229" selection-start-column="60" selection-end-line="229" selection-end-column="60" />
               <folding>
-                <element signature="e#15#26#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,17 +74,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+            <state relative-caret-position="338">
+              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/liu/mesh_widget.py">
+        <entry file="file://$PROJECT_DIR$/s3dis/pc_widget.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="53" column="44" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
+            <state relative-caret-position="286">
+              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
               <folding>
                 <element signature="e#16#38#0" expanded="true" />
               </folding>
@@ -110,13 +96,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/pc_widget.py">
+        <entry file="file://$PROJECT_DIR$/core/camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-              <folding>
-                <element signature="e#16#38#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="2632">
+              <caret line="104" column="30" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -124,8 +107,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="216" column="30" selection-start-line="216" selection-start-column="30" selection-end-line="216" selection-end-column="30" />
+            <state relative-caret-position="785">
+              <caret line="222" column="7" selection-start-line="222" selection-start-column="7" selection-end-line="222" selection-end-column="7" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -136,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/liu/Mesh.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2463">
-              <caret line="141" column="50" selection-start-line="141" selection-start-column="50" selection-end-line="141" selection-end-column="50" />
+            <state relative-caret-position="183">
+              <caret line="49" column="9" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="63" />
               <folding>
                 <element signature="e#15#40#0" expanded="true" />
               </folding>
@@ -172,7 +155,6 @@
       <find>main_layout</find>
       <find>glut</find>
       <find>onclick</find>
-      <find>print</find>
       <find>display_relations_list</find>
       <find>&quot;parent&quot;: &quot;35&quot;</find>
       <find>label_box</find>
@@ -181,6 +163,9 @@
       <find>display_index</find>
       <find>obj</find>
       <find>mesh</find>
+      <find>lookat</find>
+      <find>lastPos</find>
+      <find>print</find>
     </findStrings>
     <replaceStrings>
       <replace>gl_widget</replace>
@@ -221,29 +206,30 @@
         <option value="$PROJECT_DIR$/core/s3dis_json/Area_1.json" />
         <option value="$PROJECT_DIR$/core/s3dis_json/conferenceRoom_1.json" />
         <option value="$PROJECT_DIR$/core/s3dis_json/conferenceRoom_2.json" />
-        <option value="$PROJECT_DIR$/core/util.py" />
         <option value="$PROJECT_DIR$/core/s3dis_window.py" />
         <option value="$PROJECT_DIR$/run.py" />
         <option value="$PROJECT_DIR$/core/opt_s3dis_gt.py" />
-        <option value="$PROJECT_DIR$/core/window_s3dis.py" />
         <option value="$PROJECT_DIR$/liu/window_liu.py" />
-        <option value="$PROJECT_DIR$/core/pc_widget.py" />
         <option value="$PROJECT_DIR$/core/pointcloud.py" />
+        <option value="$PROJECT_DIR$/core/window_s3dis.py" />
+        <option value="$PROJECT_DIR$/core/pc_widget.py" />
+        <option value="$PROJECT_DIR$/s3dis/pointcloud.py" />
+        <option value="$PROJECT_DIR$/s3dis/pc_widget.py" />
+        <option value="$PROJECT_DIR$/core/util.py" />
+        <option value="$PROJECT_DIR$/s3dis/window_s3dis.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2208" />
-    <option name="y" value="109" />
-    <option name="width" value="1902" />
-    <option name="height" value="1397" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1280" />
+    <option name="width" value="1286" />
+    <option name="height" value="1416" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -261,19 +247,28 @@
               <item name="SceneLabel" type="462c0819:PsiDirectoryNode" />
               <item name="liu" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SceneLabel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SceneLabel" type="462c0819:PsiDirectoryNode" />
+              <item name="s3dis" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/liu" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/s3dis" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/liu" />
       <recent name="$PROJECT_DIR$/data" />
@@ -327,7 +322,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/core/opt_s3dis_gt.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/s3dis/opt_s3dis_gt.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -349,7 +344,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/core/pointcloud.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/s3dis/pointcloud.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -393,7 +388,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/core/pc_widget.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/s3dis/pc_widget.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -457,11 +452,13 @@
       <workItem from="1562600737156" duration="720000" />
       <workItem from="1562679787739" duration="10444000" />
       <workItem from="1562698363260" duration="5954000" />
+      <workItem from="1562688024778" duration="11948000" />
+      <workItem from="1562702054227" duration="4919000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213978000" />
+    <option name="totallyTimeSpent" value="230845000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -473,10 +470,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="0" width="2560" height="1404" extended-state="6" />
+    <frame x="-6" y="0" width="2572" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11883943" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.120429255" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Statistic" order="0" sideWeight="0.49960256" weight="0.6191607" />
@@ -485,12 +482,12 @@
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49960256" weight="0.39904988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49880764" visible="true" weight="0.22248614" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49841017" weight="0.34892944" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.3293745" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50039744" side_tool="true" weight="0.39588282" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50158983" side_tool="true" weight="0.34892944" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.32383215" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.22486144" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -536,7 +533,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SceneLabel$generate_obb_label.coverage" NAME="generate_obb_label Coverage Results" MODIFIED="1558028177729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/SceneLabel$opt_gt.coverage" NAME="opt_gt Coverage Results" MODIFIED="1562237963919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/liu" />
-    <SUITE FILE_PATH="coverage/SceneLabel$run.coverage" NAME="run Coverage Results" MODIFIED="1562681351276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SceneLabel$run.coverage" NAME="run Coverage Results" MODIFIED="1562705815309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SceneLabel$Mesh.coverage" NAME="Mesh Coverage Results" MODIFIED="1562133144247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/liu" />
     <SUITE FILE_PATH="coverage/SceneLabel$opt_s3dis_gt.coverage" NAME="opt_s3dis_gt Coverage Results" MODIFIED="1562706455135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/SceneLabel$pointcloud.coverage" NAME="pointcloud Coverage Results" MODIFIED="1562706601574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
@@ -555,9 +552,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/camera.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/liu/camera.py" />
     <entry file="file://$PROJECT_DIR$/core/__init__.py">
@@ -797,9 +791,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/s3dis_json/Area_1.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/core/s3dis_json/Area_1.json" />
     <entry file="file://$PROJECT_DIR$/core/s3dis_json/hallway_1.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -820,19 +812,9 @@
     <entry file="file://$PROJECT_DIR$/core/s3dis_json/copyRoom_1.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/liu/mesh_widget.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="53" column="44" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
-          <folding>
-            <element signature="e#16#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/liu/opt_gt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
+        <state relative-caret-position="1612">
           <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="54" />
           <folding>
             <element signature="e#15#26#0" expanded="true" />
@@ -840,73 +822,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="216" column="30" selection-start-line="216" selection-start-column="30" selection-end-line="216" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liu/Mesh.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2463">
-          <caret line="141" column="50" selection-start-line="141" selection-start-column="50" selection-end-line="141" selection-end-column="50" />
-          <folding>
-            <element signature="e#15#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/window_s3dis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3146">
-          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/liu/window_liu.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
-          <caret line="4" column="30" lean-forward="true" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/opt_s3dis_gt.py">
+    <entry file="file://$PROJECT_DIR$/liu/mesh_widget.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
-          <folding>
-            <element signature="e#16#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/pc_widget.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="1664">
+          <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
           <folding>
             <element signature="e#16#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/pointcloud.py">
+    <entry file="file://$PROJECT_DIR$/core/camera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="761">
-          <caret line="125" column="40" selection-start-line="125" selection-start-column="40" selection-end-line="125" selection-end-column="40" />
+        <state relative-caret-position="2632">
+          <caret line="104" column="30" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liu/Mesh.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="49" column="9" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="63" />
+          <folding>
+            <element signature="e#15#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s3dis/pointcloud.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="133" column="69" selection-start-line="133" selection-start-column="69" selection-end-line="133" selection-end-column="69" />
           <folding>
             <element signature="e#16#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s3dis/pc_widget.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding>
+            <element signature="e#16#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s3dis/opt_s3dis_gt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#16#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="785">
+          <caret line="222" column="7" selection-start-line="222" selection-start-column="7" selection-end-line="222" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s3dis/window_s3dis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="229" column="60" lean-forward="true" selection-start-line="229" selection-start-column="60" selection-end-line="229" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
