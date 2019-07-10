@@ -1,11 +1,8 @@
-import platform
-
-from OpenGL.GLUT import *
-from PyQt5.QtWidgets import QOpenGLWidget
-from PyQt5.QtCore import QSize, Qt
-from PyQt5.QtGui import QVector3D, QMatrix4x4
 import OpenGL.GL as gl
 import OpenGL.GLU as glu
+from PyQt5.QtCore import QSize, Qt
+from PyQt5.QtGui import QVector3D, QMatrix4x4
+from PyQt5.QtWidgets import QOpenGLWidget
 
 from .camera import Camera
 from .cube import Cube

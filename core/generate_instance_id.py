@@ -1,7 +1,8 @@
 # coding=utf-8
 
-import os, sys
 import json
+import os
+import sys
 
 try:
     import numpy as np

@@ -1,7 +1,7 @@
-import numpy as np
 import os
-from scipy.spatial import ConvexHull
 
+import numpy as np
+from scipy.spatial import ConvexHull
 
 
 def my_print(fp, s):

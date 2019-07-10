@@ -1,13 +1,17 @@
+import copy
 import json
 import threading
 
+import numpy as np
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QColor
 from PyQt5.QtWidgets import *
 
 from core.ComboCheckBox import ComboCheckBox
+from core.util import get_logger, get__function_name, get_all_json_data
+from s3dis.opt_s3dis_gt import GT
+from s3dis.opt_s3dis_gt import obj_2_json
 from s3dis.pc_widget import GLWidget
-from core.util import get_logger, get__function_name, get_label_info, get_all_json_data
 
 
 class Window(QWidget):
@@ -25,6 +29,7 @@ class Window(QWidget):
         self.merged_label_box = ComboCheckBox()
         self.display_relations_list = QListWidget()
         self.error_message = QErrorMessage()
+        self.label_edit = QLineEdit()
         self.merge_mesh_button = QPushButton('合并点云')
         self.save_button = QPushButton('写入')
         self.cancel_button = QPushButton('撤销')
@@ -36,6 +41,7 @@ class Window(QWidget):
         self.operation_stack = []
         self.merged_label_checked = []
         self.json_path_new = ''
+        self.label_new = ''
         self.init_ui()
 
     def init_ui(self):
@@ -76,6 +82,7 @@ class Window(QWidget):
         self.label_box.setMinimumContentsLength(15)
         self.label_box.setStyle(QStyleFactory.create('Windows'))
         self.label_box.signal.connect(lambda: self.on_click(self.label_box))
+
         '''
         child_layout_h_2
         '''
@@ -87,8 +94,9 @@ class Window(QWidget):
         self.merged_label_box.setStyle(QStyleFactory.create('Windows'))
         self.merged_label_box.currentIndexChanged.connect(lambda: self.on_click(self.merged_label_box))
         # display combined group
-        self.display_relations_list.currentItemChanged.connect(lambda: self.display_all_relations())
-
+        self.display_relations_list.currentItemChanged.connect(lambda: self.display_all_relations)
+        # give a new label
+        self.label_edit.textChanged.connect(lambda: self.on_click(self.label_edit))
         # merge the group
         self.merge_mesh_button.clicked.connect(lambda: self.on_click(self.merge_mesh_button))
 
@@ -110,6 +118,7 @@ class Window(QWidget):
         child_layout_h_1.addWidget(self.display_mesh, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_1.addWidget(self.label_box, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_2.addWidget(self.merged_label_box, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_2.addWidget(self.label_edit, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_2.addWidget(self.merge_mesh_button, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_3.addWidget(self.cancel_button, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_3.addWidget(self.save_button, 0, Qt.AlignLeft | Qt.AlignTop)
@@ -146,23 +155,43 @@ class Window(QWidget):
             self.draw_labeled_mesh(index)
         if widget == self.choose_file:
             directory = self.file_dialog.getOpenFileName(parent=self, caption='选取文件夹',
-                                                         directory='/data/SceneLabel/core/s3dis_json/')
+                                                         directory='s3dis/s3dis_json')
             self.json_data_path = directory[0]
             self.change_mesh(directory[0])
+        if widget == self.label_edit:
+            self.label_new = self.label_edit.text()
         if widget == self.merge_mesh_button:
-            index = self.label_box.get_checked_box()
-            labeled_index = self.merged_label_box.get_checked_box()
-            print(labeled_index)
-            self.opt_merge(index, labeled_index)
+            if self.label_new == '':
+                self.error_message.setWindowTitle('illegal operation !')
+                self.error_message.showMessage(
+                    'please give a new label to complete the merge operation')
+                self.merged_label_box.clear_checked_state()
+            else:
+                index = self.label_box.get_checked_box()
+                labeled_index = self.merged_label_box.get_checked_box()
+                print(labeled_index)
+                self.opt_merge(index, labeled_index)
         if widget == self.cancel_button:
-            self.operation_stack.pop(-1)
+            if self.operation_stack:
+                index, json_data = self.operation_stack.pop(-1)
+                self.json_data = json_data
+                self.gl_widget.pointcloud.hier_data = self.json_data
+                self.gl_widget.pointcloud.hier_display_index = np.arange(len(self.json_data)).tolist()
+                self.gl_widget.pointcloud.change_data()
+                self.change_label()
+            else:
+                pass
+
         if widget == self.save_button:
             self.change_json()
-        if widget == self.review_button:
             self.change_mesh(self.json_path_new)
+            self.write_json()
+        if widget == self.review_button:
+            pass
         if widget == self.all_in_one:
             self.change_json()
             self.change_mesh(self.json_path_new)
+            self.write_json()
 
     def change_label(self):
         get_logger().info(get__function_name() + '-->' + self.json_data_path)
@@ -176,6 +205,17 @@ class Window(QWidget):
         self.change_label()
         self.operation_stack = []
 
+    def fake_change_mesh(self, index):
+        self.gl_widget.pointcloud.hier_data = self.json_data
+        fake_list = []
+        for i, x in enumerate(self.json_data):
+            if x['parent'] == -1:
+                fake_list.append(i)
+        print('fake_list', fake_list)
+        self.gl_widget.pointcloud.hier_display_index = fake_list
+        self.gl_widget.pointcloud.change_data()
+        self.change_label()
+
     def draw_labeled_mesh(self, index_list):
         self.gl_widget.repaint_with_data(index_list)
 
@@ -185,55 +225,40 @@ class Window(QWidget):
             self.display_relations_list.addItem(str(operation))
 
     def opt_merge(self, index, labeled_index):
-        # TODO 1.build a buffer to store the operation
-        # TODO 2.recursively change the parent of the under merged mesh to the new one
-        # TODO 3.in the end write the new json format doc to represent ground truth
-        # the first one in the operation_stack[i] is the target label
-        if len(labeled_index) > 1 or len(labeled_index) == 0:
-            self.error_message.setWindowTitle('illegal operation !')
-            self.error_message.showMessage(
-                'cannot do the merge because of the illegal operation\n only could set one label to merge into')
-            self.merged_label_box.clear_checked_state()
-        else:
-            print('---merged label', labeled_index)
-            first_index = index.pop(labeled_index[0])
-            index.insert(0, first_index)
-            self.operation_stack.append(index)
+        self.json_data = self.gl_widget.pointcloud.hier_data
+        self.operation_stack.append((index, copy.deepcopy(self.json_data)))
+        self.change_json()
 
-    # def change_json(self):
-    #     # eater = EventDisable()
-    #     # self.installEventFilter(eater)
-    #     self.json_data = self.gl_widget.mesh.hier_data
-    #     model_array = get_all_json_data(self.json_data_path)
-    #     print(str(self.operation_stack))
-    #     print('--->', self.json_data)
-    #     for op in self.operation_stack:
-    #         print('0-1:', op[0], op[1])
-    #         for i in op[1:]:
-    #             self.json_data[i]['parent'] = str(self.json_data[op[0]]['newModel'])
-    #             self.json_data[op[0]]['children'].append(str(self.json_data[i]['newModel']))
-    #             self.json_data[op[0]]['leaf_group'].extend(self.json_data[i]['leaf_group'])
-    #
-    #     for i, model in enumerate(model_array):
-    #         for data in self.json_data:
-    #             if model['newModel'] == data['newModel']:
-    #                 model_array[i] = data
-    #             if model['parent'] == "0" and data['parent'] != str(model['newModel']):
-    #                 model['children'].remove(str(data['newModel']))
-    #     self.json_path_new = self.json_data_path.split('.')[0].replace('_copy', '') + '_copy' + '.json'
-    #     with open(self.json_path_new, 'w')as f:
-    #         json.dump(model_array, f)
-    #     get_logger().debug(get__function_name() + '-->' + 'json copy write complete')
-    # eater.ignore = True
     def change_json(self):
         self.json_data = self.gl_widget.pointcloud.hier_data
         model_array = get_all_json_data(self.json_data_path)
-        for op in self.operation_stack:
-            for i in op[1:]:
-                self.json_data[i]['parent'] = self.json_data[op[0]]['id']
-                self.json_data[op[0]]['children'].append(self.json_data[i]['id'])
-                self.json_data[op[0]['path']].extend(self.json_data[i]['path'])
+        print(self.operation_stack[-1])
+        op = self.operation_stack[-1][0]
+        print(op)
+        gt = GT()
+        gt.label = self.label_new
+        gt.id = self.json_data[-1]['id'] + 1
+        gt.children = []
+        gt.parent = -1
+        gt.path = []
+        pair = []
+        for i, d in enumerate(self.json_data):
+            if d['parent'] == -1:
+                pair.append(i)
+        for j in op:
+            self.json_data[pair[j]]['parent'] = gt.id
+            gt.children.append(self.json_data[pair[j]]['id'])
+            gt.path.extend(self.json_data[pair[j]]['path'])
 
+        self.json_data.append(obj_2_json(gt))
+        self.fake_change_mesh(pair)
+
+
+def write_json(self):
+    self.json_path_new = self.json_data_path.split('.')[0].replace('_copy', '') + '_copy' + '.json'
+    with open(self.json_path_new, 'w')as f:
+        json.dump(self.json_data, f)
+    get_logger().debug(get__function_name() + '-->' + 'json copy write complete')
 
 
 class EventDisable(QWidget):

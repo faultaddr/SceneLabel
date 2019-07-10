@@ -2,16 +2,295 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6782a91-b4d6-45d3-a3f8-1f9c8a4fa48c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/simpleGL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/simpleGL.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/opt_s3dis_gt.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/opt_s3dis_gt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/pc_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/pc_widget.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/pointcloud.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/pointcloud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/ComboCheckBox.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/ComboCheckBox.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/camera.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/camera.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/cube.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/cube.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/generate_instance_id.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/generate_instance_id.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/generate_obb_label.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/generate_obb_label.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/glwidget.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/glwidget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/new_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/new_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/WC_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/WC_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/conferenceRoom_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/conferenceRoom_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/conferenceRoom_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/conferenceRoom_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/copyRoom_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/copyRoom_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/hallway_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/hallway_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/hallway_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/hallway_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/hallway_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/hallway_3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/hallway_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/hallway_4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/hallway_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/hallway_5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/hallway_6.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/hallway_6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/hallway_7.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/hallway_7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/hallway_8.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/hallway_8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_10.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_10.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_11.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_11.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_12.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_12.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_13.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_14.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_14.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_15.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_15.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_16.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_16.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_17.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_17.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_18.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_18.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_19.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_19.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_20.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_20.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_21.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_21.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_22.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_22.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_23.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_23.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_24.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_24.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_25.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_25.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_26.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_26.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_27.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_27.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_28.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_28.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_29.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_29.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_30.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_30.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_31.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_31.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_6.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_7.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_8.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/office_9.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/office_9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/s3dis_json/pantry_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/pantry_1.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/window_s3dis.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/window_s3dis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/util_3d.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/util_3d.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/window.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/Mesh.py" beforeDir="false" afterPath="$PROJECT_DIR$/liu/Mesh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000007_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000007_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000032_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000032_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000036_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000036_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000052_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000052_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000060_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000060_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000062_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000062_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000065_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000065_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000073_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000073_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000081_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000081_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000082_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000082_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000085_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000085_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000086_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000086_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000087_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000087_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000109_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000109_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000121_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000121_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000134_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000134_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000162_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000162_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000165_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000165_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000172_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000172_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000187_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000187_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000190_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000190_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000276_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000276_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000290_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000290_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000296_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000296_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000302_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000302_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000312_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000312_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000315_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000315_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000325_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000325_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000338_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000338_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000340_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000340_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000342_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000342_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000383_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000383_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000393_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000393_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000417_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000417_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000429_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000429_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000439_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000439_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom000868_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom000868_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom001377_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom001377_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom001379_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom001379_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom001532_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom001532_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom001622_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom001622_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom001702_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom001702_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom001900_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom001900_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom001915_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom001915_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom001917_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom001917_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom001983_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom001983_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom002059_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom002059_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom002085_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom002085_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom002326_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom002326_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom002380_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom002380_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom002477_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom002477_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom002737_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom002737_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom002866_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom002866_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom003014_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom003014_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom003234_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom003234_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom003397_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom003397_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom003457_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom003457_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom003511_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom003511_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom003517_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom003517_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom003538_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom003538_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom003539_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom003539_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom003770_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom003770_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom004022_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom004022_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom004110_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom004110_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom004139_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom004139_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom004169_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom004169_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom004356_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom004356_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom004461_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom004461_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom004477_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom004477_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom004516_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom004516_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom004668_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom004668_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom004735_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom004735_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom004897_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom004897_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/labeled_hier/bedroom004919_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/labeled_hier/bedroom004919_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000007.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000007.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000007_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000007_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000032.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000032.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000032_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000032_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000036.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000036.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000036_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000036_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000052.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000052.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000052_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000052_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000060.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000060.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000060_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000060_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000062.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000062.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000062_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000062_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000065.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000065.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000065_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000065_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000073.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000073.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000073_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000073_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000081.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000081.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000081_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000081_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000082.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000082.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000082_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000082_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000085.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000085.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000085_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000085_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000086.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000086.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000086_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000086_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000087.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000087.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000087_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000087_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000109.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000109.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000109_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000109_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000121.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000121.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000121_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000121_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000134.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000134.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000134_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000134_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000162.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000162.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000162_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000162_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000165.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000165.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000165_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000165_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000172.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000172.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000172_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000172_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000187.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000187.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000187_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000187_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000190.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000190.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000190_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000190_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000276.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000276.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000276_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000276_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000290.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000290.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000290_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000290_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000296.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000296.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000296_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000296_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000302.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000302.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000302_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000302_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000312.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000312.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000312_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000312_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000315.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000315.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000315_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000315_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000325.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000325.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000325_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000325_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000338.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000338.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000338_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000338_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000340.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000340.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000340_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000340_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000342.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000342.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000342_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000342_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000383.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000383.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000383_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000383_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000393.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000393.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000393_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000393_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000417.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000417.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000417_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000417_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000429.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000429.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000429_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000429_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000439.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000439.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000439_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000439_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000868.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000868.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000868_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000868_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom001377.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom001377.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom001377_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom001377_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom001379.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom001379.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom001379_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom001379_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom001532.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom001532.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom001532_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom001532_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom001622.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom001622.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom001622_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom001622_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom001702.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom001702.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom001702_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom001702_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom001896.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom001896.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom001900.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom001900.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom001900_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom001900_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom001915.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom001915.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom001915_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom001915_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom001917.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom001917.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom001917_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom001917_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom001983.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom001983.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom001983_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom001983_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom002059.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom002059.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom002059_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom002059_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom002085.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom002085.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom002085_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom002085_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom002326.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom002326.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom002326_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom002326_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom002380.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom002380.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom002380_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom002380_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom002477.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom002477.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom002477_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom002477_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom002737.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom002737.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom002737_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom002737_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom002866.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom002866.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom002866_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom002866_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom003014.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom003014.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom003014_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom003014_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom003234.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom003234.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom003234_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom003234_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom003397.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom003397.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom003397_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom003397_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom003457.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom003457.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom003457_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom003457_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom003511.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom003511.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom003511_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom003511_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom003517.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom003517.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom003517_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom003517_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom003538.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom003538.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom003538_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom003538_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom003539.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom003539.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom003539_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom003539_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom003770.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom003770.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom003770_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom003770_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004022.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004022.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004022_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004022_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004110.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004110.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004110_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004110_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004139.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004139.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004139_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004139_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004169.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004169.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004169_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004169_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004356.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004356.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004356_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004356_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004461.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004461.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004461_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004461_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004477.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004477.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004477_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004477_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004516.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004516.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004516_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004516_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004668.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004668.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004668_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004668_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004735.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004735.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004735_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004735_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004897.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004897.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004897_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004897_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004919.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004919.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom004919_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom004919_copy.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s3dis/opt_s3dis_gt.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/opt_s3dis_gt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s3dis/pc_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/pc_widget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s3dis/pointcloud.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/pointcloud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s3dis/window_s3dis.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/window_s3dis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,11 +317,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/s3dis/pointcloud.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="988">
-              <caret line="133" column="69" selection-start-line="133" selection-start-column="69" selection-end-line="133" selection-end-column="69" />
-              <folding>
-                <element signature="e#16#34#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-156">
+              <caret line="51" column="63" selection-start-line="51" selection-start-column="63" selection-end-line="51" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -50,8 +326,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/s3dis/opt_s3dis_gt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="184">
+              <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
               <folding>
                 <element signature="e#16#27#0" expanded="true" />
               </folding>
@@ -59,28 +335,45 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/liu/window_liu.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="218" column="85" selection-start-line="218" selection-start-column="85" selection-end-line="218" selection-end-column="85" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/s3dis/window_s3dis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="229" column="60" lean-forward="true" selection-start-line="229" selection-start-column="60" selection-end-line="229" selection-end-column="60" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="366">
+              <caret line="262" selection-start-line="262" selection-end-line="262" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/s3dis/s3dis_json/conferenceRoom_2.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="397" column="3" selection-start-line="397" selection-start-column="3" selection-end-line="397" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/s3dis/s3dis_json/copyRoom_1.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="574">
+              <caret line="195" column="13" selection-start-line="195" selection-start-column="13" selection-end-line="195" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -88,18 +381,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
               <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-              <folding>
-                <element signature="e#16#38#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/camera.py">
+        <entry file="file://$PROJECT_DIR$/liu/mesh_widget.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2632">
-              <caret line="104" column="30" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
+            <state relative-caret-position="-364">
+              <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -107,23 +397,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="785">
-              <caret line="222" column="7" selection-start-line="222" selection-start-column="7" selection-end-line="222" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/liu/Mesh.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="49" column="9" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="63" />
-              <folding>
-                <element signature="e#15#40#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1222">
+              <caret line="223" column="7" selection-start-line="223" selection-start-column="7" selection-end-line="223" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -213,14 +488,18 @@
         <option value="$PROJECT_DIR$/core/pointcloud.py" />
         <option value="$PROJECT_DIR$/core/window_s3dis.py" />
         <option value="$PROJECT_DIR$/core/pc_widget.py" />
-        <option value="$PROJECT_DIR$/s3dis/pointcloud.py" />
         <option value="$PROJECT_DIR$/s3dis/pc_widget.py" />
         <option value="$PROJECT_DIR$/core/util.py" />
+        <option value="$PROJECT_DIR$/s3dis/opt_s3dis_gt.py" />
+        <option value="$PROJECT_DIR$/s3dis/s3dis_json/copyRoom_1.json" />
+        <option value="$PROJECT_DIR$/s3dis/pointcloud.py" />
+        <option value="$PROJECT_DIR$/s3dis/s3dis_json/copyRoom_1_copy.json" />
         <option value="$PROJECT_DIR$/s3dis/window_s3dis.py" />
+        <option value="$PROJECT_DIR$/s3dis/s3dis_json/conferenceRoom_2.json" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1280" />
     <option name="width" value="1286" />
     <option name="height" value="1416" />
@@ -263,6 +542,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/liu" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -453,12 +733,12 @@
       <workItem from="1562679787739" duration="10444000" />
       <workItem from="1562698363260" duration="5954000" />
       <workItem from="1562688024778" duration="11948000" />
-      <workItem from="1562702054227" duration="4919000" />
+      <workItem from="1562702054227" duration="15661000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230845000" />
+    <option name="totallyTimeSpent" value="241587000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -471,15 +751,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="0" width="2572" height="1416" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.120429255" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Statistic" order="0" sideWeight="0.49960256" weight="0.6191607" />
+      <window_info anchor="bottom" id="Statistic" order="0" sideWeight="0.49960256" weight="0.6185567" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49960256" weight="0.39904988" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49960256" weight="0.39888978" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49841017" weight="0.34892944" />
@@ -488,7 +767,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50158983" side_tool="true" weight="0.34892944" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32383215" />
+      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.32355273" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.22486144" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -533,7 +812,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SceneLabel$generate_obb_label.coverage" NAME="generate_obb_label Coverage Results" MODIFIED="1558028177729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/SceneLabel$opt_gt.coverage" NAME="opt_gt Coverage Results" MODIFIED="1562237963919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/liu" />
-    <SUITE FILE_PATH="coverage/SceneLabel$run.coverage" NAME="run Coverage Results" MODIFIED="1562705815309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SceneLabel$run.coverage" NAME="run Coverage Results" MODIFIED="1562718271006" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SceneLabel$Mesh.coverage" NAME="Mesh Coverage Results" MODIFIED="1562133144247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/liu" />
     <SUITE FILE_PATH="coverage/SceneLabel$opt_s3dis_gt.coverage" NAME="opt_s3dis_gt Coverage Results" MODIFIED="1562706455135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/SceneLabel$pointcloud.coverage" NAME="pointcloud Coverage Results" MODIFIED="1562706601574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
@@ -542,7 +821,6 @@
     <SUITE FILE_PATH="coverage/SceneLabel$s3dis_window.coverage" NAME="s3dis_window Coverage Results" MODIFIED="1562700872221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/liu/liu_json/0.txt" />
     <entry file="file://$PROJECT_DIR$/core/generate_obb_label.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -792,25 +1070,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/s3dis_json/Area_1.json" />
-    <entry file="file://$PROJECT_DIR$/core/s3dis_json/hallway_1.json">
+    <entry file="file://$PROJECT_DIR$/s3dis/s3dis_json/hallway_1.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/s3dis_json/conferenceRoom_1.json">
+    <entry file="file://$PROJECT_DIR$/s3dis/s3dis_json/conferenceRoom_1.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1905">
           <caret line="276" column="13" lean-forward="true" selection-start-line="276" selection-start-column="13" selection-end-line="276" selection-end-column="13" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/s3dis_json/conferenceRoom_2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/s3dis_json/copyRoom_1.json">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/liu/opt_gt.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -822,37 +1090,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/liu/window_liu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liu/mesh_widget.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1664">
-          <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
-          <folding>
-            <element signature="e#16#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/camera.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2632">
           <caret line="104" column="30" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -866,53 +1107,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/s3dis/pointcloud.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="133" column="69" selection-start-line="133" selection-start-column="69" selection-end-line="133" selection-end-column="69" />
-          <folding>
-            <element signature="e#16#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/s3dis/pc_widget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-          <folding>
-            <element signature="e#16#38#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1222">
+          <caret line="223" column="7" selection-start-line="223" selection-start-column="7" selection-end-line="223" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liu/mesh_widget.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-364">
+          <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s3dis/s3dis_json/copyRoom_1_copy.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5819" selection-start-column="5819" selection-end-column="5819" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liu/window_liu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="218" column="85" selection-start-line="218" selection-start-column="85" selection-end-line="218" selection-end-column="85" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/s3dis/opt_s3dis_gt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="184">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
           <folding>
             <element signature="e#16#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/util.py">
+    <entry file="file://$PROJECT_DIR$/s3dis/pointcloud.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="785">
-          <caret line="222" column="7" selection-start-line="222" selection-start-column="7" selection-end-line="222" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-156">
+          <caret line="51" column="63" selection-start-line="51" selection-start-column="63" selection-end-line="51" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/s3dis/window_s3dis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="229" column="60" lean-forward="true" selection-start-line="229" selection-start-column="60" selection-end-line="229" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="366">
+          <caret line="262" selection-start-line="262" selection-end-line="262" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s3dis/s3dis_json/copyRoom_1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="195" column="13" selection-start-line="195" selection-start-column="13" selection-end-line="195" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/s3dis/s3dis_json/conferenceRoom_2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="397" column="3" selection-start-line="397" selection-start-column="3" selection-end-line="397" selection-end-column="3" />
         </state>
       </provider>
     </entry>

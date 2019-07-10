@@ -7,8 +7,8 @@ from PyQt5.QtGui import QVector3D, QMatrix4x4
 from PyQt5.QtWidgets import QOpenGLWidget
 
 from core.camera import Camera
-from s3dis.pointcloud import PC
 from core.util import *
+from s3dis.pointcloud import PC
 
 ROOT_PATH = '/data/Liu/obj_data/pc'
 logger = get_logger()

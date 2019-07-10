@@ -1,16 +1,13 @@
 import os
 
-from PyQt5.QtGui import QWindow
-from PyQt5.QtWidgets import QApplication, QWidget, QHBoxLayout, QPushButton, QComboBox, QFileDialog, QStyleFactory, \
-    QTextEdit, QCheckBox, QItemDelegate, QListWidget, QAbstractItemView, QListWidgetItem, QLineEdit, QVBoxLayout, \
-    QDesktopWidget
 from PyQt5.QtCore import Qt
-from PyQt5.uic.properties import QtCore, QtGui
+from PyQt5.QtWidgets import QComboBox, QListWidget
+from PyQt5.QtWidgets import QWidget, QHBoxLayout, QPushButton, QFileDialog, QStyleFactory, \
+    QVBoxLayout, \
+    QDesktopWidget
 
 from core.ComboCheckBox import ComboCheckBox
 from core.glwidget import GLWidget as gl_widget
-
-from PyQt5.QtWidgets import QComboBox, QLineEdit, QListWidget, QCheckBox, QListWidgetItem
 
 
 class Window(QWidget):
@@ -169,7 +166,7 @@ class Window(QWidget):
 
     # 撤销
     def back_stack(self):
-        print('back_stack', self.relation_stack) 
+        print('back_stack', self.relation_stack)
         self.relation_stack.pop()
         if not self.relation_stack:
             self.use_fake = False

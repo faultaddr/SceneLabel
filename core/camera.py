@@ -24,7 +24,7 @@ class Camera(object):
         Out: QMatrix4x4
         --------------------
         """
-        T =  QMatrix4x4()
+        T = QMatrix4x4()
         T.lookAt(QVector3D(0, -40, 0), QVector3D(0, 0, 0), QVector3D(0, 0, 1))
         return T
 
@@ -112,7 +112,7 @@ class Camera(object):
         else:
             deltaT = self.lastTarget * target
             self._modelView = self._modelView * deltaT
-    
+
         self.lastTarget = QMatrix4x4(pose)
 
     def unfollow(self):

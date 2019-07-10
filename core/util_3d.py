@@ -1,5 +1,6 @@
-import os, sys
 import json
+import os
+import sys
 
 try:
     import numpy as np

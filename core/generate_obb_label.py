@@ -1,9 +1,10 @@
-from plyfile import PlyData, PlyElement
-import numpy as np
 import os
+
+import numpy as np
+from plyfile import PlyData
+
 from core import generate_instance_id
 from core.new_parser import FitObb, save_obb
-import sys
 
 id_mapping_realation = {0: 'none', 1: 'wall', 2: 'floor', 3: 'cabinet', 4: 'bed', 5: 'chair', 6: 'sofa', 7: 'table',
                         8: 'door', 9: 'window', 10: 'bookshelf', 11: 'picture', 12: 'counter', 13: 'blinds', 14: 'desk',

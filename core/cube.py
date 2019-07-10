@@ -1,8 +1,5 @@
 # coding=utf-8
 from OpenGL.GL import *
-from OpenGL.GLU import *
-import numpy as np
-from OpenGL.raw.GLUT import *
 
 from core.util import *
 

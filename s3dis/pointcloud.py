@@ -59,17 +59,26 @@ class PC(object):
             # room_name = self.path.split('/')[-1].split('.')[0]
             # room_dir = os.path.join(ROOT_PATH, room_name)
             # room_path = os.path.join(room_dir, 'Annotations')\
-            instance_path = data['path']
-            instance_label = data['label']
-            original_data = np.loadtxt(instance_path[0])
-            vex = original_data[:, :3]
-            vex = np.reshape(vex, (1, -1))
-            vex = vex / 50
-            color = original_data[:, 3:]
-            color = np.reshape(color, (1, -1))
-            color = color / 255
-            all_data.append((vex, color))
-            all_label.append(instance_label)
+            if data['parent'] == -1:
+                instance_path = data['path']
+                instance_label = data['label']
+                v = []
+                c = []
+                for instance in instance_path:
+                    original_data = np.loadtxt(instance)
+                    vex = original_data[:, :3]
+                    color = original_data[:, 3:]
+
+                    vex = np.reshape(vex, (1, -1))
+                    vex = vex / 50
+                    color = np.reshape(color, (1, -1))
+                    color = color / 255
+                    v.extend(vex.tolist()[0])
+                    c.extend(color.tolist()[0])
+                # v = np.reshape(np.array(v), (1, -1))
+                # c = np.reshape(np.array(c), (1, -1))
+                all_data.append((v, c))
+                all_label.append(instance_label)
         self.data = all_data
         self.buffers_list, self.lens = self.create_vbo()
         self.record_path = self.path
@@ -80,8 +89,9 @@ class PC(object):
             buffers_list = []
             lens = []
             for single_data in self.data:
-                vex = single_data[0].tolist()[0]
-                color = single_data[1].tolist()[0]
+                vex = single_data[0]
+                color = single_data[1]
+                print(len(vex))
                 index = np.arange(len(vex))
                 buffers = glGenBuffers(3)
                 glBindBuffer(GL_ARRAY_BUFFER, buffers[0])

@@ -213,6 +213,7 @@ def get_all_json_data(path):
             model_array = json.load(fp)
     return model_array
 
+
 def get_s3dis_json_data(path):
     room_array = get_all_json_data(path)
     return room_array
