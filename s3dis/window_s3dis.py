@@ -183,14 +183,11 @@ class Window(QWidget):
                 pass
 
         if widget == self.save_button:
-            self.change_json()
-            self.change_mesh(self.json_path_new)
             self.write_json()
         if widget == self.review_button:
             pass
         if widget == self.all_in_one:
-            self.change_json()
-            self.change_mesh(self.json_path_new)
+            # self.change_json()
             self.write_json()
 
     def change_label(self):
@@ -232,33 +229,32 @@ class Window(QWidget):
     def change_json(self):
         self.json_data = self.gl_widget.pointcloud.hier_data
         model_array = get_all_json_data(self.json_data_path)
-        print(self.operation_stack[-1])
-        op = self.operation_stack[-1][0]
-        print(op)
-        gt = GT()
-        gt.label = self.label_new
-        gt.id = self.json_data[-1]['id'] + 1
-        gt.children = []
-        gt.parent = -1
-        gt.path = []
-        pair = []
-        for i, d in enumerate(self.json_data):
-            if d['parent'] == -1:
-                pair.append(i)
-        for j in op:
-            self.json_data[pair[j]]['parent'] = gt.id
-            gt.children.append(self.json_data[pair[j]]['id'])
-            gt.path.extend(self.json_data[pair[j]]['path'])
+        if self.operation_stack:
+            op = self.operation_stack[-1][0]
+            gt = GT()
+            gt.label = self.label_new
+            gt.id = self.json_data[-1]['id'] + 1
+            gt.children = []
+            gt.parent = -1
+            gt.path = []
+            pair = []
+            for i, d in enumerate(self.json_data):
+                if d['parent'] == -1:
+                    pair.append(i)
+            print(pair)
+            for j in op:
+                self.json_data[pair[j]]['parent'] = gt.id
+                gt.children.append(self.json_data[pair[j]]['id'])
+                gt.path.extend(self.json_data[pair[j]]['path'])
 
-        self.json_data.append(obj_2_json(gt))
-        self.fake_change_mesh(pair)
+            self.json_data.append(obj_2_json(gt))
+            self.fake_change_mesh(pair)
 
-
-def write_json(self):
-    self.json_path_new = self.json_data_path.split('.')[0].replace('_copy', '') + '_copy' + '.json'
-    with open(self.json_path_new, 'w')as f:
-        json.dump(self.json_data, f)
-    get_logger().debug(get__function_name() + '-->' + 'json copy write complete')
+    def write_json(self):
+        self.json_path_new = self.json_data_path.split('.')[0].replace('_copy', '') + '_copy' + '.json'
+        with open(self.json_path_new, 'w')as f:
+            json.dump(self.json_data, f)
+        get_logger().debug(get__function_name() + '-->' + 'json copy write complete')
 
 
 class EventDisable(QWidget):
