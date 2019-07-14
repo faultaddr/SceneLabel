@@ -649,7 +649,7 @@
   },
   {
     "newModel": 6,
-    "parent": "25",
+    "parent": "-2",
     "is_meaningful": "yes",
     "children": [
       "15"
@@ -1998,7 +1998,6 @@
     "is_meaningful": "yes",
     "children": [
       "3",
-      "6",
       "11",
       "22",
       "23",

@@ -26,6 +26,7 @@ class Window(QWidget):
         self.display_relations_list = QListWidget()
         self.error_message = QErrorMessage()
         self.merge_mesh_button = QPushButton('合并面片')
+        self.delete_mesh_button = QPushButton('删除面片')
         self.save_button = QPushButton('写入')
         self.cancel_button = QPushButton('撤销')
         self.review_button = QPushButton('检查')
@@ -91,6 +92,8 @@ class Window(QWidget):
         # merge the group
         self.merge_mesh_button.clicked.connect(lambda: self.on_click(self.merge_mesh_button))
 
+        # delete the group
+        self.delete_mesh_button.clicked.connect(lambda: self.on_click(self.delete_mesh_button))
         '''
         child_layout_h_3
         '''
@@ -108,6 +111,7 @@ class Window(QWidget):
         child_layout_h_1.addWidget(self.label_box, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_2.addWidget(self.merged_label_box, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_2.addWidget(self.merge_mesh_button, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_2.addWidget(self.delete_mesh_button, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_3.addWidget(self.cancel_button, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_3.addWidget(self.save_button, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_3.addWidget(self.review_button, 0, Qt.AlignLeft | Qt.AlignTop)
@@ -150,6 +154,9 @@ class Window(QWidget):
             labeled_index = self.merged_label_box.get_checked_box()
             print(labeled_index)
             self.opt_merge(index, labeled_index)
+        if widget == self.delete_mesh_button:
+            index = self.label_box.get_checked_box()
+            self.delete_mesh(index)
         if widget == self.cancel_button:
             self.operation_stack.pop(-1)
         if widget == self.save_button:
@@ -192,6 +199,22 @@ class Window(QWidget):
             first_index = index.pop(labeled_index[0])
             index.insert(0, first_index)
             self.operation_stack.append(index)
+
+    def delete_mesh(self, index):
+        self.json_data = self.gl_widget.mesh.hier_data
+        for i in index:
+            self.json_data[i]['parent'] = '-2'
+        model_array = get_all_json_data(self.json_data_path)
+        self.json_path_new = self.json_data_path.split('.')[0].replace('_copy', '') + '_copy' + '.json'
+        for i, model in enumerate(model_array):
+            for data in self.json_data:
+                if model['newModel'] == data['newModel']:
+                    model_array[i] = data
+                if model['parent'] == "0" and data['parent'] != str(model['newModel']):
+                    model['children'].remove(str(data['newModel']))
+        with open(self.json_path_new, 'w')as f:
+            json.dump(model_array, f)
+        get_logger().debug(get__function_name() + '-->' + 'json copy write complete')
 
     def change_json(self):
         # eater = EventDisable()
