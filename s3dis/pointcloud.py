@@ -23,7 +23,7 @@ class PC(object):
     lens = []
     record_path = ''
     label_list = []
-
+    mean = []
     # light info
     light_ambient = [0.25, 0.25, 0.25]
     light_diffuse = [1.0, 1.0, 1.0]
@@ -55,6 +55,7 @@ class PC(object):
     def change_data(self):
         all_data = []
         all_label = []
+        mean_xyz = 0
         for i, data in enumerate(self.hier_data):
             # room_name = self.path.split('/')[-1].split('.')[0]
             # room_dir = os.path.join(ROOT_PATH, room_name)
@@ -67,10 +68,11 @@ class PC(object):
                 for instance in instance_path:
                     original_data = np.loadtxt(instance)
                     vex = original_data[:, :3]
+                    mean_xyz += np.mean(vex, axis=0)
                     color = original_data[:, 3:]
 
                     vex = np.reshape(vex, (1, -1))
-                    vex = vex / 50
+                    vex = vex
                     color = np.reshape(color, (1, -1))
                     color = color / 255
                     v.extend(vex.tolist()[0])
@@ -79,6 +81,7 @@ class PC(object):
                 # c = np.reshape(np.array(c), (1, -1))
                 all_data.append((v, c))
                 all_label.append(instance_label)
+        self.mean = mean_xyz / len(self.hier_data)
         self.data = all_data
         self.buffers_list, self.lens = self.create_vbo()
         self.record_path = self.path
@@ -102,6 +105,7 @@ class PC(object):
                 glBufferData(GL_ELEMENT_ARRAY_BUFFER,
                              (ctypes.c_int * len(index))(*index),
                              GL_STATIC_DRAW)
+                print(buffers[0], buffers[1], buffers[2])
                 buffers_list.append(buffers)
                 lens.append(len(vex))
             return buffers_list, lens

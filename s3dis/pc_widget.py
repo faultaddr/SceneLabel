@@ -18,9 +18,10 @@ class GLWidget(QOpenGLWidget):
     def __init__(self, parent=None):
         super(GLWidget, self).__init__(parent)
         self.lastZ = 10
-        self.cam = Camera(4, 0.1, 18)
-        self.cam.lookAt(QVector3D(10, 0.1, 0.01), QVector3D(0, 0, 0), QVector3D(-0.01, 0.1, 0))
-        self.rotCenter = QVector3D(1, 0, 0)
+        self.cam = Camera(50.0, 0.1, 100)
+        self.cam.lookAt(QVector3D(-11.34805872, 10.68026085, 10.29478443),
+                        QVector3D(-11.34805872, 10.68026085, 1.29478443), QVector3D(-1, 1, 1))
+        self.rotCenter = QVector3D(0, 0, 0)
         self.data = None
         self.pointcloud = PC(path='')
         self.is_point = False
@@ -47,6 +48,11 @@ class GLWidget(QOpenGLWidget):
         logger.info(get__function_name() + '-->')
         self.pointcloud.path = path
         self.pointcloud.init_data()
+        self.cam.lookAt(QVector3D(self.pointcloud.mean[0], self.pointcloud.mean[1], self.pointcloud.mean[2] * 20),
+                        QVector3D(self.pointcloud.mean[0], self.pointcloud.mean[1], self.pointcloud.mean[2]),
+                        QVector3D(self.pointcloud.mean[0] / abs(self.pointcloud.mean[0]),
+                                  self.pointcloud.mean[1] / abs(self.pointcloud.mean[1]),
+                                  self.pointcloud.mean[2] / abs(self.pointcloud.mean[2])))
         self.update()
 
     def repaint_with_data(self, data):

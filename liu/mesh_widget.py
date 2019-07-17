@@ -66,7 +66,6 @@ class GLWidget(QOpenGLWidget):
 
         # enable drawing vertices and color array
         gl.glEnableClientState(gl.GL_VERTEX_ARRAY)
-        gl.glEnableClientState(gl.GL_COLOR_ARRAY)
         gl.glEnableClientState(gl.GL_NORMAL_ARRAY)
 
         # draw all key frames
@@ -74,7 +73,6 @@ class GLWidget(QOpenGLWidget):
 
         # disable drawing vertices and color array
         gl.glDisableClientState(gl.GL_VERTEX_ARRAY)
-        gl.glDisableClientState(gl.GL_COLOR_ARRAY)
         gl.glEnableClientState(gl.GL_NORMAL_ARRAY)
 
     def mousePressEvent(self, event):
