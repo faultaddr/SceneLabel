@@ -1,13 +1,51 @@
 # coding=utf-8
+import threading
 
 import numpy as np
 from OpenGL.GL import *
 from OpenGL.GLUT import *
 
 from core.util import get_logger, get_s3dis_json_data
+import datetime
 
 ROOT_PATH = '/data/S3DIS/Stanford3dDataset_v1.2_Aligned_Version/Area_1/'
 logger = get_logger()
+
+
+def process_data(d):
+    data = d
+    if data['parent'] == -1:
+        instance_path = data['path']
+        instance_label = data['label']
+        v = []
+        c = []
+        mean_xyz = [0, 0, 0]
+        for instance in instance_path:
+            original_data = np.loadtxt(instance)
+            vex = original_data[:, :3]
+            mean_xyz = np.mean(vex, axis=0)
+            color = original_data[:, 3:]
+            vex = np.reshape(vex, (1, -1))
+            color = np.reshape(color, (1, -1))
+            color = color / 255
+            v = vex.tolist()[0]
+            c = color.tolist()[0]
+        return (v, c), instance_label, mean_xyz
+
+
+class MyThread(threading.Thread):
+    def __init__(self, func, args, name=''):
+        threading.Thread.__init__(self)
+        self.name = name
+        self.func = func
+        self.args = args
+        self.result = self.func(*self.args)
+
+    def get_result(self):
+        try:
+            return self.result
+        except Exception:
+            return None
 
 
 class PC(object):
@@ -55,37 +93,35 @@ class PC(object):
     def change_data(self):
         all_data = []
         all_label = []
-        mean_xyz = 0
-        for i, data in enumerate(self.hier_data):
+        mean_xyz = [0, 0, 0]
+
+        threads = []
+        start_time = datetime.datetime.now()
+        for data in self.hier_data:
             # room_name = self.path.split('/')[-1].split('.')[0]
             # room_dir = os.path.join(ROOT_PATH, room_name)
             # room_path = os.path.join(room_dir, 'Annotations')\
-            if data['parent'] == -1:
-                instance_path = data['path']
-                instance_label = data['label']
-                v = []
-                c = []
-                for instance in instance_path:
-                    original_data = np.loadtxt(instance)
-                    vex = original_data[:, :3]
-                    mean_xyz += np.mean(vex, axis=0)
-                    color = original_data[:, 3:]
+            t = MyThread(process_data, [data], process_data.__name__)
+            t.start()
+            threads.append(t)
+        for t in threads:
+            t.join()
+        for t in threads:
+            (v, c), instance_label, mean = t.get_result()
+            all_data.append((v, c))
+            all_label.append(instance_label)
+            mean_xyz.append(mean)
 
-                    vex = np.reshape(vex, (1, -1))
-                    vex = vex
-                    color = np.reshape(color, (1, -1))
-                    color = color / 255
-                    v.extend(vex.tolist()[0])
-                    c.extend(color.tolist()[0])
-                # v = np.reshape(np.array(v), (1, -1))
-                # c = np.reshape(np.array(c), (1, -1))
-                all_data.append((v, c))
-                all_label.append(instance_label)
-        self.mean = mean_xyz / len(self.hier_data)
+        # v = np.reshape(np.array(v), (1, -1))
+        # c = np.reshape(np.array(c), (1, -1))
+
+        self.mean = np.sum(np.array(mean_xyz), axis=0) / len(self.hier_data)
         self.data = all_data
         self.buffers_list, self.lens = self.create_vbo()
         self.record_path = self.path
         self.label_list = all_label
+        end_time = datetime.datetime.now()
+        print((end_time - start_time).seconds)
 
     def create_vbo(self):
         if self.data:
@@ -94,7 +130,6 @@ class PC(object):
             for single_data in self.data:
                 vex = single_data[0]
                 color = single_data[1]
-                print(len(vex))
                 index = np.arange(len(vex))
                 buffers = glGenBuffers(3)
                 glBindBuffer(GL_ARRAY_BUFFER, buffers[0])
@@ -105,7 +140,6 @@ class PC(object):
                 glBufferData(GL_ELEMENT_ARRAY_BUFFER,
                              (ctypes.c_int * len(index))(*index),
                              GL_STATIC_DRAW)
-                print(buffers[0], buffers[1], buffers[2])
                 buffers_list.append(buffers)
                 lens.append(len(vex))
             return buffers_list, lens
@@ -113,7 +147,6 @@ class PC(object):
             return [], 0
 
     def draw(self):
-
         # # turn on shading
         # glEnable(GL_LIGHTING)
         # glEnable(GL_LIGHT0)

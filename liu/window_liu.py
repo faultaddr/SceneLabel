@@ -18,14 +18,16 @@ class Window(QWidget):
         # widget init
         self.gl_widget = GLWidget(self)
         self.top_text_hint = QTextEdit()
-        self.display_mesh = QPushButton('显示面片')
+        self.path_text = QLineEdit()
         self.choose_file = QPushButton('选取文件')
+        self.display_mesh = QPushButton('显示面片')
         self.file_dialog = QFileDialog()
         self.label_box = ComboCheckBox()
         self.merged_label_box = ComboCheckBox()
         self.display_relations_list = QListWidget()
         self.error_message = QErrorMessage()
         self.merge_mesh_button = QPushButton('合并面片')
+        self.edit_text = QLineEdit()
         self.delete_mesh_button = QPushButton('删除面片')
         self.save_button = QPushButton('写入')
         self.cancel_button = QPushButton('撤销')
@@ -34,8 +36,11 @@ class Window(QWidget):
         self.json_data_path = ''
         self.json_data = []
         self.operation_stack = []
+        self.label_stack = []
         self.merged_label_checked = []
         self.json_path_new = ''
+        self.label = ''
+        self.default_directory = '/data/SceneLabel/liu/liu_json'
         self.init_ui()
 
     def init_ui(self):
@@ -63,7 +68,9 @@ class Window(QWidget):
         '''
         child_layout_h_1
         '''
-
+        # change default path
+        self.path_text.setText(self.default_directory)
+        self.path_text.textChanged.connect(lambda: self.on_click(self.path_text))
         # display mesh
         self.display_mesh.toggle()
         self.display_mesh.clicked.connect(lambda: self.on_click(self.display_mesh))
@@ -88,7 +95,9 @@ class Window(QWidget):
         self.merged_label_box.currentIndexChanged.connect(lambda: self.on_click(self.merged_label_box))
         # display combined group
         self.display_relations_list.currentItemChanged.connect(lambda: self.display_all_relations())
+        # edit the label
 
+        self.edit_text.textChanged.connect(lambda: self.edit_label())
         # merge the group
         self.merge_mesh_button.clicked.connect(lambda: self.on_click(self.merge_mesh_button))
 
@@ -105,11 +114,14 @@ class Window(QWidget):
         self.review_button.clicked.connect(lambda: self.on_click(self.review_button))
 
         # layout setting
+
         child_layout_h_0.addWidget(self.top_text_hint, 0, Qt.AlignCenter)
+        child_layout_h_1.addWidget(self.path_text, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_1.addWidget(self.choose_file, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_1.addWidget(self.display_mesh, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_1.addWidget(self.label_box, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_2.addWidget(self.merged_label_box, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_2.addWidget(self.edit_text, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_2.addWidget(self.merge_mesh_button, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_2.addWidget(self.delete_mesh_button, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_3.addWidget(self.cancel_button, 0, Qt.AlignLeft | Qt.AlignTop)
@@ -132,6 +144,8 @@ class Window(QWidget):
         self.move(qr.topLeft())
 
     def on_click(self, widget):
+        if widget == self.path_text:
+            self.default_directory = widget.text()
         if widget == self.label_box:
             get_logger().info(get__function_name() + '-->')
             original_list = self.label_box.items
@@ -146,9 +160,10 @@ class Window(QWidget):
             self.draw_labeled_mesh(index)
         if widget == self.choose_file:
             directory = self.file_dialog.getOpenFileName(parent=self, caption='选取文件夹',
-                                                         directory='/data/SceneLabel/core/s3dis_json')
-            self.json_data_path = directory[0]
-            self.change_mesh(directory[0])
+                                                         directory=self.default_directory)
+            if directory != '':
+                self.json_data_path = directory[0]
+                self.change_mesh(directory[0])
         if widget == self.merge_mesh_button:
             index = self.label_box.get_checked_box()
             labeled_index = self.merged_label_box.get_checked_box()
@@ -173,6 +188,7 @@ class Window(QWidget):
     def change_mesh(self, path):
         self.gl_widget.change_data(path)
         self.json_data_path = path
+        self.setWindowTitle("Label Tools :->" + path)
         self.change_label()
         self.operation_stack = []
 
@@ -199,6 +215,7 @@ class Window(QWidget):
             first_index = index.pop(labeled_index[0])
             index.insert(0, first_index)
             self.operation_stack.append(index)
+            self.label_stack.append(self.label)
 
     def delete_mesh(self, index):
         self.json_data = self.gl_widget.mesh.hier_data
@@ -223,13 +240,16 @@ class Window(QWidget):
         model_array = get_all_json_data(self.json_data_path)
         print(str(self.operation_stack))
         print('--->', self.json_data)
-        for op in self.operation_stack:
+        for index, op in enumerate(self.operation_stack):
             print('0-1:', op[0], op[1])
             for i in op[1:]:
                 self.json_data[i]['parent'] = str(self.json_data[op[0]]['newModel'])
                 self.json_data[op[0]]['children'].append(str(self.json_data[i]['newModel']))
                 self.json_data[op[0]]['leaf_group'].extend(self.json_data[i]['leaf_group'])
-
+        if not self.label_stack and self.label != '':
+            index = self.label_box.get_checked_box()
+            for i in index:
+                self.json_data[i]['label'] = self.label.split(' ')
         for i, model in enumerate(model_array):
             for data in self.json_data:
                 if model['newModel'] == data['newModel']:
@@ -240,7 +260,15 @@ class Window(QWidget):
         with open(self.json_path_new, 'w')as f:
             json.dump(model_array, f)
         get_logger().debug(get__function_name() + '-->' + 'json copy write complete')
+        self.label = ''
+        self.operation_stack = []
+        self.label_stack = []
+        self.edit_text.clear()
         # eater.ignore = True
+
+    def edit_label(self):
+
+        self.label = self.edit_text.text()
 
 
 class EventDisable(QWidget):

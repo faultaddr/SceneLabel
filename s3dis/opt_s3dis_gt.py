@@ -34,19 +34,22 @@ def translate_2_json(path):
 
     gt_list = []
     for i, instance in enumerate(instance_dir):
-        gt = GT()
         print(instance)
-        label = instance.split('_')[0]
-        parent = -1
-        children = []
-        instance_path = [os.path.join(os.path.join(path, 'Annotations'), instance)]
-        gt.id = i
-        gt.parent = parent
-        gt.children = children
-        gt.label = label
-        gt.path = instance_path
-        gt_list.append(gt)
-    print(path.split('/'))
+        if '.txt' in instance:
+            gt = GT()
+            print(instance)
+            label = instance.split('_')[0]
+            parent = -1
+            children = []
+            instance_path = [os.path.join(os.path.join(path, 'Annotations'), instance)]
+            gt.id = i
+            gt.parent = parent
+            gt.children = children
+            gt.label = label
+            gt.path = instance_path
+            gt_list.append(gt)
+        print(path.split('/'))
+
     with open('./s3dis_json/%s.json' % path.split('/')[-1], 'w')as json_data:
         json.dump(gt_list, json_data, default=obj_2_json)
 

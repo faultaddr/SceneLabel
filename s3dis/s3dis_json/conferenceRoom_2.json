@@ -54,15 +54,6 @@
     ]
   },
   {
-    "id": 6,
-    "parent": -1,
-    "children": [],
-    "label": "Icon",
-    "path": [
-      "/data/S3DIS/Stanford3dDataset_v1.2_Aligned_Version/Area_1/conferenceRoom_2/Annotations/Icon"
-    ]
-  },
-  {
     "id": 7,
     "parent": -1,
     "children": [],
