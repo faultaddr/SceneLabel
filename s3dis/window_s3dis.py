@@ -3,7 +3,7 @@ import json
 import threading
 
 import numpy as np
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, pyqtSignal, QBasicTimer
 from PyQt5.QtGui import QColor
 from PyQt5.QtWidgets import *
 
@@ -14,8 +14,55 @@ from s3dis.opt_s3dis_gt import obj_2_json
 from s3dis.pc_widget import GLWidget
 
 
+class MainWindow(QMainWindow):
+
+    def __init__(self):
+        super(MainWindow, self).__init__()
+        self.progress_bar = QProgressBar(self)
+        self.statusBar().showMessage('运行中...')
+        self.setWindowTitle("Label Tools (for Beta Lab use only)")
+        self.label_first = QLabel()
+        self.label_second = QLabel()
+        self.flag = 0
+        self.window = Window()
+        self.step = 0
+        self.timer = QBasicTimer()
+        self.init_ui()
+
+    def init_ui(self):
+        self.window.signal.connect(self.progress_bar_animate)
+
+        self.setCentralWidget(self.window)
+
+        self.statusBar().addPermanentWidget(self.label_first)
+        self.statusBar().addPermanentWidget(self.label_second)
+        self.statusBar().addPermanentWidget(self.progress_bar)
+        # self.statusBar().addWidget(self.progressBar)
+
+        # This is simply to show the bar
+        self.progress_bar.setGeometry(0, 0, 100, 5)
+        self.progress_bar.setRange(0, 100)  # 设置进度条的范围
+
+    def progress_bar_animate(self):
+        self.progress_bar.setValue(20)
+        if self.flag == 0:
+            self.flag = 1
+        else:
+            self.progress_bar.setValue(100)
+            self.statusBar().showMessage("successful")
+
+    def timerEvent(self, e):
+        if self.step >= 100:
+            self.timer.stop()
+        self.step += self.step + 1
+        self.progress_bar.setValue(self.step)
+
+    def wait_for_loading(self):
+        self.progress_bar.setValue(self.progress_bar.value() + 100)
+
+
 class Window(QWidget):
-    lock = threading.RLock()
+    signal = pyqtSignal(int)
 
     def __init__(self):
         super(Window, self).__init__()
@@ -197,10 +244,12 @@ class Window(QWidget):
         self.label_box.fn_init_data(label_list)
 
     def change_mesh(self, path):
+        self.signal.emit(0)
         self.gl_widget.change_data(path)
         self.json_data_path = path
         self.change_label()
         self.operation_stack = []
+        self.signal.emit(1)
 
     def fake_change_mesh(self, index):
         self.gl_widget.pointcloud.hier_data = self.json_data
