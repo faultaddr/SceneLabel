@@ -1,19 +1,23 @@
 # coding=utf-8
 import threading
+from concurrent.futures import ProcessPoolExecutor
 
 import numpy as np
 from OpenGL.GL import *
 from OpenGL.GLUT import *
 
-from core.util import get_logger, get_s3dis_json_data
+from core.util import get_logger, get_s3dis_json_data, json_2_obj
 import datetime
+from cachetools import LRUCache, RRCache, cachedmethod, cached, TTLCache
 
 ROOT_PATH = '/data/S3DIS/Stanford3dDataset_v1.2_Aligned_Version/Area_1/'
 logger = get_logger()
+cache = TTLCache(maxsize=400, ttl=300)
 
 
 def process_data(d):
-    data = d
+    print(d)
+    data = eval(d)
     if data['parent'] == -1:
         instance_path = data['path']
         instance_label = data['label']
@@ -31,21 +35,6 @@ def process_data(d):
             v = vex.tolist()[0]
             c = color.tolist()[0]
         return (v, c), instance_label, mean_xyz
-
-
-class MyThread(threading.Thread):
-    def __init__(self, func, args, name=''):
-        threading.Thread.__init__(self)
-        self.name = name
-        self.func = func
-        self.args = args
-        self.result = self.func(*self.args)
-
-    def get_result(self):
-        try:
-            return self.result
-        except Exception:
-            return None
 
 
 class PC(object):
@@ -95,19 +84,11 @@ class PC(object):
         all_label = []
         mean_xyz = [0, 0, 0]
 
-        threads = []
         start_time = datetime.datetime.now()
-        for data in self.hier_data:
-            # room_name = self.path.split('/')[-1].split('.')[0]
-            # room_dir = os.path.join(ROOT_PATH, room_name)
-            # room_path = os.path.join(room_dir, 'Annotations')\
-            t = MyThread(process_data, [data], process_data.__name__)
-            t.start()
-            threads.append(t)
-        for t in threads:
-            t.join()
-        for t in threads:
-            (v, c), instance_label, mean = t.get_result()
+        pool = ProcessPoolExecutor(max_workers=16)
+        result = list(pool.map(process_data, [str(x) for x in self.hier_data]))
+        for r in result:
+            (v, c), instance_label, mean = r
             all_data.append((v, c))
             all_label.append(instance_label)
             mean_xyz.append(mean)
@@ -117,13 +98,15 @@ class PC(object):
 
         self.mean = np.sum(np.array(mean_xyz), axis=0) / len(self.hier_data)
         self.data = all_data
-        self.buffers_list, self.lens = self.create_vbo()
+        self.buffers_list, self.lens = self.create_vbo(self.path)
         self.record_path = self.path
         self.label_list = all_label
         end_time = datetime.datetime.now()
         print((end_time - start_time).seconds)
 
-    def create_vbo(self):
+    @cached(cache)
+    def create_vbo(self, path):
+        print(path)
         if self.data:
             buffers_list = []
             lens = []

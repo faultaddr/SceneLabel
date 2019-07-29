@@ -219,6 +219,10 @@ def get_s3dis_json_data(path):
     return room_array
 
 
+def json_2_obj(json_str):
+    return json.loads(json_str)
+
+
 # ===========================Liu's dataset============================
 def get_json_data(path):
     """
