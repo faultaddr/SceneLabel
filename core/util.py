@@ -264,6 +264,14 @@ def get_obj_data(path):
 
 
 # ===========================Liu's dataset============================
+
+# ===========================ply data============================
+def get_ply_data_origin(path):
+    point_cloud = o3d.io.read_point_cloud(path)
+    return np.asarray(point_cloud.points), np.asarray(point_cloud.colors)
+
+
+# ===========================ply data============================
 def get_logger():
     global logger
     if logger is None:

@@ -44,16 +44,23 @@ class MainWindow(QMainWindow):
         self.progress_bar.setRange(0, 100)  # 设置进度条的范围
 
     def progress_bar_animate(self):
-        self.progress_bar.setValue(20)
+        print('progress_bar_animate')
+        self.progress_bar.setValue(0)
+        self.timer.start(100, self)
+
         if self.flag == 0:
             self.flag = 1
         else:
             self.progress_bar.setValue(100)
             self.statusBar().showMessage("successful")
+            self.flag = 0
 
     def timerEvent(self, e):
-        if self.step >= 100:
+        print(self.step)
+        if self.step >= 50:
             self.timer.stop()
+            self.window.change_mesh()
+            self.progress_bar.setValue(100)
         self.step += self.step + 1
         self.progress_bar.setValue(self.step)
 
@@ -62,7 +69,7 @@ class MainWindow(QMainWindow):
 
 
 class Window(QWidget):
-    signal = pyqtSignal(int)
+    signal = pyqtSignal(str)
 
     def __init__(self):
         super(Window, self).__init__()
@@ -203,8 +210,10 @@ class Window(QWidget):
         if widget == self.choose_file:
             directory = self.file_dialog.getOpenFileName(parent=self, caption='选取文件夹',
                                                          directory='s3dis/s3dis_json')
-            self.json_data_path = directory[0]
-            self.change_mesh(directory[0])
+            if directory[0] != self.json_data_path:
+                self.json_data_path = directory[0]
+                self.signal.emit(directory[0])
+
         if widget == self.label_edit:
             self.label_new = self.label_edit.text()
         if widget == self.merge_mesh_button:
@@ -243,13 +252,13 @@ class Window(QWidget):
         self.label_box.clear()
         self.label_box.fn_init_data(label_list)
 
-    def change_mesh(self, path):
-        self.signal.emit(0)
-        self.gl_widget.change_data(path)
-        self.json_data_path = path
-        self.change_label()
-        self.operation_stack = []
-        self.signal.emit(1)
+    def change_mesh(self, path=''):
+        if path == '':
+            path = self.json_data_path
+            self.gl_widget.change_data(path)
+            self.json_data_path = path
+            self.change_label()
+            self.operation_stack = []
 
     def fake_change_mesh(self, index):
         self.gl_widget.pointcloud.hier_data = self.json_data
@@ -260,6 +269,7 @@ class Window(QWidget):
         print('fake_list', fake_list)
         self.gl_widget.pointcloud.hier_display_index = fake_list
         self.gl_widget.pointcloud.change_data()
+        self.gl_widget.update()
         self.change_label()
 
     def draw_labeled_mesh(self, index_list):

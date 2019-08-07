@@ -16,7 +16,6 @@ cache = TTLCache(maxsize=400, ttl=300)
 
 
 def process_data(d):
-    print(d)
     data = eval(d)
     if data['parent'] == -1:
         instance_path = data['path']
@@ -32,9 +31,9 @@ def process_data(d):
             vex = np.reshape(vex, (1, -1))
             color = np.reshape(color, (1, -1))
             color = color / 255
-            v = vex.tolist()[0]
-            c = color.tolist()[0]
-        return (v, c), instance_label, mean_xyz
+            v.extend(vex.tolist()[0])
+            c.extend(color.tolist()[0])
+        return (v, c), instance_label, mean_xyz, data['id']
 
 
 class PC(object):
@@ -45,6 +44,7 @@ class PC(object):
     vn = []
     hier_data = []
     hier_display_index = []
+    hier_display_id = []
     data = []
     buffers_list = None
     lens = []
@@ -80,39 +80,46 @@ class PC(object):
         self.change_data()
 
     def change_data(self):
+
+        self.hier_display_id = []
         all_data = []
         all_label = []
         mean_xyz = [0, 0, 0]
 
         start_time = datetime.datetime.now()
         pool = ProcessPoolExecutor(max_workers=16)
-        result = list(pool.map(process_data, [str(x) for x in self.hier_data]))
+        result = list(pool.map(process_data, [str(y) for y in self.hier_data]))
+        print(len(result))
         for r in result:
-            (v, c), instance_label, mean = r
-            all_data.append((v, c))
-            all_label.append(instance_label)
-            mean_xyz.append(mean)
+            if r is not None:
+                (v, c), instance_label, mean, i_id = r
+                all_data.append((v, c))
+                all_label.append(instance_label)
+                mean_xyz.append(mean)
+                self.hier_display_id.append(i_id)
 
+        self.hier_display_index = range(0, len(all_data))
         # v = np.reshape(np.array(v), (1, -1))
         # c = np.reshape(np.array(c), (1, -1))
 
-        self.mean = np.sum(np.array(mean_xyz), axis=0) / len(self.hier_data)
+        self.mean = np.sum(np.array(mean_xyz), axis=0) / len(all_data)
         self.data = all_data
-        self.buffers_list, self.lens = self.create_vbo(self.path)
+        self.buffers_list, self.lens = self.create_vbo(str(self.hier_display_id))
         self.record_path = self.path
         self.label_list = all_label
         end_time = datetime.datetime.now()
         print((end_time - start_time).seconds)
 
-    @cached(cache)
-    def create_vbo(self, path):
-        print(path)
+    def create_vbo(self, id_list_str):
+        print(id_list_str)
         if self.data:
             buffers_list = []
             lens = []
             for single_data in self.data:
                 vex = single_data[0]
+                print(vex)
                 color = single_data[1]
+                print(color)
                 index = np.arange(len(vex))
                 buffers = glGenBuffers(3)
                 glBindBuffer(GL_ARRAY_BUFFER, buffers[0])
@@ -123,6 +130,7 @@ class PC(object):
                 glBufferData(GL_ELEMENT_ARRAY_BUFFER,
                              (ctypes.c_int * len(index))(*index),
                              GL_STATIC_DRAW)
+                print(buffers)
                 buffers_list.append(buffers)
                 lens.append(len(vex))
             return buffers_list, lens
@@ -151,9 +159,11 @@ class PC(object):
         function for render input objects
         with material
         """
+
         if self.lens == 0 or self.record_path != self.path:
             self.init_data()
         buffers_list, lens = self.buffers_list, self.lens
+
         if lens:
             for i, buffers in enumerate(buffers_list):
                 if i in self.hier_display_index:

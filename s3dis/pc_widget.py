@@ -57,7 +57,7 @@ class GLWidget(QOpenGLWidget):
 
     def repaint_with_data(self, data):
         logger.info(get__function_name() + '-->' + str(data))
-        logger.info(get__function_name() + '-->' + str(self.pointcloud.hier_data))
+        # logger.info(get__function_name() + '-->' + str(self.pointcloud.hier_data))
         if self.pointcloud.hier_data:
             self.pointcloud.hier_display_index = data
             self.update()
