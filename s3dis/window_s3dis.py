@@ -210,7 +210,7 @@ class Window(QWidget):
         if widget == self.choose_file:
             directory = self.file_dialog.getOpenFileName(parent=self, caption='选取文件夹',
                                                          directory='s3dis/s3dis_json')
-            if directory[0] != self.json_data_path:
+            if directory[0] != self.json_data_path and directory[0] != '' and directory is not None:
                 self.json_data_path = directory[0]
                 self.signal.emit(directory[0])
 
@@ -314,6 +314,9 @@ class Window(QWidget):
         with open(self.json_path_new, 'w')as f:
             json.dump(self.json_data, f)
         get_logger().debug(get__function_name() + '-->' + 'json copy write complete')
+        self.error_message.setWindowTitle('写入完成')
+        self.error_message.showMessage(
+            'complete!')
 
 
 class EventDisable(QWidget):

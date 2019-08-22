@@ -89,7 +89,6 @@ class PC(object):
         start_time = datetime.datetime.now()
         pool = ProcessPoolExecutor(max_workers=16)
         result = list(pool.map(process_data, [str(y) for y in self.hier_data]))
-        print(len(result))
         for r in result:
             if r is not None:
                 (v, c), instance_label, mean, i_id = r
@@ -111,15 +110,12 @@ class PC(object):
         print((end_time - start_time).seconds)
 
     def create_vbo(self, id_list_str):
-        print(id_list_str)
         if self.data:
             buffers_list = []
             lens = []
             for single_data in self.data:
                 vex = single_data[0]
-                print(vex)
                 color = single_data[1]
-                print(color)
                 index = np.arange(len(vex))
                 buffers = glGenBuffers(3)
                 glBindBuffer(GL_ARRAY_BUFFER, buffers[0])
@@ -130,7 +126,6 @@ class PC(object):
                 glBufferData(GL_ELEMENT_ARRAY_BUFFER,
                              (ctypes.c_int * len(index))(*index),
                              GL_STATIC_DRAW)
-                print(buffers)
                 buffers_list.append(buffers)
                 lens.append(len(vex))
             return buffers_list, lens

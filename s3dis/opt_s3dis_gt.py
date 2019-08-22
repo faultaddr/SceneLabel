@@ -59,4 +59,5 @@ def opt_all_data(path):
         if os.path.isdir(os.path.join(path, room)):
             translate_2_json(os.path.join(path, room))
 
-# opt_all_data('/data/S3DIS/Stanford3dDataset_v1.2_Aligned_Version/Area_1/')
+
+#opt_all_data('/data/S3DIS/Stanford3dDataset_v1.2_Aligned_Version/Area_6/')
