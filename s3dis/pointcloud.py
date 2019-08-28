@@ -24,13 +24,14 @@ def process_data(d):
         c = []
         mean_xyz = [0, 0, 0]
         for instance in instance_path:
-            original_data = np.loadtxt(instance)
+            new_path = '/'.join(instance.split('/')[0:4]) + '/gt/' + '/'.join(instance.split('/')[4:])
+            new_path = new_path.replace('.txt', '_color01.txt')
+            original_data = np.loadtxt(new_path)
             vex = original_data[:, :3]
             mean_xyz = np.mean(vex, axis=0)
-            color = original_data[:, 3:]
+            color = original_data[:, 3:6]
             vex = np.reshape(vex, (1, -1))
             color = np.reshape(color, (1, -1))
-            color = color / 255
             v.extend(vex.tolist()[0])
             c.extend(color.tolist()[0])
         return (v, c), instance_label, mean_xyz, data['id']
@@ -101,13 +102,14 @@ class PC(object):
         # v = np.reshape(np.array(v), (1, -1))
         # c = np.reshape(np.array(c), (1, -1))
 
-        self.mean = np.sum(np.array(mean_xyz), axis=0) / len(all_data)
+        self.mean = np.sum(np.asarray(mean_xyz), axis=0) / len(all_data)
         self.data = all_data
         self.buffers_list, self.lens = self.create_vbo(str(self.hier_display_id))
         self.record_path = self.path
         self.label_list = all_label
         end_time = datetime.datetime.now()
         print((end_time - start_time).seconds)
+
 
     def create_vbo(self, id_list_str):
         if self.data:

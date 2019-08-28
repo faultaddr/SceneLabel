@@ -567,7 +567,7 @@
   },
   {
     "id": 58,
-    "parent": -1,
+    "parent": 61,
     "children": [
       33
     ],
@@ -578,7 +578,7 @@
   },
   {
     "id": 59,
-    "parent": -1,
+    "parent": 49,
     "children": [
       23
     ],
@@ -600,6 +600,17 @@
       "/data/S3DIS/Stanford3dDataset_v1.2_Aligned_Version/Area_2/hallway_2/Annotations/chair_1.txt",
       "/data/S3DIS/Stanford3dDataset_v1.2_Aligned_Version/Area_2/hallway_2/Annotations/sofa_1.txt",
       "/data/S3DIS/Stanford3dDataset_v1.2_Aligned_Version/Area_2/hallway_2/Annotations/chair_2.txt"
+    ]
+  },
+  {
+    "id": 61,
+    "parent": -1,
+    "children": [
+      58
+    ],
+    "label": "table area",
+    "path": [
+      "/data/S3DIS/Stanford3dDataset_v1.2_Aligned_Version/Area_2/hallway_2/Annotations/table_1.txt"
     ]
   }
 ]
