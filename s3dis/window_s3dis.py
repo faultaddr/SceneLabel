@@ -12,6 +12,7 @@ from core.util import get_logger, get__function_name, get_all_json_data
 from s3dis.opt_s3dis_gt import GT
 from s3dis.opt_s3dis_gt import obj_2_json
 from s3dis.pc_widget import GLWidget
+import copy
 
 
 class MainWindow(QMainWindow):
@@ -27,6 +28,7 @@ class MainWindow(QMainWindow):
         self.window = Window()
         self.step = 0
         self.timer = QBasicTimer()
+
         self.init_ui()
 
     def init_ui(self):
@@ -74,6 +76,7 @@ class Window(QWidget):
     def __init__(self):
         super(Window, self).__init__()
         # widget init
+
         self.gl_widget = GLWidget(self)
         self.top_text_hint = QTextEdit()
         self.display_mesh = QPushButton('显示点云')
@@ -96,6 +99,9 @@ class Window(QWidget):
         self.merged_label_checked = []
         self.json_path_new = ''
         self.label_new = ''
+        self.check_box_list = []
+        self.check_label_index = []
+        self.label_dict = {}
         self.init_ui()
 
     def init_ui(self):
@@ -105,11 +111,12 @@ class Window(QWidget):
 
         # child layout
 
-        child_layout_v_1 = QVBoxLayout()
+        self.child_layout_v_1 = QVBoxLayout()
         child_layout_h_0 = QHBoxLayout()
         child_layout_h_1 = QHBoxLayout()
-        child_layout_h_2 = QHBoxLayout()
+        self.child_layout_h_2 = QHBoxLayout()
         child_layout_h_3 = QHBoxLayout()
+        child_layout_h_4 = QHBoxLayout()
         '''
         child_layout_h_0
         '''
@@ -136,6 +143,10 @@ class Window(QWidget):
         self.label_box.setMinimumContentsLength(15)
         self.label_box.setStyle(QStyleFactory.create('Windows'))
         self.label_box.signal.connect(lambda: self.on_click(self.label_box))
+
+        '''
+        child_layout_h_3
+        '''
 
         '''
         child_layout_h_2
@@ -171,21 +182,22 @@ class Window(QWidget):
         child_layout_h_1.addWidget(self.choose_file, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_1.addWidget(self.display_mesh, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_1.addWidget(self.label_box, 0, Qt.AlignLeft | Qt.AlignTop)
-        child_layout_h_2.addWidget(self.merged_label_box, 0, Qt.AlignLeft | Qt.AlignTop)
-        child_layout_h_2.addWidget(self.label_edit, 0, Qt.AlignLeft | Qt.AlignTop)
-        child_layout_h_2.addWidget(self.merge_mesh_button, 0, Qt.AlignLeft | Qt.AlignTop)
-        child_layout_h_3.addWidget(self.cancel_button, 0, Qt.AlignLeft | Qt.AlignTop)
-        child_layout_h_3.addWidget(self.save_button, 0, Qt.AlignLeft | Qt.AlignTop)
-        child_layout_h_3.addWidget(self.review_button, 0, Qt.AlignLeft | Qt.AlignTop)
-        child_layout_h_3.addWidget(self.all_in_one, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_3.addWidget(self.merged_label_box, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_3.addWidget(self.label_edit, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_3.addWidget(self.merge_mesh_button, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_4.addWidget(self.cancel_button, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_4.addWidget(self.save_button, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_4.addWidget(self.review_button, 0, Qt.AlignLeft | Qt.AlignTop)
+        child_layout_h_4.addWidget(self.all_in_one, 0, Qt.AlignLeft | Qt.AlignTop)
 
-        child_layout_v_1.addLayout(child_layout_h_0, 2)
-        child_layout_v_1.addLayout(child_layout_h_1, 1)
-        child_layout_v_1.addLayout(child_layout_h_2, 1)
-        child_layout_v_1.addLayout(child_layout_h_3, 1)
+        self.child_layout_v_1.addLayout(child_layout_h_0, 2)
+        self.child_layout_v_1.addLayout(child_layout_h_1, 1)
+        self.child_layout_v_1.addLayout(self.child_layout_h_2, 1)
+        self.child_layout_v_1.addLayout(child_layout_h_3, 1)
+        self.child_layout_v_1.addLayout(child_layout_h_4, 1)
 
-        child_layout_v_1.addStretch(4)
-        main_layout.addLayout(child_layout_v_1)
+        self.child_layout_v_1.addStretch(4)
+        main_layout.addLayout(self.child_layout_v_1)
         main_layout.addStretch(1)
         self.setLayout(main_layout)
         self.setWindowTitle("Label Tools")
@@ -206,7 +218,8 @@ class Window(QWidget):
             self.draw_labeled_mesh(index)
         if widget == self.display_mesh:
             index = self.label_box.get_checked_box()
-            self.draw_labeled_mesh(index)
+            self.gl_widget.pointcloud.change_data()
+            self.gl_widget.update()
         if widget == self.choose_file:
             directory = self.file_dialog.getOpenFileName(parent=self, caption='选取文件夹',
                                                          directory='s3dis/s3dis_json')
@@ -235,6 +248,7 @@ class Window(QWidget):
                 self.gl_widget.pointcloud.hier_display_index = np.arange(len(self.json_data)).tolist()
                 self.gl_widget.pointcloud.change_data()
                 self.change_label()
+                self.gl_widget.update()
             else:
                 pass
 
@@ -251,6 +265,44 @@ class Window(QWidget):
         label_list = self.gl_widget.pointcloud.label_list
         self.label_box.clear()
         self.label_box.fn_init_data(label_list)
+        self.init_single_class_label()
+
+    def add_check_box(self, i):
+        check_box = QCheckBox()
+        check_box.setCheckable(True)
+        check_box.stateChanged.connect(lambda: self.on_check(check_box, i))
+        self.check_box_list.append(check_box)
+
+    def init_single_class_label(self):
+        get_logger().info(get__function_name() + '-->' + self.json_data_path)
+        label_list = self.gl_widget.pointcloud.label_list
+        for i, label in enumerate(label_list):
+            if label not in self.label_dict.keys():
+                self.label_dict[label] = []
+            self.label_dict[label].append(i)
+        for i in range(len(list(self.label_dict))):
+            self.add_check_box(i)
+        for i, (key, value) in enumerate(self.label_dict.items()):
+            self.check_box_list[i].setText(key)
+            print('---index', i)
+        self.child_layout_v_1.removeItem(self.child_layout_h_2)
+        self.child_layout_h_2 = QHBoxLayout()
+        for c in self.check_box_list:
+            self.child_layout_h_2.addWidget(c, 0, Qt.AlignLeft | Qt.AlignTop)
+        self.child_layout_v_1.insertLayout(2, self.child_layout_h_2, 1)
+
+    def on_check(self, widget, index):
+        print(index)
+        self.check_label_index = []
+        for check_box in self.check_box_list:
+            if check_box.isChecked():
+                value_list = self.label_dict.values()
+                self.check_label_index.extend(list(value_list)[index])
+                sorted(set(self.check_label_index), key=self.check_label_index.index)
+                print(self.check_label_index)
+                print(self.label_dict)
+        print(self.check_label_index)
+        self.draw_labeled_mesh(self.check_label_index)
 
     def change_mesh(self, path=''):
         if path == '':

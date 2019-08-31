@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6782a91-b4d6-45d3-a3f8-1f9c8a4fa48c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/simpleGL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/simpleGL.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000005.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000005.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liu/liu_json_copy_v3/bedroom000005_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json_copy_v3/bedroom000005_copy.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.spec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/s3dis/pointcloud.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/pointcloud.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/s3dis/s3dis_json/Area1/hallway_6_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/Area1/hallway_6_copy.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/s3dis/s3dis_json/Area2/hallway_2_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/Area2/hallway_2_copy.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/s3dis/s3dis_json/Area5/hallway_8_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/s3dis_json/Area5/hallway_8_copy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s3dis/pc_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/pc_widget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/s3dis/window_s3dis.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/window_s3dis.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,9 +111,9 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="$USER_HOME$/anaconda3/envs/py36/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
@@ -255,7 +250,11 @@
       <workItem from="1566130653005" duration="26511000" />
       <workItem from="1566711110797" duration="11114000" />
       <workItem from="1566873399123" duration="5206000" />
-      <workItem from="1566958617442" duration="6083000" />
+      <workItem from="1566958617442" duration="6730000" />
+      <workItem from="1567005525308" duration="7000" />
+      <workItem from="1567005729842" duration="691000" />
+      <workItem from="1567064292528" duration="1834000" />
+      <workItem from="1567079778846" duration="14172000" />
     </task>
     <servers />
   </component>
@@ -286,7 +285,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SceneLabel$s3dis_window.coverage" NAME="s3dis_window Coverage Results" MODIFIED="1562700872221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
-    <SUITE FILE_PATH="coverage/SceneLabel$run.coverage" NAME="run Coverage Results" MODIFIED="1566982926472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SceneLabel$run.coverage" NAME="run Coverage Results" MODIFIED="1567227804273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SceneLabel$pointcloud.coverage" NAME="pointcloud Coverage Results" MODIFIED="1562706601574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/SceneLabel$pytest_in_test_thread_py.coverage" NAME="pytest in test_thread.py Coverage Results" MODIFIED="1564313528771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SceneLabel$text_test.coverage" NAME="text_test Coverage Results" MODIFIED="1565172100105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

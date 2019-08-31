@@ -27,10 +27,10 @@ class GLWidget(QOpenGLWidget):
         self.is_point = False
 
     def minimumSizeHint(self):
-        return QSize(1920, 1080)
+        return QSize(1600, 800)
 
     def sizeHint(self):
-        return QSize(1920, 1080)
+        return QSize(1600, 800)
 
     def initializeGL(self):
         gl.glClearColor(0.3, 0.3, 0.3, 1.0)
