@@ -124,3 +124,6 @@ dmypy.json
 .pyre/
 dist/
 gt_data
+s3dis
+liu
+

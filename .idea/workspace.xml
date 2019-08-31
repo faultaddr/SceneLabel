@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c6782a91-b4d6-45d3-a3f8-1f9c8a4fa48c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liu/liu_json/bedroom000005.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json/bedroom000005.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/liu/liu_json_copy_v3/bedroom000005_copy.json" beforeDir="false" afterPath="$PROJECT_DIR$/liu/liu_json_copy_v3/bedroom000005_copy.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/s3dis/pc_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/pc_widget.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/s3dis/window_s3dis.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/window_s3dis.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -254,7 +249,7 @@
       <workItem from="1567005525308" duration="7000" />
       <workItem from="1567005729842" duration="691000" />
       <workItem from="1567064292528" duration="1834000" />
-      <workItem from="1567079778846" duration="14172000" />
+      <workItem from="1567079778846" duration="14921000" />
     </task>
     <servers />
   </component>
