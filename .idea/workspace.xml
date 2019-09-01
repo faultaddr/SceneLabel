@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c6782a91-b4d6-45d3-a3f8-1f9c8a4fa48c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/ComboCheckBox.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/ComboCheckBox.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/s3dis/pc_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/pc_widget.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/s3dis/window_s3dis.py" beforeDir="false" afterPath="$PROJECT_DIR$/s3dis/window_s3dis.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -254,7 +251,7 @@
       <workItem from="1567005729842" duration="691000" />
       <workItem from="1567064292528" duration="1834000" />
       <workItem from="1567079778846" duration="15720000" />
-      <workItem from="1567264652151" duration="4351000" />
+      <workItem from="1567264652151" duration="5954000" />
     </task>
     <servers />
   </component>
@@ -285,7 +282,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SceneLabel$s3dis_window.coverage" NAME="s3dis_window Coverage Results" MODIFIED="1562700872221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
-    <SUITE FILE_PATH="coverage/SceneLabel$run.coverage" NAME="run Coverage Results" MODIFIED="1567305146057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SceneLabel$run.coverage" NAME="run Coverage Results" MODIFIED="1567305902170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SceneLabel$pointcloud.coverage" NAME="pointcloud Coverage Results" MODIFIED="1562706601574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/SceneLabel$pytest_in_test_thread_py.coverage" NAME="pytest in test_thread.py Coverage Results" MODIFIED="1564313528771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SceneLabel$text_test.coverage" NAME="text_test Coverage Results" MODIFIED="1565172100105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
