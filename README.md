@@ -15,12 +15,6 @@ This is an example of PyQt5 + pyopengl. Mouse rotation, translation, and zoom is
 
 ---
 
-<center style="position:absolute;top:0;right:0;width:5%;height:5%">
-![avatar](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567522041&di=cffc73300d37423c2023e8c03f3ffc8a&imgtype=jpg&er=1&src=http%3A%2F%2Ffiles.eduuu.com%2Fimg%2F2015%2F01%2F05%2F142329_54aa2de1b3046.jpg)
-</center>
-<center style="position:absolute;top:0;right:5%;width:5%;height:5%">
-![avarar](https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=103631955c4e9258b2398ebcfdebba3d/8718367adab44aed37666715b91c8701a18bfb13.jpg)
-</center>
 
 ## <center>计算机图形学课程设计报告</center>
 
@@ -29,22 +23,14 @@ This is an example of PyQt5 + pyopengl. Mouse rotation, translation, and zoom is
 <br></br>
 <br></br>
 <br></br>
-<center style="position:relative;width:100%;height=auto">![avatar](https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3501382343,3988719200&fm=26&gp=0.jpg)</center>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<center>
-### 姓名：<u>潘云逸</u>
 
-### 学号：<u>MG1833058</u>
-
-### 项目名称：<u>SceneLabel Tool</u>
-
-</center>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
 
 ---
 <br></br>
