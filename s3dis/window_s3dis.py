@@ -192,7 +192,6 @@ class Window(QWidget):
 
         self.child_layout_v_1.addLayout(child_layout_h_0, 2)
         self.child_layout_v_1.addLayout(child_layout_h_1, 1)
-        self.child_layout_v_1.addLayout(self.child_layout_h_2, 1)
         self.child_layout_v_1.addLayout(child_layout_h_3, 1)
         self.child_layout_v_1.addLayout(child_layout_h_4, 1)
 
@@ -274,18 +273,28 @@ class Window(QWidget):
         self.check_box_list.append(check_box)
 
     def init_single_class_label(self):
+        for child in self.check_box_list:
+            print('---', child)
+            child.setParent(None)
+            self.child_layout_h_2.removeWidget(child)
+
+        self.check_box_list = []
+        self.label_dict = {}
         get_logger().info(get__function_name() + '-->' + self.json_data_path)
         label_list = self.gl_widget.pointcloud.label_list
         for i, label in enumerate(label_list):
             if label not in self.label_dict.keys():
                 self.label_dict[label] = []
             self.label_dict[label].append(i)
+        print(self.label_dict)
         for i in range(len(list(self.label_dict))):
             self.add_check_box(i)
         for i, (key, value) in enumerate(self.label_dict.items()):
             self.check_box_list[i].setText(key)
             print('---index', i)
+        print(self.check_box_list)
         self.child_layout_v_1.removeItem(self.child_layout_h_2)
+        self.child_layout_h_2.setParent(None)
         self.child_layout_h_2 = QHBoxLayout()
         for c in self.check_box_list:
             self.child_layout_h_2.addWidget(c, 0, Qt.AlignLeft | Qt.AlignTop)
@@ -294,14 +303,16 @@ class Window(QWidget):
     def on_check(self, widget, index):
         print(index)
         self.check_label_index = []
-        for check_box in self.check_box_list:
+        for i, check_box in enumerate(self.check_box_list):
             if check_box.isChecked():
                 value_list = self.label_dict.values()
-                self.check_label_index.extend(list(value_list)[index])
+                self.check_label_index.extend(list(value_list)[i])
                 sorted(set(self.check_label_index), key=self.check_label_index.index)
                 print(self.check_label_index)
                 print(self.label_dict)
         print(self.check_label_index)
+        self.label_box.fn_clear()
+        self.label_box.fn_set_checked(self.check_label_index)
         self.draw_labeled_mesh(self.check_label_index)
 
     def change_mesh(self, path=''):

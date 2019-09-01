@@ -115,3 +115,7 @@ class ComboCheckBox(QComboBox):
     def fn_clear(self):
         for i in range(self.row_num):
             self.qCheckBox[i].setChecked(False)
+
+    def fn_set_checked(self, index_list):
+        for index in index_list:
+            self.qCheckBox[index].setChecked(True)

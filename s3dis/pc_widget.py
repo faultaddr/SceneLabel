@@ -4,7 +4,7 @@ import OpenGL.GL as gl
 import OpenGL.GLU as glu
 from PyQt5.QtCore import QSize, Qt
 from PyQt5.QtGui import QVector3D, QMatrix4x4
-from PyQt5.QtWidgets import QOpenGLWidget
+from PyQt5.QtWidgets import QOpenGLWidget, QApplication
 
 from core.camera import Camera
 from core.util import *
@@ -25,9 +25,13 @@ class GLWidget(QOpenGLWidget):
         self.data = None
         self.pointcloud = PC(path='')
         self.is_point = False
+        self.desktop = QApplication.desktop()
+
+        self.screenRect = self.desktop.screenGeometry()
 
     def minimumSizeHint(self):
-        return QSize(1600, 800)
+
+        return QSize(int(self.screenRect.width() / 2), int(self.screenRect.height() / 2))
 
     def sizeHint(self):
         return QSize(1600, 800)
