@@ -3,7 +3,7 @@ import json
 import logging
 import os
 import sys
-
+import configparser
 import open3d as o3d
 
 try:
@@ -272,6 +272,27 @@ def get_ply_data_origin(path):
 
 
 # ===========================ply data============================
+
+
+def read_ini(ini_path='config.ini'):
+    if os.path.exists(ini_path):
+        config = configparser.ConfigParser()
+        config.read_file(open(ini_path))
+        json_path = config.get("PATH", "JSON_PATH")
+        return json_path
+    else:
+        return ''
+
+
+def write_ini(path, ini_path='config.ini'):
+    config = configparser.ConfigParser()
+    config.add_section("PATH")
+    config.set("PATH", "JSON_PATH", path)
+    config.write(open(ini_path, "w"))
+
+
+# ===========================logger============================
+
 def get_logger():
     global logger
     if logger is None:
@@ -289,3 +310,4 @@ def get_logger():
         logger.addHandler(handler)
         logger.addHandler(console)
     return logger
+# ===========================logger============================

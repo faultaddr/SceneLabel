@@ -8,11 +8,13 @@ from PyQt5.QtGui import QColor
 from PyQt5.QtWidgets import *
 
 from core.ComboCheckBox import ComboCheckBox
-from core.util import get_logger, get__function_name, get_all_json_data
+from core.util import get_logger, get__function_name, get_all_json_data, read_ini, write_ini
 from s3dis.opt_s3dis_gt import GT
 from s3dis.opt_s3dis_gt import obj_2_json
+from s3dis.opt_scannet_gt import main
 from s3dis.pc_widget import GLWidget
 import copy
+import os
 
 
 class MainWindow(QMainWindow):
@@ -79,6 +81,9 @@ class Window(QWidget):
 
         self.gl_widget = GLWidget(self)
         self.top_text_hint = QTextEdit()
+        self.file_directory = QLineEdit('请输入3d数据目录')
+        self.json_directory = QLineEdit('请输入json目录')
+        self.lock_button = QPushButton('锁定')
         self.display_mesh = QPushButton('显示点云')
         self.choose_file = QPushButton('选取文件')
         self.file_dialog = QFileDialog()
@@ -92,6 +97,7 @@ class Window(QWidget):
         self.cancel_button = QPushButton('撤销')
         self.review_button = QPushButton('检查')
         self.all_in_one = QPushButton('一键写入')
+        self.wait_progress_bar = QProgressDialog()
         # init
         self.json_data_path = ''
         self.json_data = []
@@ -99,9 +105,12 @@ class Window(QWidget):
         self.merged_label_checked = []
         self.json_path_new = ''
         self.label_new = ''
+        self.dir_path = ''
         self.check_box_list = []
         self.check_label_index = []
         self.label_dict = {}
+        self.json_directory_path = ''
+        self.checkbox_layout_list = []
         self.init_ui()
 
     def init_ui(self):
@@ -112,11 +121,27 @@ class Window(QWidget):
         # child layout
 
         self.child_layout_v_1 = QVBoxLayout()
+        top_child_layout = QHBoxLayout()
         child_layout_h_0 = QHBoxLayout()
         child_layout_h_1 = QHBoxLayout()
         self.child_layout_h_2 = QHBoxLayout()
         child_layout_h_3 = QHBoxLayout()
         child_layout_h_4 = QHBoxLayout()
+        '''
+        top_child_layout
+        '''
+        if not os.path.exists(read_ini()):
+            print(self.json_directory_path)
+            self.file_directory.setClearButtonEnabled(True)
+            self.file_directory.textChanged.connect(lambda: self.on_click(self.file_directory))
+            self.json_directory.setClearButtonEnabled(True)
+            self.json_directory.textChanged.connect(lambda: self.on_click(self.json_directory))
+            self.lock_button.clicked.connect(lambda: self.on_click(self.lock_button))
+            self.wait_progress_bar.reset()
+        else:
+            self.json_directory_path = read_ini()
+            self.wait_progress_bar = None
+
         '''
         child_layout_h_0
         '''
@@ -145,11 +170,11 @@ class Window(QWidget):
         self.label_box.signal.connect(lambda: self.on_click(self.label_box))
 
         '''
-        child_layout_h_3
+        child_layout_h_2
         '''
 
         '''
-        child_layout_h_2
+        child_layout_h_3
         '''
 
         # merged label choose
@@ -166,7 +191,7 @@ class Window(QWidget):
         self.merge_mesh_button.clicked.connect(lambda: self.on_click(self.merge_mesh_button))
 
         '''
-        child_layout_h_3
+        child_layout_h_4
         '''
         # cancel the last operation
         self.cancel_button.clicked.connect(lambda: self.on_click(self.cancel_button))
@@ -178,6 +203,10 @@ class Window(QWidget):
         self.all_in_one.clicked.connect(lambda: self.on_click(self.all_in_one))
 
         # layout setting
+        if not os.path.exists(read_ini()):
+            top_child_layout.addWidget(self.file_directory)
+            top_child_layout.addWidget(self.json_directory)
+            top_child_layout.addWidget(self.lock_button)
         child_layout_h_0.addWidget(self.top_text_hint, 0, Qt.AlignCenter)
         child_layout_h_1.addWidget(self.choose_file, 0, Qt.AlignLeft | Qt.AlignTop)
         child_layout_h_1.addWidget(self.display_mesh, 0, Qt.AlignLeft | Qt.AlignTop)
@@ -191,6 +220,8 @@ class Window(QWidget):
         child_layout_h_4.addWidget(self.all_in_one, 0, Qt.AlignLeft | Qt.AlignTop)
 
         self.child_layout_v_1.addLayout(child_layout_h_0, 2)
+        if not os.path.exists(read_ini()):
+            self.child_layout_v_1.addLayout(top_child_layout, 1)
         self.child_layout_v_1.addLayout(child_layout_h_1, 1)
         self.child_layout_v_1.addLayout(child_layout_h_3, 1)
         self.child_layout_v_1.addLayout(child_layout_h_4, 1)
@@ -220,14 +251,51 @@ class Window(QWidget):
             self.gl_widget.pointcloud.change_data()
             self.gl_widget.update()
         if widget == self.choose_file:
+            if self.json_directory_path == '':
+                self.error_message.setWindowTitle('illegal operation !')
+                self.error_message.showMessage(
+                    'json directory not chosen')
             directory = self.file_dialog.getOpenFileName(parent=self, caption='选取文件夹',
-                                                         directory='s3dis/s3dis_json')
+                                                         directory=self.json_directory_path)
             if directory[0] != self.json_data_path and directory[0] != '' and directory is not None:
                 self.json_data_path = directory[0]
                 self.signal.emit(directory[0])
 
         if widget == self.label_edit:
             self.label_new = self.label_edit.text()
+        if widget == self.lock_button:
+            # TODO 文件夹检查
+            if self.json_directory_path != '' and os.path.exists(self.json_directory_path) and os.listdir(
+                    self.json_directory_path):
+                pass
+            else:
+                if self.file_directory != '' and os.path.exists(self.dir_path):
+                    dir_path = self.file_directory.text()
+                    file_count = len(os.listdir(dir_path))
+                    self.wait_progress_bar.resize(340, self.wait_progress_bar.height())
+                    self.wait_progress_bar.setWindowTitle("Json 文件生成中，请耐心等待！：）")
+                    label = QLabel()
+                    label.setWordWrap(True)
+                    label.setMinimumHeight(17)
+                    self.wait_progress_bar.setLabel(label)
+                    self.wait_progress_bar.show()
+                    self.wait_progress_bar.setValue(20)
+                    self.wait_progress_bar.setValue(40)
+                    self.wait_progress_bar.setValue(90)
+                    main(dir_path, self.json_directory_path)
+                    self.wait_progress_bar.setValue(100)
+                    self.json_directory.setVisible(False)
+                    self.file_directory.setVisible(False)
+                    self.lock_button.setGraphicsEffect(QGraphicsBlurEffect())
+                    write_ini(self.json_directory_path)
+                else:
+                    self.error_message.setWindowTitle('illegal operation !')
+                    self.error_message.showMessage(
+                        'please give a existed directory that contains the 3D data')
+        if widget == self.file_directory:
+            self.dir_path = self.file_directory.text()
+        if widget == self.json_directory:
+            self.json_directory_path = self.json_directory.text()
         if widget == self.merge_mesh_button:
             if self.label_new == '':
                 self.error_message.setWindowTitle('illegal operation !')
@@ -273,11 +341,14 @@ class Window(QWidget):
         self.check_box_list.append(check_box)
 
     def init_single_class_label(self):
+
         for child in self.check_box_list:
             print('---', child)
             child.setParent(None)
-            self.child_layout_h_2.removeWidget(child)
-
+            for child_layout in self.checkbox_layout_list:
+                child_layout.removeWidget(child)
+                child_layout.setParent(None)
+                self.child_layout_v_1.removeItem(child_layout)
         self.check_box_list = []
         self.label_dict = {}
         get_logger().info(get__function_name() + '-->' + self.json_data_path)
@@ -293,12 +364,17 @@ class Window(QWidget):
             self.check_box_list[i].setText(key)
             print('---index', i)
         print(self.check_box_list)
-        self.child_layout_v_1.removeItem(self.child_layout_h_2)
-        self.child_layout_h_2.setParent(None)
-        self.child_layout_h_2 = QHBoxLayout()
+        layout_count = len(self.check_box_list) % 5 + 1
+        for i in range(layout_count + 1):
+            self.checkbox_layout_list.append(QHBoxLayout())
+        count = 0
+        layout_index = 0
         for c in self.check_box_list:
-            self.child_layout_h_2.addWidget(c, 0, Qt.AlignLeft | Qt.AlignTop)
-        self.child_layout_v_1.insertLayout(2, self.child_layout_h_2, 1)
+            count += 1
+            self.checkbox_layout_list[layout_index].addWidget(c, 0, Qt.AlignLeft | Qt.AlignTop)
+            if count % 5 == 0 or count == len(self.check_box_list):
+                self.child_layout_v_1.insertLayout(2, self.checkbox_layout_list[layout_index], 1)
+                layout_index += 1
 
     def on_check(self, widget, index):
         print(index)

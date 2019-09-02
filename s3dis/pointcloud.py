@@ -6,7 +6,7 @@ import numpy as np
 from OpenGL.GL import *
 from OpenGL.GLUT import *
 
-from core.util import get_logger, get_s3dis_json_data, json_2_obj
+from core.util import get_logger, get_s3dis_json_data, json_2_obj, get_ply_data_origin, get_obj_data
 import datetime
 from cachetools import LRUCache, RRCache, cachedmethod, cached, TTLCache
 
@@ -16,6 +16,24 @@ cache = TTLCache(maxsize=400, ttl=300)
 
 
 def process_data(d):
+    def judge_file_type(path):
+        if path.endswith('.txt'):
+            return 0
+        if path.endswith('.ply'):
+            return 1
+        if path.endswith('.obj'):
+            return 2
+
+    def get_data(path, file_type):
+        if file_type == 0:
+            return np.loadtxt(path)
+        if file_type == 1:
+            coords, colors = get_ply_data_origin(path)
+            return np.concatenate((coords, colors), axis=1)
+        if file_type == 2:
+            ver, tri, vn = get_obj_data(path)
+            return ver, tri, vn
+
     data = eval(d)
     if data['parent'] == -1:
         instance_path = data['path']
@@ -24,9 +42,10 @@ def process_data(d):
         c = []
         mean_xyz = [0, 0, 0]
         for instance in instance_path:
-            new_path = '/'.join(instance.split('/')[0:4]) + '/gt/' + '/'.join(instance.split('/')[4:])
-            new_path = new_path.replace('.txt', '_color01.txt')
-            original_data = np.loadtxt(new_path)
+            # new_path = '/'.join(instance.split('/')[0:4]) + '/gt/' + '/'.join(instance.split('/')[4:])
+            # new_path = new_path.replace('.txt', '_color01.txt')
+            file_type = judge_file_type(instance)
+            original_data = get_data(instance, file_type)
             vex = original_data[:, :3]
             mean_xyz = np.mean(vex, axis=0)
             color = original_data[:, 3:6]
@@ -103,13 +122,13 @@ class PC(object):
         # c = np.reshape(np.array(c), (1, -1))
 
         self.mean = np.sum(np.asarray(mean_xyz), axis=0) / len(all_data)
+        print(self.mean)
         self.data = all_data
         self.buffers_list, self.lens = self.create_vbo(str(self.hier_display_id))
         self.record_path = self.path
         self.label_list = all_label
         end_time = datetime.datetime.now()
         print((end_time - start_time).seconds)
-
 
     def create_vbo(self, id_list_str):
         if self.data:
