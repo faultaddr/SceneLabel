@@ -16,21 +16,6 @@ This is an example of PyQt5 + pyopengl. Mouse rotation, translation, and zoom is
 ---
 
 
-## <center>计算机图形学课程设计报告</center>
-
----
-
-<br></br>
-<br></br>
-<br></br>
-
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
 
 ---
 <br></br>
@@ -79,23 +64,23 @@ This is an example of PyQt5 + pyopengl. Mouse rotation, translation, and zoom is
 
 	- 基础显示
 	
-	![](/home/panyunyi/Desktop/DeepinScreenshot_select-area_20190828101831.png) 
+	![](https://github.com/panyunyi97/SceneLabel/blob/master/preview/DeepinScreenshot_select-area_20190828101831.png) 
 	
 	- 显示组合AABB
 	
-	![](/home/panyunyi/Desktop/DeepinScreenshot_select-area_20190828101903.png)
+	![](https://github.com/panyunyi97/SceneLabel/blob/master/preview/DeepinScreenshot_select-area_20190828101903.png)
 	 
 	- 显示点云便于可视化标注
 	
-	![ ](/home/panyunyi/Desktop/DeepinScreenshot_select-area_20190828101918.png  "显示点云")
+	![ ](https://github.com/panyunyi97/SceneLabel/blob/master/preview/DeepinScreenshot_select-area_20190828101918.png  "显示点云")
 	
 	- 显示可选关系
 	
-	![](/home/panyunyi/Desktop/DeepinScreenshot_select-area_20190828102321.png) 
+	![](https://github.com/panyunyi97/SceneLabel/blob/master/preview/DeepinScreenshot_select-area_20190828102321.png) 
 	
 	- 标注关系后进行查看
 	
-	![](/home/panyunyi/Desktop/DeepinScreenshot_select-area_20190828102444.png) 
+	![](https://github.com/panyunyi97/SceneLabel/blob/master/preview/DeepinScreenshot_select-area_20190828102444.png) 
 	
 
 
@@ -104,27 +89,27 @@ This is an example of PyQt5 + pyopengl. Mouse rotation, translation, and zoom is
 	&emsp;&emsp; 读入面片信息，通过OpenGL渲染绘制纹理光照和基础的面片Triangle，进行显示。
 	
 	- 基础显示
-	![](/home/panyunyi/Desktop/DeepinScreenshot_select-area_20190828104605.png) 
+	![](https://github.com/panyunyi97/SceneLabel/blob/master/preview/DeepinScreenshot_select-area_20190828104605.png) 
 	
 	- 显示组合Mesh
 	
-	![](/home/panyunyi/Desktop/DeepinScreenshot_select-area_20190828104729.png) 
+	![](https://github.com/panyunyi97/SceneLabel/blob/master/preview/DeepinScreenshot_select-area_20190828104729.png) 
 	
 	- 显示待合并面片并进行合并
-	![](/home/panyunyi/Desktop/DeepinScreenshot_select-area_20190828104713.png) 
+	![](https://github.com/panyunyi97/SceneLabel/blob/master/preview/DeepinScreenshot_select-area_20190828104713.png) 
 	
 - **点云标注**：
 
 	&emsp;&emsp; 读入点云信息，通过OpenGL绘制渲染以便于显示
 	
 	- 基础显示
-	![](/home/panyunyi/Desktop/DeepinScreenshot_select-area_20190828105605.png) 
+	![](https://github.com/panyunyi97/SceneLabel/blob/master/preview/DeepinScreenshot_select-area_20190828105605.png) 
 	
 	- 显示进度条
-	![](/home/panyunyi/Desktop/DeepinScreenshot_select-area_20190828105619.png) 
+	![](https://github.com/panyunyi97/SceneLabel/blob/master/preview/DeepinScreenshot_select-area_20190828105619.png) 
 	
 	- 显示选中instance （可进行合并 更改label等操作）
-	![](/home/panyunyi/Desktop/DeepinScreenshot_select-area_20190828105841.png) ![](/home/panyunyi/Desktop/DeepinScreenshot_select-area_20190828105903.png) 
+	![](https://github.com/panyunyi97/SceneLabel/blob/master/preview/DeepinScreenshot_select-area_20190828105841.png) ![](https://github.com/panyunyi97/SceneLabel/blob/master/preview/DeepinScreenshot_select-area_20190828105903.png) 
 	
 	
 ### 代码细节：
