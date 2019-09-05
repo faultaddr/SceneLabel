@@ -49,6 +49,8 @@ def process_data(d):
             vex = original_data[:, :3]
             mean_xyz = np.mean(vex, axis=0)
             color = original_data[:, 3:6]
+            if np.max(color) > 1:
+                color = color / 255
             vex = np.reshape(vex, (1, -1))
             color = np.reshape(color, (1, -1))
             v.extend(vex.tolist()[0])

@@ -98,6 +98,7 @@ class Window(QWidget):
         self.review_button = QPushButton('检查')
         self.all_in_one = QPushButton('一键写入')
         self.wait_progress_bar = QProgressDialog()
+        self.clip_board = QApplication.clipboard()
         # init
         self.json_data_path = ''
         self.json_data = []
@@ -303,10 +304,18 @@ class Window(QWidget):
                     'please give a new label to complete the merge operation')
                 self.merged_label_box.clear_checked_state()
             else:
-                index = self.label_box.get_checked_box()
-                labeled_index = self.merged_label_box.get_checked_box()
-                print(labeled_index)
-                self.opt_merge(index, labeled_index)
+                wrong_tag = ['areea', '  ', 'builidng', 'celing', 'celingg', 'ofice', 'sleepping', 'goup', 'gruop']
+                flag = True
+                for tag in wrong_tag:
+                    if tag in self.label_new:
+                        self.error_message.setWindowTitle('illegal operation !')
+                        self.error_message.showMessage('wrong label --->' + str(tag))
+                        self.label_edit.clear()
+                if flag:
+                    index = self.label_box.get_checked_box()
+                    labeled_index = self.merged_label_box.get_checked_box()
+                    print(labeled_index)
+                    self.opt_merge(index, labeled_index)
         if widget == self.cancel_button:
             if self.operation_stack:
                 index, json_data = self.operation_stack.pop(-1)
@@ -382,11 +391,25 @@ class Window(QWidget):
         for i, check_box in enumerate(self.check_box_list):
             if check_box.isChecked():
                 value_list = self.label_dict.values()
+                label = list(self.label_dict.keys())[i]
+                if 'group' in label:
+                    new_label = ' area'
+                    if new_label != self.clip_board.text():
+                        self.label_edit.clear()
+                    self.clip_board.setText(new_label)
+                    self.label_edit.setText(new_label)
+                else:
+                    new_label = list(self.label_dict.keys())[i] + ' group'
+                    if new_label != self.clip_board.text():
+                        self.label_edit.clear()
+                    self.clip_board.setText(list(self.label_dict.keys())[i] + ' group')
+                    self.label_edit.setText(new_label)
                 self.check_label_index.extend(list(value_list)[i])
                 sorted(set(self.check_label_index), key=self.check_label_index.index)
                 print(self.check_label_index)
                 print(self.label_dict)
         print(self.check_label_index)
+
         self.label_box.fn_clear()
         self.label_box.fn_set_checked(self.check_label_index)
         self.draw_labeled_mesh(self.check_label_index)

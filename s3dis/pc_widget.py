@@ -18,7 +18,7 @@ class GLWidget(QOpenGLWidget):
     def __init__(self, parent=None):
         super(GLWidget, self).__init__(parent)
         self.lastZ = 10
-        self.cam = Camera(50.0, 2, 100)
+        self.cam = Camera(50.0, 2, 1000)
         self.cam.lookAt(QVector3D(-11.34805872, 10.68026085, 10.29478443),
                         QVector3D(-11.34805872, 10.68026085, 1.29478443), QVector3D(-1, 1, 1))
         self.rotCenter = QVector3D(0, 0, 0)
