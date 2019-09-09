@@ -1,5 +1,7 @@
 import copy
 import json
+import pickle
+import shutil
 import threading
 
 import numpy as np
@@ -283,7 +285,8 @@ class Window(QWidget):
                 self.error_message.showMessage(
                     'json directory not chosen')
             directory = self.file_dialog.getOpenFileName(parent=self, caption='选取文件夹',
-                                                         directory=self.json_directory_path)
+                                                         directory=self.json_directory_path,
+                                                         filter='JSON files(*.json)')
             if directory[0] != self.json_data_path and directory[0] != '' and directory is not None:
                 self.json_data_path = directory[0]
                 self.signal.emit(directory[0])
@@ -449,7 +452,10 @@ class Window(QWidget):
             self.gl_widget.change_data(path)
             self.json_data_path = path
             self.change_label()
-            self.operation_stack = []
+            if os.path.exists(self.json_data_path.split('.')[0] + '.pickle'):
+                self.deserialize_stack(self.json_data_path.split('.')[0] + '.pickle')
+            else:
+                self.operation_stack = []
 
     def fake_change_mesh(self, index):
         self.gl_widget.pointcloud.hier_data = self.json_data
@@ -501,13 +507,27 @@ class Window(QWidget):
             self.fake_change_mesh(pair)
 
     def write_json(self):
+
         self.json_path_new = self.json_data_path.split('.')[0].replace('_copy', '') + '_copy' + '.json'
         with open(self.json_path_new, 'w')as f:
             json.dump(self.json_data, f)
         get_logger().debug(get__function_name() + '-->' + 'json copy write complete')
+        self.serialize_stack(self.operation_stack)
         self.error_message.setWindowTitle('写入完成')
         self.error_message.showMessage(
             'complete!')
+
+    def serialize_stack(self, stack):
+        with open(self.json_path_new.split('.')[0] + '.pickle', 'wb')as fp:
+            pickle.dump(stack, fp)
+
+    def deserialize_stack(self, path):
+        try:
+            with open(path, 'rb')as fp:
+                self.operation_stack = pickle.load(fp)
+        except:
+            os.remove(path)
+            self.operation_stack = []
 
 
 class EventDisable(QWidget):
