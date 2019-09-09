@@ -52,7 +52,7 @@ class GLWidget(QOpenGLWidget):
         logger.info(get__function_name() + '-->')
         self.pointcloud.path = path
         self.pointcloud.init_data()
-        self.cam.lookAt(QVector3D(self.pointcloud.mean[0], self.pointcloud.mean[1], self.pointcloud.mean[2] * 2000),
+        self.cam.lookAt(QVector3D(self.pointcloud.mean[0], self.pointcloud.mean[1], self.pointcloud.mean[2] * 20),
                         QVector3D(self.pointcloud.mean[0], self.pointcloud.mean[1], self.pointcloud.mean[2]),
                         QVector3D(self.pointcloud.mean[0] / abs(self.pointcloud.mean[0]),
                                   self.pointcloud.mean[1] / abs(self.pointcloud.mean[1]),
@@ -61,7 +61,7 @@ class GLWidget(QOpenGLWidget):
 
     def repaint_with_data(self, data):
         logger.info(get__function_name() + '-->' + str(data))
-        # logger.info(get__function_name() + '-->' + str(self.pointcloud.hier_data))
+        logger.info(get__function_name() + '-->' + str(self.pointcloud.hier_data))
         if self.pointcloud.hier_data:
             self.pointcloud.hier_display_index = data
             self.update()

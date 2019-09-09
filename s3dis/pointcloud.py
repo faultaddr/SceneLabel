@@ -120,6 +120,7 @@ class PC(object):
                 self.hier_display_id.append(i_id)
 
         self.hier_display_index = range(0, len(all_data))
+        print(self.hier_display_index)
         # v = np.reshape(np.array(v), (1, -1))
         # c = np.reshape(np.array(c), (1, -1))
 

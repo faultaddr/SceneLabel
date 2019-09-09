@@ -11,7 +11,7 @@ from core.ComboCheckBox import ComboCheckBox
 from core.util import get_logger, get__function_name, get_all_json_data, read_ini, write_ini
 from s3dis.opt_s3dis_gt import GT
 from s3dis.opt_s3dis_gt import obj_2_json
-from s3dis.opt_scannet_gt import main
+from s3dis.opt_s3dis_gt import main
 from s3dis.pc_widget import GLWidget
 import copy
 import os
@@ -112,6 +112,7 @@ class Window(QWidget):
         self.label_dict = {}
         self.json_directory_path = ''
         self.checkbox_layout_list = []
+        self.merge_label_index = []
         self.init_ui()
 
     def init_ui(self):
@@ -183,7 +184,8 @@ class Window(QWidget):
         self.merged_label_box.fn_init_data(self.json_data)
         self.merged_label_box.setMinimumContentsLength(15)
         self.merged_label_box.setStyle(QStyleFactory.create('Windows'))
-        self.merged_label_box.currentIndexChanged.connect(lambda: self.on_click(self.merged_label_box))
+        # self.merged_label_box.currentIndexChanged.connect(lambda: self.on_click(self.merged_label_box))
+        self.merged_label_box.signal.connect(lambda: self.on_click(self.merged_label_box))
         # display combined group
         self.display_relations_list.currentItemChanged.connect(lambda: self.display_all_relations)
         # give a new label
@@ -237,15 +239,39 @@ class Window(QWidget):
         qr.moveCenter(cp)
         self.move(qr.topLeft())
 
+    def compare_adjust_index(self, merge_index):
+        for index in self.label_box.get_checked_box():
+            if index not in merge_index:
+                self.label_box.qCheckBox[index].setChecked(False)
+        for index in merge_index:
+            if index not in self.label_box.get_checked_box():
+                self.label_box.qCheckBox[index].setChecked(True)
+
     def on_click(self, widget):
+        if widget == self.merged_label_box:
+            get_logger().info(get__function_name() + "-->")
+            _list = self.merged_label_box.items
+            get_logger().info(str(_list))
+            index = self.check_label_index
+            merge_index = self.merged_label_box.get_checked_box()
+            index_pair = {}
+            print(index)
+            for i in merge_index:
+                index_pair[i] = self.merge_label_index[i]
+            print('fn_clear')
+            if merge_index:
+                print('---', merge_index)
+                print('index_pair', [index_pair[x] for x in merge_index])
+                selected_index = [index_pair[x] for x in merge_index]
+                self.draw_labeled_mesh(selected_index)
+                self.compare_adjust_index(selected_index)
         if widget == self.label_box:
             get_logger().info(get__function_name() + '-->')
             original_list = self.label_box.items
             get_logger().info(str(original_list))
             index = self.label_box.get_checked_box()
             get_logger().info(str(index))
-            self.merged_label_box.clear()
-            self.merged_label_box.fn_init_data([original_list[x] for x in index])
+
             self.draw_labeled_mesh(index)
         if widget == self.display_mesh:
             index = self.label_box.get_checked_box()
@@ -412,6 +438,9 @@ class Window(QWidget):
 
         self.label_box.fn_clear()
         self.label_box.fn_set_checked(self.check_label_index)
+        self.merged_label_box.clear()
+        self.merged_label_box.fn_init_data([self.label_box.items[x] for x in self.label_box.get_checked_box()])
+        self.merge_label_index = self.label_box.get_checked_box()
         self.draw_labeled_mesh(self.check_label_index)
 
     def change_mesh(self, path=''):
