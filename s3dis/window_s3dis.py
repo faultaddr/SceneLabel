@@ -17,6 +17,9 @@ from s3dis.opt_s3dis_gt import main
 from s3dis.pc_widget import GLWidget
 import copy
 import os
+from spellchecker import SpellChecker
+
+spell = SpellChecker()
 
 
 class MainWindow(QMainWindow):
@@ -59,6 +62,7 @@ class MainWindow(QMainWindow):
         else:
             self.progress_bar.setValue(100)
             self.statusBar().showMessage("successful")
+
             self.flag = 0
 
     def timerEvent(self, e):
@@ -67,6 +71,7 @@ class MainWindow(QMainWindow):
             self.timer.stop()
             self.window.change_mesh()
             self.progress_bar.setValue(100)
+            self.statusBar().showMessage("loaded file:==>" + self.window.json_data_path)
         self.step += self.step + 1
         self.progress_bar.setValue(self.step)
 
@@ -333,18 +338,18 @@ class Window(QWidget):
                     'please give a new label to complete the merge operation')
                 self.merged_label_box.clear_checked_state()
             else:
-                wrong_tag = ['areea', '  ', 'builidng', 'celing', 'celingg', 'ofice', 'sleepping', 'goup', 'gruop']
                 flag = True
-                for tag in wrong_tag:
-                    if tag in self.label_new:
-                        self.error_message.setWindowTitle('illegal operation !')
-                        self.error_message.showMessage('wrong label --->' + str(tag))
-                        self.label_edit.clear()
+                for tag in spell.unknown(self.label_new.split()):
+                    self.error_message.setWindowTitle('illegal operation !')
+                    self.error_message.showMessage('wrong label please correct it as--->' + spell.correction(tag))
+                    self.label_edit.clear()
+                    flag = False
                 if flag:
                     index = self.label_box.get_checked_box()
                     labeled_index = self.merged_label_box.get_checked_box()
                     print(labeled_index)
                     self.opt_merge(index, labeled_index)
+
         if widget == self.cancel_button:
             if self.operation_stack:
                 index, json_data = self.operation_stack.pop(-1)
@@ -422,7 +427,11 @@ class Window(QWidget):
                 value_list = self.label_dict.values()
                 label = list(self.label_dict.keys())[i]
                 if 'group' in label:
-                    new_label = ' area'
+                    print(self.label_edit.text())
+                    if 'area' in self.label_edit.text():
+                        new_label = self.label_edit.text()
+                    else:
+                        new_label = 'area'
                     if new_label != self.clip_board.text():
                         self.label_edit.clear()
                     self.clip_board.setText(new_label)
@@ -483,6 +492,7 @@ class Window(QWidget):
         self.change_json()
 
     def change_json(self):
+        self.merged_label_box.clear()
         self.json_data = self.gl_widget.pointcloud.hier_data
         model_array = get_all_json_data(self.json_data_path)
         if self.operation_stack:
